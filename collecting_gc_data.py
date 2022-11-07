@@ -5,6 +5,8 @@ from selenium.webdriver.common.keys import Keys
 from webdriver_manager .chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 import pandas as pd
+from time import sleep
+
 driver = webdriver.Chrome(executable_path=ChromeDriverManager().install())
 
 #credentials
@@ -23,7 +25,9 @@ a.perform()
 
 # Get aribrary round (For some reason the first time you get this link after logging in, NFL
 # redirects you
+sleep(5)
 driver.get('https://fantasy.nfl.com/league/1078038/history/2022/teamgamecenter?teamId=1&week=8')
+sleep(5)
 
 #Collect data as dictionary
 main_dict = {}
@@ -31,7 +35,7 @@ for year in range(2012,2023):
     round_dict={}
     for round in range(1,17):
         driver.get('https://fantasy.nfl.com/league/1078038/history/{year}/teamgamecenter?teamId=1&week={round}'.format(year=year,round=round))
-   
+        sleep(.1)
         games_dict ={}
         games = driver.find_elements(By.CLASS_NAME,'dynamic')
         games_details = [s.find_elements(By.TAG_NAME,'div') for s in games][0:8]
@@ -53,4 +57,6 @@ for year in range(2012,2023):
             i+=1
   
 table_data = pd.DataFrame.from_dict(main_dict).transpose()
+dataset = table_data[['home_team','away_team','home_score','away_score']]
+table_data['winner'] = dataset.apply(lambda x: x[0] if float(x[2])>float(x[3]) else x[1],axis = 1)
 table_data.to_csv('CSV_PATH')
