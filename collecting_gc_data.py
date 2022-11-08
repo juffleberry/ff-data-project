@@ -34,11 +34,16 @@ main_dict = {}
 for year in range(2012,2023):
     round_dict={}
     for round in range(1,17):
-        driver.get('https://fantasy.nfl.com/league/1078038/history/{year}/teamgamecenter?teamId=1&week={round}'.format(year=year,round=round))
-        sleep(.1)
-        games_dict ={}
-        games = driver.find_elements(By.CLASS_NAME,'dynamic')
-        games_details = [s.find_elements(By.TAG_NAME,'div') for s in games][0:8]
+        games_details = []
+        #loop in case page doesnt load properly (games_details will be empty in this change)
+        for check in range(0,100):
+            if len(games_details)>0: break
+            else: pass
+            driver.get('https://fantasy.nfl.com/league/1078038/history/{year}/teamgamecenter?teamId=1&week={round}'.format(year=year,round=round))
+            sleep(.1*check)
+            games_dict ={}
+            games = driver.find_elements(By.CLASS_NAME,'dynamic')
+            games_details = [s.find_elements(By.TAG_NAME,'div') for s in games][0:8]
         i=0
         for g in games_details:
             try:
