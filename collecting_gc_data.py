@@ -35,7 +35,7 @@ for year in range(2012,2023):
     round_dict={}
     for round in range(1,17):
         games_details = []
-        #loop in case page doesnt load properly (games_details will be empty in this change)
+        #loop in case page doesnt load properly (games_details will be empty in this case)
         for check in range(0,100):
             if len(games_details)>0: break
             else: pass
