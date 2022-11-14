@@ -1,0 +1,2456 @@
+{
+    "TheClairevilleCougars": {
+        "opponentHistory": [
+            {
+                "opponent": "BearnaiseDynamics",
+                "record": "3-1-0",
+                "winPercentage": "75%",
+                "basePoints": 386.48,
+                "opponentPoints": 373.5,
+                "gamesPlayed": 4
+            },
+            {
+                "opponent": "Kurlewless",
+                "record": "1-0-0",
+                "winPercentage": "10%",
+                "basePoints": 106.12,
+                "opponentPoints": 84.54,
+                "gamesPlayed": 1
+            },
+            {
+                "opponent": "LondonTanqs",
+                "record": "2-0-0",
+                "winPercentage": "10%",
+                "basePoints": 217.22,
+                "opponentPoints": 161.66,
+                "gamesPlayed": 2
+            },
+            {
+                "opponent": "MikkelsManatees",
+                "record": "1-1-0",
+                "winPercentage": "50%",
+                "basePoints": 176.84,
+                "opponentPoints": 164.04000000000002,
+                "gamesPlayed": 2
+            },
+            {
+                "opponent": "SERPION",
+                "record": "2-1-0",
+                "winPercentage": "66%",
+                "basePoints": 319.34000000000003,
+                "opponentPoints": 290.32,
+                "gamesPlayed": 3
+            },
+            {
+                "opponent": "StandardDeviations",
+                "record": "2-0-0",
+                "winPercentage": "10%",
+                "basePoints": 217.68,
+                "opponentPoints": 192.04,
+                "gamesPlayed": 2
+            },
+            {
+                "opponent": "TheAligators",
+                "record": "1-2-0",
+                "winPercentage": "33%",
+                "basePoints": 278.18,
+                "opponentPoints": 319.86,
+                "gamesPlayed": 3
+            },
+            {
+                "opponent": "TheBeerBarons",
+                "record": "2-2-0",
+                "winPercentage": "50%",
+                "basePoints": 487.64,
+                "opponentPoints": 489.5,
+                "gamesPlayed": 4
+            },
+            {
+                "opponent": "TheDirtyBirds",
+                "record": "1-2-0",
+                "winPercentage": "33%",
+                "basePoints": 305.38,
+                "opponentPoints": 301.38,
+                "gamesPlayed": 3
+            },
+            {
+                "opponent": "TheHatters",
+                "record": "1-1-0",
+                "winPercentage": "50%",
+                "basePoints": 216.83999999999997,
+                "opponentPoints": 227.32,
+                "gamesPlayed": 2
+            },
+            {
+                "opponent": "ThePuffins",
+                "record": "1-3-0",
+                "winPercentage": "25%",
+                "basePoints": 454.1,
+                "opponentPoints": 490.34000000000003,
+                "gamesPlayed": 4
+            }
+        ],
+        "allTimeRecord": {
+            "record": "17-13-0",
+            "winPercentage": "56%",
+            "basePoints": 3165.82,
+            "opponentPoints": 3094.5,
+            "gamesPlayed": 30
+        }
+    },
+    "pending": {
+        "opponentHistory": [
+            {
+                "opponent": "ATFootballTeam",
+                "record": "4-1-0",
+                "winPercentage": "80%",
+                "basePoints": 439.08000000000004,
+                "opponentPoints": 427.0,
+                "gamesPlayed": 5
+            },
+            {
+                "opponent": "BearnaiseDynamics",
+                "record": "1-2-0",
+                "winPercentage": "33%",
+                "basePoints": 268.0,
+                "opponentPoints": 334.44,
+                "gamesPlayed": 3
+            },
+            {
+                "opponent": "Kurlewless",
+                "record": "3-1-0",
+                "winPercentage": "75%",
+                "basePoints": 347.0,
+                "opponentPoints": 352.7,
+                "gamesPlayed": 4
+            },
+            {
+                "opponent": "Leeannacondas",
+                "record": "5-4-0",
+                "winPercentage": "55%",
+                "basePoints": 904.5,
+                "opponentPoints": 872.9399999999999,
+                "gamesPlayed": 9
+            },
+            {
+                "opponent": "LondonTanqs",
+                "record": "4-4-0",
+                "winPercentage": "50%",
+                "basePoints": 711.88,
+                "opponentPoints": 817.54,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "MikkelsManatees",
+                "record": "3-4-0",
+                "winPercentage": "42%",
+                "basePoints": 537.64,
+                "opponentPoints": 598.0,
+                "gamesPlayed": 7
+            },
+            {
+                "opponent": "SERPION",
+                "record": "5-6-0",
+                "winPercentage": "45%",
+                "basePoints": 1027.4,
+                "opponentPoints": 1069.4,
+                "gamesPlayed": 11
+            },
+            {
+                "opponent": "StandardDeviations",
+                "record": "3-0-0",
+                "winPercentage": "10%",
+                "basePoints": 249.26,
+                "opponentPoints": 216.42000000000002,
+                "gamesPlayed": 3
+            },
+            {
+                "opponent": "TheAligators",
+                "record": "2-7-0",
+                "winPercentage": "22%",
+                "basePoints": 788.1,
+                "opponentPoints": 986.38,
+                "gamesPlayed": 9
+            },
+            {
+                "opponent": "TheBeerBarons",
+                "record": "3-3-0",
+                "winPercentage": "50%",
+                "basePoints": 551.76,
+                "opponentPoints": 549.3,
+                "gamesPlayed": 6
+            },
+            {
+                "opponent": "TheDirtyBirds",
+                "record": "2-6-0",
+                "winPercentage": "25%",
+                "basePoints": 672.48,
+                "opponentPoints": 763.4399999999999,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "TheHatters",
+                "record": "6-5-0",
+                "winPercentage": "54%",
+                "basePoints": 1123.92,
+                "opponentPoints": 1089.3,
+                "gamesPlayed": 11
+            },
+            {
+                "opponent": "ThePiggies",
+                "record": "5-3-0",
+                "winPercentage": "62%",
+                "basePoints": 852.7,
+                "opponentPoints": 842.44,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "ThePuffins",
+                "record": "3-5-0",
+                "winPercentage": "37%",
+                "basePoints": 715.46,
+                "opponentPoints": 824.94,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "TooManyCooks",
+                "record": "2-4-0",
+                "winPercentage": "33%",
+                "basePoints": 514.98,
+                "opponentPoints": 612.52,
+                "gamesPlayed": 6
+            }
+        ],
+        "allTimeRecord": {
+            "record": "51-55-0",
+            "winPercentage": "48%",
+            "basePoints": 9704.16,
+            "opponentPoints": 10356.76,
+            "gamesPlayed": 106
+        }
+    },
+    "StandardDeviations": {
+        "opponentHistory": [
+            {
+                "opponent": "ATFootballTeam",
+                "record": "6-5-0",
+                "winPercentage": "54%",
+                "basePoints": 1034.84,
+                "opponentPoints": 1000.14,
+                "gamesPlayed": 11
+            },
+            {
+                "opponent": "BearnaiseDynamics",
+                "record": "5-12-0",
+                "winPercentage": "29%",
+                "basePoints": 1617.74,
+                "opponentPoints": 1761.9,
+                "gamesPlayed": 17
+            },
+            {
+                "opponent": "FresnoFishHeads",
+                "record": "1-0-0",
+                "winPercentage": "10%",
+                "basePoints": 96.14,
+                "opponentPoints": 80.62,
+                "gamesPlayed": 1
+            },
+            {
+                "opponent": "Kurlewless",
+                "record": "11-4-0",
+                "winPercentage": "73%",
+                "basePoints": 1534.52,
+                "opponentPoints": 1332.22,
+                "gamesPlayed": 15
+            },
+            {
+                "opponent": "Leeannacondas",
+                "record": "2-5-0",
+                "winPercentage": "28%",
+                "basePoints": 659.04,
+                "opponentPoints": 734.22,
+                "gamesPlayed": 7
+            },
+            {
+                "opponent": "LondonTanqs",
+                "record": "8-4-0",
+                "winPercentage": "66%",
+                "basePoints": 1325.3600000000001,
+                "opponentPoints": 1230.72,
+                "gamesPlayed": 12
+            },
+            {
+                "opponent": "MikkelsManatees",
+                "record": "5-6-0",
+                "winPercentage": "45%",
+                "basePoints": 1059.9,
+                "opponentPoints": 993.56,
+                "gamesPlayed": 11
+            },
+            {
+                "opponent": "SERPION",
+                "record": "3-3-0",
+                "winPercentage": "50%",
+                "basePoints": 630.34,
+                "opponentPoints": 634.1,
+                "gamesPlayed": 6
+            },
+            {
+                "opponent": "TheAligators",
+                "record": "7-3-0",
+                "winPercentage": "70%",
+                "basePoints": 1107.7,
+                "opponentPoints": 872.12,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "TheBeerBarons",
+                "record": "5-10-0",
+                "winPercentage": "33%",
+                "basePoints": 1405.9,
+                "opponentPoints": 1591.6,
+                "gamesPlayed": 15
+            },
+            {
+                "opponent": "TheClairevilleCougars",
+                "record": "0-2-0",
+                "winPercentage": "0.%",
+                "basePoints": 192.04,
+                "opponentPoints": 217.68,
+                "gamesPlayed": 2
+            },
+            {
+                "opponent": "TheDirtyBirds",
+                "record": "5-7-0",
+                "winPercentage": "41%",
+                "basePoints": 1199.78,
+                "opponentPoints": 1203.08,
+                "gamesPlayed": 12
+            },
+            {
+                "opponent": "TheHatters",
+                "record": "2-8-0",
+                "winPercentage": "20%",
+                "basePoints": 950.18,
+                "opponentPoints": 1132.52,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "ThePiggies",
+                "record": "6-2-0",
+                "winPercentage": "75%",
+                "basePoints": 796.16,
+                "opponentPoints": 641.74,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "ThePuffins",
+                "record": "4-9-0",
+                "winPercentage": "30%",
+                "basePoints": 1125.92,
+                "opponentPoints": 1299.26,
+                "gamesPlayed": 13
+            },
+            {
+                "opponent": "TooManyCooks",
+                "record": "2-3-0",
+                "winPercentage": "40%",
+                "basePoints": 398.88,
+                "opponentPoints": 474.32,
+                "gamesPlayed": 5
+            },
+            {
+                "opponent": "pending",
+                "record": "0-3-0",
+                "winPercentage": "0.%",
+                "basePoints": 216.42000000000002,
+                "opponentPoints": 249.26,
+                "gamesPlayed": 3
+            }
+        ],
+        "allTimeRecord": {
+            "record": "72-86-0",
+            "winPercentage": "45%",
+            "basePoints": 15350.86,
+            "opponentPoints": 15449.06,
+            "gamesPlayed": 158
+        }
+    },
+    "Leeannacondas": {
+        "opponentHistory": [
+            {
+                "opponent": "ATFootballTeam",
+                "record": "4-3-0",
+                "winPercentage": "57%",
+                "basePoints": 613.02,
+                "opponentPoints": 659.84,
+                "gamesPlayed": 7
+            },
+            {
+                "opponent": "BearnaiseDynamics",
+                "record": "2-4-0",
+                "winPercentage": "33%",
+                "basePoints": 658.14,
+                "opponentPoints": 716.72,
+                "gamesPlayed": 6
+            },
+            {
+                "opponent": "FresnoFishHeads",
+                "record": "1-0-0",
+                "winPercentage": "10%",
+                "basePoints": 105.42,
+                "opponentPoints": 91.72,
+                "gamesPlayed": 1
+            },
+            {
+                "opponent": "Kurlewless",
+                "record": "3-4-0",
+                "winPercentage": "42%",
+                "basePoints": 631.92,
+                "opponentPoints": 639.52,
+                "gamesPlayed": 7
+            },
+            {
+                "opponent": "LondonTanqs",
+                "record": "6-2-0",
+                "winPercentage": "75%",
+                "basePoints": 787.24,
+                "opponentPoints": 790.74,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "MikkelsManatees",
+                "record": "5-1-0",
+                "winPercentage": "83%",
+                "basePoints": 678.54,
+                "opponentPoints": 485.2,
+                "gamesPlayed": 6
+            },
+            {
+                "opponent": "SERPION",
+                "record": "7-2-0",
+                "winPercentage": "77%",
+                "basePoints": 1020.4,
+                "opponentPoints": 929.5,
+                "gamesPlayed": 9
+            },
+            {
+                "opponent": "StandardDeviations",
+                "record": "5-2-0",
+                "winPercentage": "71%",
+                "basePoints": 734.22,
+                "opponentPoints": 659.04,
+                "gamesPlayed": 7
+            },
+            {
+                "opponent": "TheAligators",
+                "record": "6-2-0",
+                "winPercentage": "75%",
+                "basePoints": 850.24,
+                "opponentPoints": 731.86,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "TheBeerBarons",
+                "record": "5-2-0",
+                "winPercentage": "71%",
+                "basePoints": 673.04,
+                "opponentPoints": 610.1800000000001,
+                "gamesPlayed": 7
+            },
+            {
+                "opponent": "TheDirtyBirds",
+                "record": "2-4-0",
+                "winPercentage": "33%",
+                "basePoints": 582.62,
+                "opponentPoints": 660.74,
+                "gamesPlayed": 6
+            },
+            {
+                "opponent": "TheHatters",
+                "record": "3-4-0",
+                "winPercentage": "42%",
+                "basePoints": 713.52,
+                "opponentPoints": 687.08,
+                "gamesPlayed": 7
+            },
+            {
+                "opponent": "ThePiggies",
+                "record": "10-6-0",
+                "winPercentage": "62%",
+                "basePoints": 1623.0,
+                "opponentPoints": 1497.86,
+                "gamesPlayed": 16
+            },
+            {
+                "opponent": "ThePuffins",
+                "record": "2-3-0",
+                "winPercentage": "40%",
+                "basePoints": 440.24,
+                "opponentPoints": 511.5,
+                "gamesPlayed": 5
+            },
+            {
+                "opponent": "TooManyCooks",
+                "record": "2-4-0",
+                "winPercentage": "33%",
+                "basePoints": 563.54,
+                "opponentPoints": 633.86,
+                "gamesPlayed": 6
+            },
+            {
+                "opponent": "pending",
+                "record": "4-5-0",
+                "winPercentage": "44%",
+                "basePoints": 872.9399999999999,
+                "opponentPoints": 904.5,
+                "gamesPlayed": 9
+            }
+        ],
+        "allTimeRecord": {
+            "record": "67-48-0",
+            "winPercentage": "58%",
+            "basePoints": 11548.04,
+            "opponentPoints": 11209.86,
+            "gamesPlayed": 115
+        }
+    },
+    "TheAligators": {
+        "opponentHistory": [
+            {
+                "opponent": "ATFootballTeam",
+                "record": "4-4-0",
+                "winPercentage": "50%",
+                "basePoints": 737.3199999999999,
+                "opponentPoints": 761.26,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "BearnaiseDynamics",
+                "record": "5-5-0",
+                "winPercentage": "50%",
+                "basePoints": 878.1800000000001,
+                "opponentPoints": 1002.04,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "FresnoFishHeads",
+                "record": "0-1-0",
+                "winPercentage": "0.%",
+                "basePoints": 83.8,
+                "opponentPoints": 99.4,
+                "gamesPlayed": 1
+            },
+            {
+                "opponent": "Kurlewless",
+                "record": "7-1-0",
+                "winPercentage": "87%",
+                "basePoints": 824.38,
+                "opponentPoints": 751.64,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "Leeannacondas",
+                "record": "2-6-0",
+                "winPercentage": "25%",
+                "basePoints": 731.86,
+                "opponentPoints": 850.24,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "LondonTanqs",
+                "record": "6-3-0",
+                "winPercentage": "66%",
+                "basePoints": 930.36,
+                "opponentPoints": 803.44,
+                "gamesPlayed": 9
+            },
+            {
+                "opponent": "MikkelsManatees",
+                "record": "12-3-0",
+                "winPercentage": "80%",
+                "basePoints": 1705.92,
+                "opponentPoints": 1333.1,
+                "gamesPlayed": 15
+            },
+            {
+                "opponent": "SERPION",
+                "record": "6-8-0",
+                "winPercentage": "42%",
+                "basePoints": 1473.22,
+                "opponentPoints": 1386.86,
+                "gamesPlayed": 14
+            },
+            {
+                "opponent": "StandardDeviations",
+                "record": "3-7-0",
+                "winPercentage": "30%",
+                "basePoints": 872.12,
+                "opponentPoints": 1107.7,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "TheBeerBarons",
+                "record": "11-6-0",
+                "winPercentage": "64%",
+                "basePoints": 1822.72,
+                "opponentPoints": 1691.92,
+                "gamesPlayed": 17
+            },
+            {
+                "opponent": "TheClairevilleCougars",
+                "record": "2-1-0",
+                "winPercentage": "66%",
+                "basePoints": 319.86,
+                "opponentPoints": 278.18,
+                "gamesPlayed": 3
+            },
+            {
+                "opponent": "TheDirtyBirds",
+                "record": "7-2-0",
+                "winPercentage": "77%",
+                "basePoints": 857.6800000000001,
+                "opponentPoints": 762.08,
+                "gamesPlayed": 9
+            },
+            {
+                "opponent": "TheHatters",
+                "record": "4-7-0",
+                "winPercentage": "36%",
+                "basePoints": 1090.2,
+                "opponentPoints": 1125.04,
+                "gamesPlayed": 11
+            },
+            {
+                "opponent": "ThePiggies",
+                "record": "3-4-0",
+                "winPercentage": "42%",
+                "basePoints": 691.96,
+                "opponentPoints": 659.4,
+                "gamesPlayed": 7
+            },
+            {
+                "opponent": "ThePuffins",
+                "record": "5-6-0",
+                "winPercentage": "45%",
+                "basePoints": 1168.46,
+                "opponentPoints": 1215.86,
+                "gamesPlayed": 11
+            },
+            {
+                "opponent": "TooManyCooks",
+                "record": "4-3-0",
+                "winPercentage": "57%",
+                "basePoints": 687.54,
+                "opponentPoints": 713.14,
+                "gamesPlayed": 7
+            },
+            {
+                "opponent": "pending",
+                "record": "7-2-0",
+                "winPercentage": "77%",
+                "basePoints": 986.38,
+                "opponentPoints": 788.1,
+                "gamesPlayed": 9
+            }
+        ],
+        "allTimeRecord": {
+            "record": "88-69-0",
+            "winPercentage": "56%",
+            "basePoints": 15861.96,
+            "opponentPoints": 15329.4,
+            "gamesPlayed": 157
+        }
+    },
+    "TooManyCooks": {
+        "opponentHistory": [
+            {
+                "opponent": "ATFootballTeam",
+                "record": "3-2-0",
+                "winPercentage": "60%",
+                "basePoints": 481.7,
+                "opponentPoints": 419.26,
+                "gamesPlayed": 5
+            },
+            {
+                "opponent": "BearnaiseDynamics",
+                "record": "6-2-0",
+                "winPercentage": "75%",
+                "basePoints": 877.74,
+                "opponentPoints": 665.88,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "FresnoFishHeads",
+                "record": "0-1-0",
+                "winPercentage": "0.%",
+                "basePoints": 86.3,
+                "opponentPoints": 131.32,
+                "gamesPlayed": 1
+            },
+            {
+                "opponent": "Kurlewless",
+                "record": "5-3-0",
+                "winPercentage": "62%",
+                "basePoints": 788.7,
+                "opponentPoints": 732.38,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "Leeannacondas",
+                "record": "4-2-0",
+                "winPercentage": "66%",
+                "basePoints": 633.86,
+                "opponentPoints": 563.54,
+                "gamesPlayed": 6
+            },
+            {
+                "opponent": "LondonTanqs",
+                "record": "0-4-0",
+                "winPercentage": "0.%",
+                "basePoints": 361.58000000000004,
+                "opponentPoints": 459.78,
+                "gamesPlayed": 4
+            },
+            {
+                "opponent": "MikkelsManatees",
+                "record": "5-1-0",
+                "winPercentage": "83%",
+                "basePoints": 546.0,
+                "opponentPoints": 457.46,
+                "gamesPlayed": 6
+            },
+            {
+                "opponent": "SERPION",
+                "record": "4-4-0",
+                "winPercentage": "50%",
+                "basePoints": 845.98,
+                "opponentPoints": 854.8199999999999,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "StandardDeviations",
+                "record": "3-2-0",
+                "winPercentage": "60%",
+                "basePoints": 474.32,
+                "opponentPoints": 398.88,
+                "gamesPlayed": 5
+            },
+            {
+                "opponent": "TheAligators",
+                "record": "3-4-0",
+                "winPercentage": "42%",
+                "basePoints": 713.14,
+                "opponentPoints": 687.54,
+                "gamesPlayed": 7
+            },
+            {
+                "opponent": "TheBeerBarons",
+                "record": "4-1-0",
+                "winPercentage": "80%",
+                "basePoints": 468.46,
+                "opponentPoints": 392.91999999999996,
+                "gamesPlayed": 5
+            },
+            {
+                "opponent": "TheDirtyBirds",
+                "record": "8-4-0",
+                "winPercentage": "66%",
+                "basePoints": 1210.52,
+                "opponentPoints": 1122.7,
+                "gamesPlayed": 12
+            },
+            {
+                "opponent": "TheHatters",
+                "record": "2-11-0",
+                "winPercentage": "15%",
+                "basePoints": 1120.66,
+                "opponentPoints": 1311.8799999999999,
+                "gamesPlayed": 13
+            },
+            {
+                "opponent": "ThePiggies",
+                "record": "4-4-0",
+                "winPercentage": "50%",
+                "basePoints": 771.9,
+                "opponentPoints": 733.44,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "ThePuffins",
+                "record": "4-3-0",
+                "winPercentage": "57%",
+                "basePoints": 625.58,
+                "opponentPoints": 661.3,
+                "gamesPlayed": 7
+            },
+            {
+                "opponent": "pending",
+                "record": "4-2-0",
+                "winPercentage": "66%",
+                "basePoints": 612.52,
+                "opponentPoints": 514.98,
+                "gamesPlayed": 6
+            }
+        ],
+        "allTimeRecord": {
+            "record": "59-50-0",
+            "winPercentage": "54%",
+            "basePoints": 10618.96,
+            "opponentPoints": 10108.08,
+            "gamesPlayed": 109
+        }
+    },
+    "MikkelsManatees": {
+        "opponentHistory": [
+            {
+                "opponent": "ATFootballTeam",
+                "record": "7-6-0",
+                "winPercentage": "53%",
+                "basePoints": 1118.62,
+                "opponentPoints": 1216.56,
+                "gamesPlayed": 13
+            },
+            {
+                "opponent": "BearnaiseDynamics",
+                "record": "6-8-0",
+                "winPercentage": "42%",
+                "basePoints": 1447.06,
+                "opponentPoints": 1431.0,
+                "gamesPlayed": 14
+            },
+            {
+                "opponent": "FresnoFishHeads",
+                "record": "1-0-0",
+                "winPercentage": "10%",
+                "basePoints": 134.84,
+                "opponentPoints": 114.46,
+                "gamesPlayed": 1
+            },
+            {
+                "opponent": "Kurlewless",
+                "record": "8-4-0",
+                "winPercentage": "66%",
+                "basePoints": 1193.96,
+                "opponentPoints": 1077.34,
+                "gamesPlayed": 12
+            },
+            {
+                "opponent": "Leeannacondas",
+                "record": "1-5-0",
+                "winPercentage": "16%",
+                "basePoints": 485.2,
+                "opponentPoints": 678.54,
+                "gamesPlayed": 6
+            },
+            {
+                "opponent": "LondonTanqs",
+                "record": "5-6-0",
+                "winPercentage": "45%",
+                "basePoints": 1041.0,
+                "opponentPoints": 1069.26,
+                "gamesPlayed": 11
+            },
+            {
+                "opponent": "SERPION",
+                "record": "4-8-0",
+                "winPercentage": "33%",
+                "basePoints": 1076.06,
+                "opponentPoints": 1290.58,
+                "gamesPlayed": 12
+            },
+            {
+                "opponent": "StandardDeviations",
+                "record": "6-5-0",
+                "winPercentage": "54%",
+                "basePoints": 993.56,
+                "opponentPoints": 1059.9,
+                "gamesPlayed": 11
+            },
+            {
+                "opponent": "TheAligators",
+                "record": "3-12-0",
+                "winPercentage": "20%",
+                "basePoints": 1333.1,
+                "opponentPoints": 1705.92,
+                "gamesPlayed": 15
+            },
+            {
+                "opponent": "TheBeerBarons",
+                "record": "5-5-0",
+                "winPercentage": "50%",
+                "basePoints": 926.22,
+                "opponentPoints": 1057.02,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "TheClairevilleCougars",
+                "record": "1-1-0",
+                "winPercentage": "50%",
+                "basePoints": 164.04000000000002,
+                "opponentPoints": 176.84,
+                "gamesPlayed": 2
+            },
+            {
+                "opponent": "TheDirtyBirds",
+                "record": "6-7-0",
+                "winPercentage": "46%",
+                "basePoints": 1198.64,
+                "opponentPoints": 1199.76,
+                "gamesPlayed": 13
+            },
+            {
+                "opponent": "TheHatters",
+                "record": "2-6-0",
+                "winPercentage": "25%",
+                "basePoints": 685.52,
+                "opponentPoints": 824.02,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "ThePiggies",
+                "record": "4-6-0",
+                "winPercentage": "40%",
+                "basePoints": 851.46,
+                "opponentPoints": 947.72,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "ThePuffins",
+                "record": "3-6-0",
+                "winPercentage": "33%",
+                "basePoints": 863.72,
+                "opponentPoints": 1053.3600000000001,
+                "gamesPlayed": 9
+            },
+            {
+                "opponent": "TooManyCooks",
+                "record": "1-5-0",
+                "winPercentage": "16%",
+                "basePoints": 457.46,
+                "opponentPoints": 546.0,
+                "gamesPlayed": 6
+            },
+            {
+                "opponent": "pending",
+                "record": "4-3-0",
+                "winPercentage": "57%",
+                "basePoints": 598.0,
+                "opponentPoints": 537.64,
+                "gamesPlayed": 7
+            }
+        ],
+        "allTimeRecord": {
+            "record": "67-93-0",
+            "winPercentage": "41%",
+            "basePoints": 14568.46,
+            "opponentPoints": 15985.92,
+            "gamesPlayed": 160
+        }
+    },
+    "ThePiggies": {
+        "opponentHistory": [
+            {
+                "opponent": "ATFootballTeam",
+                "record": "3-3-0",
+                "winPercentage": "50%",
+                "basePoints": 528.98,
+                "opponentPoints": 542.26,
+                "gamesPlayed": 6
+            },
+            {
+                "opponent": "BearnaiseDynamics",
+                "record": "1-5-0",
+                "winPercentage": "16%",
+                "basePoints": 517.06,
+                "opponentPoints": 652.54,
+                "gamesPlayed": 6
+            },
+            {
+                "opponent": "Kurlewless",
+                "record": "3-5-0",
+                "winPercentage": "37%",
+                "basePoints": 741.56,
+                "opponentPoints": 668.62,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "Leeannacondas",
+                "record": "6-10-0",
+                "winPercentage": "37%",
+                "basePoints": 1497.86,
+                "opponentPoints": 1623.0,
+                "gamesPlayed": 16
+            },
+            {
+                "opponent": "LondonTanqs",
+                "record": "4-4-0",
+                "winPercentage": "50%",
+                "basePoints": 833.1,
+                "opponentPoints": 784.32,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "MikkelsManatees",
+                "record": "6-4-0",
+                "winPercentage": "60%",
+                "basePoints": 947.72,
+                "opponentPoints": 851.46,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "SERPION",
+                "record": "4-5-0",
+                "winPercentage": "44%",
+                "basePoints": 795.72,
+                "opponentPoints": 983.64,
+                "gamesPlayed": 9
+            },
+            {
+                "opponent": "StandardDeviations",
+                "record": "2-6-0",
+                "winPercentage": "25%",
+                "basePoints": 641.74,
+                "opponentPoints": 796.16,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "TheAligators",
+                "record": "4-3-0",
+                "winPercentage": "57%",
+                "basePoints": 659.4,
+                "opponentPoints": 691.96,
+                "gamesPlayed": 7
+            },
+            {
+                "opponent": "TheBeerBarons",
+                "record": "1-6-0",
+                "winPercentage": "14%",
+                "basePoints": 593.3,
+                "opponentPoints": 785.24,
+                "gamesPlayed": 7
+            },
+            {
+                "opponent": "TheDirtyBirds",
+                "record": "6-5-0",
+                "winPercentage": "54%",
+                "basePoints": 997.68,
+                "opponentPoints": 1015.72,
+                "gamesPlayed": 11
+            },
+            {
+                "opponent": "TheHatters",
+                "record": "1-4-0",
+                "winPercentage": "20%",
+                "basePoints": 503.94,
+                "opponentPoints": 534.78,
+                "gamesPlayed": 5
+            },
+            {
+                "opponent": "ThePuffins",
+                "record": "5-5-0",
+                "winPercentage": "50%",
+                "basePoints": 1060.42,
+                "opponentPoints": 1060.48,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "TooManyCooks",
+                "record": "4-4-0",
+                "winPercentage": "50%",
+                "basePoints": 733.44,
+                "opponentPoints": 771.9,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "pending",
+                "record": "3-5-0",
+                "winPercentage": "37%",
+                "basePoints": 842.44,
+                "opponentPoints": 852.7,
+                "gamesPlayed": 8
+            }
+        ],
+        "allTimeRecord": {
+            "record": "53-74-0",
+            "winPercentage": "41%",
+            "basePoints": 11894.36,
+            "opponentPoints": 12614.78,
+            "gamesPlayed": 127
+        }
+    },
+    "SERPION": {
+        "opponentHistory": [
+            {
+                "opponent": "ATFootballTeam",
+                "record": "5-0-0",
+                "winPercentage": "10%",
+                "basePoints": 561.78,
+                "opponentPoints": 459.8,
+                "gamesPlayed": 5
+            },
+            {
+                "opponent": "BearnaiseDynamics",
+                "record": "3-8-0",
+                "winPercentage": "27%",
+                "basePoints": 991.74,
+                "opponentPoints": 1171.3,
+                "gamesPlayed": 11
+            },
+            {
+                "opponent": "FresnoFishHeads",
+                "record": "0-1-0",
+                "winPercentage": "0.%",
+                "basePoints": 0.0,
+                "opponentPoints": 20.0,
+                "gamesPlayed": 1
+            },
+            {
+                "opponent": "Kurlewless",
+                "record": "5-5-0",
+                "winPercentage": "50%",
+                "basePoints": 936.14,
+                "opponentPoints": 893.34,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "Leeannacondas",
+                "record": "2-7-0",
+                "winPercentage": "22%",
+                "basePoints": 929.5,
+                "opponentPoints": 1020.4,
+                "gamesPlayed": 9
+            },
+            {
+                "opponent": "LondonTanqs",
+                "record": "10-4-0",
+                "winPercentage": "71%",
+                "basePoints": 1385.14,
+                "opponentPoints": 1198.2,
+                "gamesPlayed": 14
+            },
+            {
+                "opponent": "MikkelsManatees",
+                "record": "8-4-0",
+                "winPercentage": "66%",
+                "basePoints": 1290.58,
+                "opponentPoints": 1076.06,
+                "gamesPlayed": 12
+            },
+            {
+                "opponent": "StandardDeviations",
+                "record": "3-3-0",
+                "winPercentage": "50%",
+                "basePoints": 634.1,
+                "opponentPoints": 630.34,
+                "gamesPlayed": 6
+            },
+            {
+                "opponent": "TheAligators",
+                "record": "8-6-0",
+                "winPercentage": "57%",
+                "basePoints": 1386.86,
+                "opponentPoints": 1473.22,
+                "gamesPlayed": 14
+            },
+            {
+                "opponent": "TheBeerBarons",
+                "record": "7-3-0",
+                "winPercentage": "70%",
+                "basePoints": 986.18,
+                "opponentPoints": 898.72,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "TheClairevilleCougars",
+                "record": "1-2-0",
+                "winPercentage": "33%",
+                "basePoints": 290.32,
+                "opponentPoints": 319.34000000000003,
+                "gamesPlayed": 3
+            },
+            {
+                "opponent": "TheDirtyBirds",
+                "record": "11-3-0",
+                "winPercentage": "78%",
+                "basePoints": 1544.48,
+                "opponentPoints": 1390.22,
+                "gamesPlayed": 14
+            },
+            {
+                "opponent": "TheHatters",
+                "record": "4-6-0",
+                "winPercentage": "40%",
+                "basePoints": 1048.34,
+                "opponentPoints": 1120.62,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "ThePiggies",
+                "record": "5-4-0",
+                "winPercentage": "55%",
+                "basePoints": 983.64,
+                "opponentPoints": 795.72,
+                "gamesPlayed": 9
+            },
+            {
+                "opponent": "ThePuffins",
+                "record": "4-6-0",
+                "winPercentage": "40%",
+                "basePoints": 914.32,
+                "opponentPoints": 1005.06,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "TooManyCooks",
+                "record": "4-4-0",
+                "winPercentage": "50%",
+                "basePoints": 854.8199999999999,
+                "opponentPoints": 845.98,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "pending",
+                "record": "6-5-0",
+                "winPercentage": "54%",
+                "basePoints": 1069.4,
+                "opponentPoints": 1027.4,
+                "gamesPlayed": 11
+            }
+        ],
+        "allTimeRecord": {
+            "record": "86-71-0",
+            "winPercentage": "54%",
+            "basePoints": 15807.34,
+            "opponentPoints": 15345.72,
+            "gamesPlayed": 157
+        }
+    },
+    "FresnoFishHeads": {
+        "opponentHistory": [
+            {
+                "opponent": "Kurlewless",
+                "record": "1-0-0",
+                "winPercentage": "10%",
+                "basePoints": 82.6,
+                "opponentPoints": 70.04,
+                "gamesPlayed": 1
+            },
+            {
+                "opponent": "Leeannacondas",
+                "record": "0-1-0",
+                "winPercentage": "0.%",
+                "basePoints": 91.72,
+                "opponentPoints": 105.42,
+                "gamesPlayed": 1
+            },
+            {
+                "opponent": "LondonTanqs",
+                "record": "1-0-0",
+                "winPercentage": "10%",
+                "basePoints": 82.38,
+                "opponentPoints": 70.56,
+                "gamesPlayed": 1
+            },
+            {
+                "opponent": "MikkelsManatees",
+                "record": "0-1-0",
+                "winPercentage": "0.%",
+                "basePoints": 114.46,
+                "opponentPoints": 134.84,
+                "gamesPlayed": 1
+            },
+            {
+                "opponent": "SERPION",
+                "record": "1-0-0",
+                "winPercentage": "10%",
+                "basePoints": 20.0,
+                "opponentPoints": 0.0,
+                "gamesPlayed": 1
+            },
+            {
+                "opponent": "StandardDeviations",
+                "record": "0-1-0",
+                "winPercentage": "0.%",
+                "basePoints": 80.62,
+                "opponentPoints": 96.14,
+                "gamesPlayed": 1
+            },
+            {
+                "opponent": "TheAligators",
+                "record": "1-0-0",
+                "winPercentage": "10%",
+                "basePoints": 99.4,
+                "opponentPoints": 83.8,
+                "gamesPlayed": 1
+            },
+            {
+                "opponent": "TheDirtyBirds",
+                "record": "1-0-0",
+                "winPercentage": "10%",
+                "basePoints": 66.86,
+                "opponentPoints": 60.06,
+                "gamesPlayed": 1
+            },
+            {
+                "opponent": "TheHatters",
+                "record": "1-0-0",
+                "winPercentage": "10%",
+                "basePoints": 110.52,
+                "opponentPoints": 110.08,
+                "gamesPlayed": 1
+            },
+            {
+                "opponent": "TooManyCooks",
+                "record": "1-0-0",
+                "winPercentage": "10%",
+                "basePoints": 131.32,
+                "opponentPoints": 86.3,
+                "gamesPlayed": 1
+            }
+        ],
+        "allTimeRecord": {
+            "record": "7-3-0",
+            "winPercentage": "70%",
+            "basePoints": 879.88,
+            "opponentPoints": 817.24,
+            "gamesPlayed": 10
+        }
+    },
+    "Kurlewless": {
+        "opponentHistory": [
+            {
+                "opponent": "ATFootballTeam",
+                "record": "5-4-0",
+                "winPercentage": "55%",
+                "basePoints": 884.4399999999999,
+                "opponentPoints": 851.88,
+                "gamesPlayed": 9
+            },
+            {
+                "opponent": "BearnaiseDynamics",
+                "record": "5-12-0",
+                "winPercentage": "29%",
+                "basePoints": 1620.76,
+                "opponentPoints": 1778.66,
+                "gamesPlayed": 17
+            },
+            {
+                "opponent": "FresnoFishHeads",
+                "record": "0-1-0",
+                "winPercentage": "0.%",
+                "basePoints": 70.04,
+                "opponentPoints": 82.6,
+                "gamesPlayed": 1
+            },
+            {
+                "opponent": "Leeannacondas",
+                "record": "4-3-0",
+                "winPercentage": "57%",
+                "basePoints": 639.52,
+                "opponentPoints": 631.92,
+                "gamesPlayed": 7
+            },
+            {
+                "opponent": "LondonTanqs",
+                "record": "6-3-0",
+                "winPercentage": "66%",
+                "basePoints": 890.34,
+                "opponentPoints": 823.02,
+                "gamesPlayed": 9
+            },
+            {
+                "opponent": "MikkelsManatees",
+                "record": "4-8-0",
+                "winPercentage": "33%",
+                "basePoints": 1077.34,
+                "opponentPoints": 1193.96,
+                "gamesPlayed": 12
+            },
+            {
+                "opponent": "SERPION",
+                "record": "5-5-0",
+                "winPercentage": "50%",
+                "basePoints": 893.34,
+                "opponentPoints": 936.14,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "StandardDeviations",
+                "record": "4-11-0",
+                "winPercentage": "26%",
+                "basePoints": 1332.22,
+                "opponentPoints": 1534.52,
+                "gamesPlayed": 15
+            },
+            {
+                "opponent": "TheAligators",
+                "record": "1-7-0",
+                "winPercentage": "12%",
+                "basePoints": 751.64,
+                "opponentPoints": 824.38,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "TheBeerBarons",
+                "record": "5-5-0",
+                "winPercentage": "50%",
+                "basePoints": 979.9200000000001,
+                "opponentPoints": 876.0,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "TheClairevilleCougars",
+                "record": "0-1-0",
+                "winPercentage": "0.%",
+                "basePoints": 84.54,
+                "opponentPoints": 106.12,
+                "gamesPlayed": 1
+            },
+            {
+                "opponent": "TheDirtyBirds",
+                "record": "5-3-0",
+                "winPercentage": "62%",
+                "basePoints": 749.8199999999999,
+                "opponentPoints": 726.86,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "TheHatters",
+                "record": "5-5-0",
+                "winPercentage": "50%",
+                "basePoints": 925.8,
+                "opponentPoints": 953.22,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "ThePiggies",
+                "record": "5-3-0",
+                "winPercentage": "62%",
+                "basePoints": 668.62,
+                "opponentPoints": 741.56,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "ThePuffins",
+                "record": "6-5-0",
+                "winPercentage": "54%",
+                "basePoints": 1237.0,
+                "opponentPoints": 1125.18,
+                "gamesPlayed": 11
+            },
+            {
+                "opponent": "TooManyCooks",
+                "record": "3-5-0",
+                "winPercentage": "37%",
+                "basePoints": 732.38,
+                "opponentPoints": 788.7,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "pending",
+                "record": "1-3-0",
+                "winPercentage": "25%",
+                "basePoints": 352.7,
+                "opponentPoints": 347.0,
+                "gamesPlayed": 4
+            }
+        ],
+        "allTimeRecord": {
+            "record": "64-84-0",
+            "winPercentage": "43%",
+            "basePoints": 13890.42,
+            "opponentPoints": 14321.72,
+            "gamesPlayed": 148
+        }
+    },
+    "LondonTanqs": {
+        "opponentHistory": [
+            {
+                "opponent": "ATFootballTeam",
+                "record": "4-5-0",
+                "winPercentage": "44%",
+                "basePoints": 870.0600000000001,
+                "opponentPoints": 937.5,
+                "gamesPlayed": 9
+            },
+            {
+                "opponent": "BearnaiseDynamics",
+                "record": "6-7-0",
+                "winPercentage": "46%",
+                "basePoints": 1226.78,
+                "opponentPoints": 1348.78,
+                "gamesPlayed": 13
+            },
+            {
+                "opponent": "FresnoFishHeads",
+                "record": "0-1-0",
+                "winPercentage": "0.%",
+                "basePoints": 70.56,
+                "opponentPoints": 82.38,
+                "gamesPlayed": 1
+            },
+            {
+                "opponent": "Kurlewless",
+                "record": "3-6-0",
+                "winPercentage": "33%",
+                "basePoints": 823.02,
+                "opponentPoints": 890.34,
+                "gamesPlayed": 9
+            },
+            {
+                "opponent": "Leeannacondas",
+                "record": "2-6-0",
+                "winPercentage": "25%",
+                "basePoints": 790.74,
+                "opponentPoints": 787.24,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "MikkelsManatees",
+                "record": "6-5-0",
+                "winPercentage": "54%",
+                "basePoints": 1069.26,
+                "opponentPoints": 1041.0,
+                "gamesPlayed": 11
+            },
+            {
+                "opponent": "SERPION",
+                "record": "4-10-0",
+                "winPercentage": "28%",
+                "basePoints": 1198.2,
+                "opponentPoints": 1385.14,
+                "gamesPlayed": 14
+            },
+            {
+                "opponent": "StandardDeviations",
+                "record": "4-8-0",
+                "winPercentage": "33%",
+                "basePoints": 1230.72,
+                "opponentPoints": 1325.3600000000001,
+                "gamesPlayed": 12
+            },
+            {
+                "opponent": "TheAligators",
+                "record": "3-6-0",
+                "winPercentage": "33%",
+                "basePoints": 803.44,
+                "opponentPoints": 930.36,
+                "gamesPlayed": 9
+            },
+            {
+                "opponent": "TheBeerBarons",
+                "record": "9-9-0",
+                "winPercentage": "50%",
+                "basePoints": 1683.5,
+                "opponentPoints": 1749.04,
+                "gamesPlayed": 18
+            },
+            {
+                "opponent": "TheClairevilleCougars",
+                "record": "0-2-0",
+                "winPercentage": "0.%",
+                "basePoints": 161.66,
+                "opponentPoints": 217.22,
+                "gamesPlayed": 2
+            },
+            {
+                "opponent": "TheDirtyBirds",
+                "record": "8-4-0",
+                "winPercentage": "66%",
+                "basePoints": 1191.6,
+                "opponentPoints": 1086.34,
+                "gamesPlayed": 12
+            },
+            {
+                "opponent": "TheHatters",
+                "record": "4-6-0",
+                "winPercentage": "40%",
+                "basePoints": 1050.04,
+                "opponentPoints": 1134.18,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "ThePiggies",
+                "record": "4-4-0",
+                "winPercentage": "50%",
+                "basePoints": 784.32,
+                "opponentPoints": 833.1,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "ThePuffins",
+                "record": "5-5-0",
+                "winPercentage": "50%",
+                "basePoints": 1046.0,
+                "opponentPoints": 1071.36,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "TooManyCooks",
+                "record": "4-0-0",
+                "winPercentage": "10%",
+                "basePoints": 459.78,
+                "opponentPoints": 361.58000000000004,
+                "gamesPlayed": 4
+            },
+            {
+                "opponent": "pending",
+                "record": "4-4-0",
+                "winPercentage": "50%",
+                "basePoints": 817.54,
+                "opponentPoints": 711.88,
+                "gamesPlayed": 8
+            }
+        ],
+        "allTimeRecord": {
+            "record": "70-88-0",
+            "winPercentage": "44%",
+            "basePoints": 15277.22,
+            "opponentPoints": 15892.8,
+            "gamesPlayed": 158
+        }
+    },
+    "BearnaiseDynamics": {
+        "opponentHistory": [
+            {
+                "opponent": "ATFootballTeam",
+                "record": "6-2-0",
+                "winPercentage": "75%",
+                "basePoints": 880.44,
+                "opponentPoints": 817.5,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "Kurlewless",
+                "record": "12-5-0",
+                "winPercentage": "70%",
+                "basePoints": 1778.66,
+                "opponentPoints": 1620.76,
+                "gamesPlayed": 17
+            },
+            {
+                "opponent": "Leeannacondas",
+                "record": "4-2-0",
+                "winPercentage": "66%",
+                "basePoints": 716.72,
+                "opponentPoints": 658.14,
+                "gamesPlayed": 6
+            },
+            {
+                "opponent": "LondonTanqs",
+                "record": "7-6-0",
+                "winPercentage": "53%",
+                "basePoints": 1348.78,
+                "opponentPoints": 1226.78,
+                "gamesPlayed": 13
+            },
+            {
+                "opponent": "MikkelsManatees",
+                "record": "8-6-0",
+                "winPercentage": "57%",
+                "basePoints": 1431.0,
+                "opponentPoints": 1447.06,
+                "gamesPlayed": 14
+            },
+            {
+                "opponent": "SERPION",
+                "record": "8-3-0",
+                "winPercentage": "72%",
+                "basePoints": 1171.3,
+                "opponentPoints": 991.74,
+                "gamesPlayed": 11
+            },
+            {
+                "opponent": "StandardDeviations",
+                "record": "12-5-0",
+                "winPercentage": "70%",
+                "basePoints": 1761.9,
+                "opponentPoints": 1617.74,
+                "gamesPlayed": 17
+            },
+            {
+                "opponent": "TheAligators",
+                "record": "5-5-0",
+                "winPercentage": "50%",
+                "basePoints": 1002.04,
+                "opponentPoints": 878.1800000000001,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "TheBeerBarons",
+                "record": "4-5-0",
+                "winPercentage": "44%",
+                "basePoints": 893.5,
+                "opponentPoints": 930.52,
+                "gamesPlayed": 9
+            },
+            {
+                "opponent": "TheClairevilleCougars",
+                "record": "1-3-0",
+                "winPercentage": "25%",
+                "basePoints": 373.5,
+                "opponentPoints": 386.48,
+                "gamesPlayed": 4
+            },
+            {
+                "opponent": "TheDirtyBirds",
+                "record": "8-3-0",
+                "winPercentage": "72%",
+                "basePoints": 1212.1,
+                "opponentPoints": 1018.54,
+                "gamesPlayed": 11
+            },
+            {
+                "opponent": "TheHatters",
+                "record": "4-6-0",
+                "winPercentage": "40%",
+                "basePoints": 1134.24,
+                "opponentPoints": 1169.2,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "ThePiggies",
+                "record": "5-1-0",
+                "winPercentage": "83%",
+                "basePoints": 652.54,
+                "opponentPoints": 517.06,
+                "gamesPlayed": 6
+            },
+            {
+                "opponent": "ThePuffins",
+                "record": "12-5-0",
+                "winPercentage": "70%",
+                "basePoints": 1773.52,
+                "opponentPoints": 1477.04,
+                "gamesPlayed": 17
+            },
+            {
+                "opponent": "TooManyCooks",
+                "record": "2-6-0",
+                "winPercentage": "25%",
+                "basePoints": 665.88,
+                "opponentPoints": 877.74,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "pending",
+                "record": "2-1-0",
+                "winPercentage": "66%",
+                "basePoints": 334.44,
+                "opponentPoints": 268.0,
+                "gamesPlayed": 3
+            }
+        ],
+        "allTimeRecord": {
+            "record": "100-64-0",
+            "winPercentage": "60%",
+            "basePoints": 17130.56,
+            "opponentPoints": 15902.48,
+            "gamesPlayed": 164
+        }
+    },
+    "TheBeerBarons": {
+        "opponentHistory": [
+            {
+                "opponent": "ATFootballTeam",
+                "record": "9-2-0",
+                "winPercentage": "81%",
+                "basePoints": 1060.62,
+                "opponentPoints": 1025.72,
+                "gamesPlayed": 11
+            },
+            {
+                "opponent": "BearnaiseDynamics",
+                "record": "5-4-0",
+                "winPercentage": "55%",
+                "basePoints": 930.52,
+                "opponentPoints": 893.5,
+                "gamesPlayed": 9
+            },
+            {
+                "opponent": "Kurlewless",
+                "record": "5-5-0",
+                "winPercentage": "50%",
+                "basePoints": 876.0,
+                "opponentPoints": 979.9200000000001,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "Leeannacondas",
+                "record": "2-5-0",
+                "winPercentage": "28%",
+                "basePoints": 610.1800000000001,
+                "opponentPoints": 673.04,
+                "gamesPlayed": 7
+            },
+            {
+                "opponent": "LondonTanqs",
+                "record": "9-9-0",
+                "winPercentage": "50%",
+                "basePoints": 1749.04,
+                "opponentPoints": 1683.5,
+                "gamesPlayed": 18
+            },
+            {
+                "opponent": "MikkelsManatees",
+                "record": "5-5-0",
+                "winPercentage": "50%",
+                "basePoints": 1057.02,
+                "opponentPoints": 926.22,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "SERPION",
+                "record": "3-7-0",
+                "winPercentage": "30%",
+                "basePoints": 898.72,
+                "opponentPoints": 986.18,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "StandardDeviations",
+                "record": "10-5-0",
+                "winPercentage": "66%",
+                "basePoints": 1591.6,
+                "opponentPoints": 1405.9,
+                "gamesPlayed": 15
+            },
+            {
+                "opponent": "TheAligators",
+                "record": "6-11-0",
+                "winPercentage": "35%",
+                "basePoints": 1691.92,
+                "opponentPoints": 1822.72,
+                "gamesPlayed": 17
+            },
+            {
+                "opponent": "TheClairevilleCougars",
+                "record": "2-2-0",
+                "winPercentage": "50%",
+                "basePoints": 489.5,
+                "opponentPoints": 487.64,
+                "gamesPlayed": 4
+            },
+            {
+                "opponent": "TheDirtyBirds",
+                "record": "3-4-0",
+                "winPercentage": "42%",
+                "basePoints": 622.48,
+                "opponentPoints": 693.62,
+                "gamesPlayed": 7
+            },
+            {
+                "opponent": "TheHatters",
+                "record": "4-4-0",
+                "winPercentage": "50%",
+                "basePoints": 793.88,
+                "opponentPoints": 765.7,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "ThePiggies",
+                "record": "6-1-0",
+                "winPercentage": "85%",
+                "basePoints": 785.24,
+                "opponentPoints": 593.3,
+                "gamesPlayed": 7
+            },
+            {
+                "opponent": "ThePuffins",
+                "record": "5-8-0",
+                "winPercentage": "38%",
+                "basePoints": 1421.48,
+                "opponentPoints": 1542.4,
+                "gamesPlayed": 13
+            },
+            {
+                "opponent": "TooManyCooks",
+                "record": "1-4-0",
+                "winPercentage": "20%",
+                "basePoints": 392.91999999999996,
+                "opponentPoints": 468.46,
+                "gamesPlayed": 5
+            },
+            {
+                "opponent": "pending",
+                "record": "3-3-0",
+                "winPercentage": "50%",
+                "basePoints": 549.3,
+                "opponentPoints": 551.76,
+                "gamesPlayed": 6
+            }
+        ],
+        "allTimeRecord": {
+            "record": "78-79-0",
+            "winPercentage": "49%",
+            "basePoints": 15520.42,
+            "opponentPoints": 15499.58,
+            "gamesPlayed": 157
+        }
+    },
+    "ThePuffins": {
+        "opponentHistory": [
+            {
+                "opponent": "ATFootballTeam",
+                "record": "6-2-0",
+                "winPercentage": "75%",
+                "basePoints": 782.6,
+                "opponentPoints": 628.56,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "BearnaiseDynamics",
+                "record": "5-12-0",
+                "winPercentage": "29%",
+                "basePoints": 1477.04,
+                "opponentPoints": 1773.52,
+                "gamesPlayed": 17
+            },
+            {
+                "opponent": "Kurlewless",
+                "record": "5-6-0",
+                "winPercentage": "45%",
+                "basePoints": 1125.18,
+                "opponentPoints": 1237.0,
+                "gamesPlayed": 11
+            },
+            {
+                "opponent": "Leeannacondas",
+                "record": "3-2-0",
+                "winPercentage": "60%",
+                "basePoints": 511.5,
+                "opponentPoints": 440.24,
+                "gamesPlayed": 5
+            },
+            {
+                "opponent": "LondonTanqs",
+                "record": "5-5-0",
+                "winPercentage": "50%",
+                "basePoints": 1071.36,
+                "opponentPoints": 1046.0,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "MikkelsManatees",
+                "record": "6-3-0",
+                "winPercentage": "66%",
+                "basePoints": 1053.3600000000001,
+                "opponentPoints": 863.72,
+                "gamesPlayed": 9
+            },
+            {
+                "opponent": "SERPION",
+                "record": "6-4-0",
+                "winPercentage": "60%",
+                "basePoints": 1005.06,
+                "opponentPoints": 914.32,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "StandardDeviations",
+                "record": "9-4-0",
+                "winPercentage": "69%",
+                "basePoints": 1299.26,
+                "opponentPoints": 1125.92,
+                "gamesPlayed": 13
+            },
+            {
+                "opponent": "TheAligators",
+                "record": "6-5-0",
+                "winPercentage": "54%",
+                "basePoints": 1215.86,
+                "opponentPoints": 1168.46,
+                "gamesPlayed": 11
+            },
+            {
+                "opponent": "TheBeerBarons",
+                "record": "8-5-0",
+                "winPercentage": "61%",
+                "basePoints": 1542.4,
+                "opponentPoints": 1421.48,
+                "gamesPlayed": 13
+            },
+            {
+                "opponent": "TheClairevilleCougars",
+                "record": "3-1-0",
+                "winPercentage": "75%",
+                "basePoints": 490.34000000000003,
+                "opponentPoints": 454.1,
+                "gamesPlayed": 4
+            },
+            {
+                "opponent": "TheDirtyBirds",
+                "record": "7-7-0",
+                "winPercentage": "50%",
+                "basePoints": 1469.1399999999999,
+                "opponentPoints": 1385.72,
+                "gamesPlayed": 14
+            },
+            {
+                "opponent": "TheHatters",
+                "record": "7-4-0",
+                "winPercentage": "63%",
+                "basePoints": 1148.76,
+                "opponentPoints": 975.04,
+                "gamesPlayed": 11
+            },
+            {
+                "opponent": "ThePiggies",
+                "record": "5-5-0",
+                "winPercentage": "50%",
+                "basePoints": 1060.48,
+                "opponentPoints": 1060.42,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "TooManyCooks",
+                "record": "3-4-0",
+                "winPercentage": "42%",
+                "basePoints": 661.3,
+                "opponentPoints": 625.58,
+                "gamesPlayed": 7
+            },
+            {
+                "opponent": "pending",
+                "record": "5-3-0",
+                "winPercentage": "62%",
+                "basePoints": 824.94,
+                "opponentPoints": 715.46,
+                "gamesPlayed": 8
+            }
+        ],
+        "allTimeRecord": {
+            "record": "89-72-0",
+            "winPercentage": "55%",
+            "basePoints": 16738.58,
+            "opponentPoints": 15835.54,
+            "gamesPlayed": 161
+        }
+    },
+    "TheDirtyBirds": {
+        "opponentHistory": [
+            {
+                "opponent": "ATFootballTeam",
+                "record": "3-2-0",
+                "winPercentage": "60%",
+                "basePoints": 436.05999999999995,
+                "opponentPoints": 439.06,
+                "gamesPlayed": 5
+            },
+            {
+                "opponent": "BearnaiseDynamics",
+                "record": "3-8-0",
+                "winPercentage": "27%",
+                "basePoints": 1018.54,
+                "opponentPoints": 1212.1,
+                "gamesPlayed": 11
+            },
+            {
+                "opponent": "FresnoFishHeads",
+                "record": "0-1-0",
+                "winPercentage": "0.%",
+                "basePoints": 60.06,
+                "opponentPoints": 66.86,
+                "gamesPlayed": 1
+            },
+            {
+                "opponent": "Kurlewless",
+                "record": "3-5-0",
+                "winPercentage": "37%",
+                "basePoints": 726.86,
+                "opponentPoints": 749.8199999999999,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "Leeannacondas",
+                "record": "4-2-0",
+                "winPercentage": "66%",
+                "basePoints": 660.74,
+                "opponentPoints": 582.62,
+                "gamesPlayed": 6
+            },
+            {
+                "opponent": "LondonTanqs",
+                "record": "4-8-0",
+                "winPercentage": "33%",
+                "basePoints": 1086.34,
+                "opponentPoints": 1191.6,
+                "gamesPlayed": 12
+            },
+            {
+                "opponent": "MikkelsManatees",
+                "record": "7-6-0",
+                "winPercentage": "53%",
+                "basePoints": 1199.76,
+                "opponentPoints": 1198.64,
+                "gamesPlayed": 13
+            },
+            {
+                "opponent": "SERPION",
+                "record": "3-11-0",
+                "winPercentage": "21%",
+                "basePoints": 1390.22,
+                "opponentPoints": 1544.48,
+                "gamesPlayed": 14
+            },
+            {
+                "opponent": "StandardDeviations",
+                "record": "7-5-0",
+                "winPercentage": "58%",
+                "basePoints": 1203.08,
+                "opponentPoints": 1199.78,
+                "gamesPlayed": 12
+            },
+            {
+                "opponent": "TheAligators",
+                "record": "2-7-0",
+                "winPercentage": "22%",
+                "basePoints": 762.08,
+                "opponentPoints": 857.6800000000001,
+                "gamesPlayed": 9
+            },
+            {
+                "opponent": "TheBeerBarons",
+                "record": "4-3-0",
+                "winPercentage": "57%",
+                "basePoints": 693.62,
+                "opponentPoints": 622.48,
+                "gamesPlayed": 7
+            },
+            {
+                "opponent": "TheClairevilleCougars",
+                "record": "2-1-0",
+                "winPercentage": "66%",
+                "basePoints": 301.38,
+                "opponentPoints": 305.38,
+                "gamesPlayed": 3
+            },
+            {
+                "opponent": "TheHatters",
+                "record": "4-9-0",
+                "winPercentage": "30%",
+                "basePoints": 1173.6,
+                "opponentPoints": 1331.02,
+                "gamesPlayed": 13
+            },
+            {
+                "opponent": "ThePiggies",
+                "record": "5-6-0",
+                "winPercentage": "45%",
+                "basePoints": 1015.72,
+                "opponentPoints": 997.68,
+                "gamesPlayed": 11
+            },
+            {
+                "opponent": "ThePuffins",
+                "record": "7-7-0",
+                "winPercentage": "50%",
+                "basePoints": 1385.72,
+                "opponentPoints": 1469.1399999999999,
+                "gamesPlayed": 14
+            },
+            {
+                "opponent": "TooManyCooks",
+                "record": "4-8-0",
+                "winPercentage": "33%",
+                "basePoints": 1122.7,
+                "opponentPoints": 1210.52,
+                "gamesPlayed": 12
+            },
+            {
+                "opponent": "pending",
+                "record": "6-2-0",
+                "winPercentage": "75%",
+                "basePoints": 763.4399999999999,
+                "opponentPoints": 672.48,
+                "gamesPlayed": 8
+            }
+        ],
+        "allTimeRecord": {
+            "record": "68-91-0",
+            "winPercentage": "42%",
+            "basePoints": 14999.92,
+            "opponentPoints": 15651.34,
+            "gamesPlayed": 159
+        }
+    },
+    "ATFootballTeam": {
+        "opponentHistory": [
+            {
+                "opponent": "BearnaiseDynamics",
+                "record": "2-6-0",
+                "winPercentage": "25%",
+                "basePoints": 817.5,
+                "opponentPoints": 880.44,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "Kurlewless",
+                "record": "4-5-0",
+                "winPercentage": "44%",
+                "basePoints": 851.88,
+                "opponentPoints": 884.4399999999999,
+                "gamesPlayed": 9
+            },
+            {
+                "opponent": "Leeannacondas",
+                "record": "3-4-0",
+                "winPercentage": "42%",
+                "basePoints": 659.84,
+                "opponentPoints": 613.02,
+                "gamesPlayed": 7
+            },
+            {
+                "opponent": "LondonTanqs",
+                "record": "5-4-0",
+                "winPercentage": "55%",
+                "basePoints": 937.5,
+                "opponentPoints": 870.0600000000001,
+                "gamesPlayed": 9
+            },
+            {
+                "opponent": "MikkelsManatees",
+                "record": "6-7-0",
+                "winPercentage": "46%",
+                "basePoints": 1216.56,
+                "opponentPoints": 1118.62,
+                "gamesPlayed": 13
+            },
+            {
+                "opponent": "SERPION",
+                "record": "0-5-0",
+                "winPercentage": "0.%",
+                "basePoints": 459.8,
+                "opponentPoints": 561.78,
+                "gamesPlayed": 5
+            },
+            {
+                "opponent": "StandardDeviations",
+                "record": "5-6-0",
+                "winPercentage": "45%",
+                "basePoints": 1000.14,
+                "opponentPoints": 1034.84,
+                "gamesPlayed": 11
+            },
+            {
+                "opponent": "TheAligators",
+                "record": "4-4-0",
+                "winPercentage": "50%",
+                "basePoints": 761.26,
+                "opponentPoints": 737.3199999999999,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "TheBeerBarons",
+                "record": "2-9-0",
+                "winPercentage": "18%",
+                "basePoints": 1025.72,
+                "opponentPoints": 1060.62,
+                "gamesPlayed": 11
+            },
+            {
+                "opponent": "TheDirtyBirds",
+                "record": "2-3-0",
+                "winPercentage": "40%",
+                "basePoints": 439.06,
+                "opponentPoints": 436.05999999999995,
+                "gamesPlayed": 5
+            },
+            {
+                "opponent": "TheHatters",
+                "record": "1-2-0",
+                "winPercentage": "33%",
+                "basePoints": 264.22,
+                "opponentPoints": 302.91999999999996,
+                "gamesPlayed": 3
+            },
+            {
+                "opponent": "ThePiggies",
+                "record": "3-3-0",
+                "winPercentage": "50%",
+                "basePoints": 542.26,
+                "opponentPoints": 528.98,
+                "gamesPlayed": 6
+            },
+            {
+                "opponent": "ThePuffins",
+                "record": "2-6-0",
+                "winPercentage": "25%",
+                "basePoints": 628.56,
+                "opponentPoints": 782.6,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "TooManyCooks",
+                "record": "2-3-0",
+                "winPercentage": "40%",
+                "basePoints": 419.26,
+                "opponentPoints": 481.7,
+                "gamesPlayed": 5
+            },
+            {
+                "opponent": "pending",
+                "record": "1-4-0",
+                "winPercentage": "20%",
+                "basePoints": 427.0,
+                "opponentPoints": 439.08000000000004,
+                "gamesPlayed": 5
+            }
+        ],
+        "allTimeRecord": {
+            "record": "42-71-0",
+            "winPercentage": "37%",
+            "basePoints": 10450.56,
+            "opponentPoints": 10732.48,
+            "gamesPlayed": 113
+        }
+    },
+    "TheHatters": {
+        "opponentHistory": [
+            {
+                "opponent": "ATFootballTeam",
+                "record": "2-1-0",
+                "winPercentage": "66%",
+                "basePoints": 302.91999999999996,
+                "opponentPoints": 264.22,
+                "gamesPlayed": 3
+            },
+            {
+                "opponent": "BearnaiseDynamics",
+                "record": "6-4-0",
+                "winPercentage": "60%",
+                "basePoints": 1169.2,
+                "opponentPoints": 1134.24,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "FresnoFishHeads",
+                "record": "0-1-0",
+                "winPercentage": "0.%",
+                "basePoints": 110.08,
+                "opponentPoints": 110.52,
+                "gamesPlayed": 1
+            },
+            {
+                "opponent": "Kurlewless",
+                "record": "5-5-0",
+                "winPercentage": "50%",
+                "basePoints": 953.22,
+                "opponentPoints": 925.8,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "Leeannacondas",
+                "record": "4-3-0",
+                "winPercentage": "57%",
+                "basePoints": 687.08,
+                "opponentPoints": 713.52,
+                "gamesPlayed": 7
+            },
+            {
+                "opponent": "LondonTanqs",
+                "record": "6-4-0",
+                "winPercentage": "60%",
+                "basePoints": 1134.18,
+                "opponentPoints": 1050.04,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "MikkelsManatees",
+                "record": "6-2-0",
+                "winPercentage": "75%",
+                "basePoints": 824.02,
+                "opponentPoints": 685.52,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "SERPION",
+                "record": "6-4-0",
+                "winPercentage": "60%",
+                "basePoints": 1120.62,
+                "opponentPoints": 1048.34,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "StandardDeviations",
+                "record": "8-2-0",
+                "winPercentage": "80%",
+                "basePoints": 1132.52,
+                "opponentPoints": 950.18,
+                "gamesPlayed": 10
+            },
+            {
+                "opponent": "TheAligators",
+                "record": "7-4-0",
+                "winPercentage": "63%",
+                "basePoints": 1125.04,
+                "opponentPoints": 1090.2,
+                "gamesPlayed": 11
+            },
+            {
+                "opponent": "TheBeerBarons",
+                "record": "4-4-0",
+                "winPercentage": "50%",
+                "basePoints": 765.7,
+                "opponentPoints": 793.88,
+                "gamesPlayed": 8
+            },
+            {
+                "opponent": "TheClairevilleCougars",
+                "record": "1-1-0",
+                "winPercentage": "50%",
+                "basePoints": 227.32,
+                "opponentPoints": 216.83999999999997,
+                "gamesPlayed": 2
+            },
+            {
+                "opponent": "TheDirtyBirds",
+                "record": "9-4-0",
+                "winPercentage": "69%",
+                "basePoints": 1331.02,
+                "opponentPoints": 1173.6,
+                "gamesPlayed": 13
+            },
+            {
+                "opponent": "ThePiggies",
+                "record": "4-1-0",
+                "winPercentage": "80%",
+                "basePoints": 534.78,
+                "opponentPoints": 503.94,
+                "gamesPlayed": 5
+            },
+            {
+                "opponent": "ThePuffins",
+                "record": "4-7-0",
+                "winPercentage": "36%",
+                "basePoints": 975.04,
+                "opponentPoints": 1148.76,
+                "gamesPlayed": 11
+            },
+            {
+                "opponent": "TooManyCooks",
+                "record": "11-2-0",
+                "winPercentage": "84%",
+                "basePoints": 1311.8799999999999,
+                "opponentPoints": 1120.66,
+                "gamesPlayed": 13
+            },
+            {
+                "opponent": "pending",
+                "record": "5-6-0",
+                "winPercentage": "45%",
+                "basePoints": 1089.3,
+                "opponentPoints": 1123.92,
+                "gamesPlayed": 11
+            }
+        ],
+        "allTimeRecord": {
+            "record": "88-55-0",
+            "winPercentage": "61%",
+            "basePoints": 14793.92,
+            "opponentPoints": 14054.18,
+            "gamesPlayed": 143
+        }
+    }
+}

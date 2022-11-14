@@ -1,10 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import OpponentList from "./List";
 
 function App() {
   return (
     <div className="App">
-      
+      <OpponentList />
     </div>
   );
 }
