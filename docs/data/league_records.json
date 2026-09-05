@@ -41,7 +41,9 @@
       "2019": 13,
       "2020": 13,
       "2021": 14,
-      "2022": 14
+      "2022": 14,
+      "2023": 14,
+      "2024": 14
     },
     "bracketSeasons": [
       "2012",
@@ -5857,7 +5859,7 @@
     },
     "Mikkels Manatees": {
       "franchise": "Mikkels Manatees",
-      "emoji": "",
+      "emoji": "\ud83e\uddad",
       "active": false,
       "allTime": {
         "regular": {

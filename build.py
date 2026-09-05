@@ -28,11 +28,12 @@ RAW = ROOT / "data"
 OUT = ROOT / "docs" / "data"
 LEAGUE = "1078038"
 
-# The 2022 scrape ran on 13 Nov 2022, midway through week 10. Weeks 10-16 came
-# back as zeros and "Not yet played" placeholders. The NFL API still has the
-# real final 2022 standings, so the season isn't lost - only its matchups are.
-LAST_SCRAPED = ("2022", 9)
-PLACEHOLDER = "Not yet played"
+# The 2022 scrape ran on 13 Nov 2022, midway through week 10, so weeks 10-16 came
+# back as zeros and "Not yet played" placeholders. Those rows have been dropped
+# from data/league_h2h.csv outright: an unplayed week is not a result. The
+# season's real records survive in the NFL API archive, only its matchups are
+# lost - which is why the regular-season length is read from those records
+# rather than from the log.
 
 # A manager changing NFL accounts looks exactly like a new manager taking the
 # seat. These two are the same person either side of the change; every other
@@ -84,32 +85,34 @@ def sleeper_alias():
 
 
 def franchise_emoji():
-    """The badge each current franchise goes by. Departed franchises have none."""
-    with open(RAW / "sleeper_aliases.csv", newline="") as f:
-        return {r["franchise"]: r["emoji"] for r in csv.DictReader(f) if r.get("emoji")}
+    """The badge each franchise goes by, including ones that have left."""
+    with open(RAW / "emoji.csv", newline="") as f:
+        rows = csv.DictReader(r for r in f if not r.startswith("#"))
+        return {r["franchise"]: r["emoji"] for r in rows if r.get("emoji")}
 
 
 # ---------- game logs ----------
 
-def regular_season_end():
-    """Last week of the regular season, per year, read off the game log.
+def regular_season_end(seasons):
+    """Last week of the regular season, per year.
 
-    The league has moved its playoff start around - week 14 in 2012-14 and
-    2021-22, week 13 in between - so it can't be hardcoded. Every team plays in
-    a regular-season week, so the regular season is the run of weeks carrying a
-    full slate; the slate shrinks the moment the brackets start. This agrees
-    exactly with the game counts in NFL's own season records.
+    Every team plays every regular-season week, so a team's regular-season games
+    played is the number of weeks - and the season records state that directly.
+    This used to be read off the game log as the run of weeks carrying a full
+    slate, which agreed exactly but broke as soon as 2022's unplayed weeks were
+    removed from the log. The records are the more direct source anyway.
+
+    The league moved its playoff start between weeks 13 and 14 over the years,
+    so it cannot be hardcoded.
     """
-    per_week = defaultdict(int)
-    with open(RAW / "league_h2h.csv", newline="") as f:
-        for row in csv.DictReader(f):
-            if PLACEHOLDER not in (row["home_team"], row["away_team"]):
-                per_week[(row["year"], int(row["round"]))] += 1
     out = {}
-    for (year, week), n in per_week.items():
-        full = max(v for (y, _), v in per_week.items() if y == year)
-        if n == full:
-            out[year] = max(out.get(year, 0), week)
+    for year, lg in seasons.items():
+        weeks = {int(st["wins"]) + int(st["losses"]) + int(st["ties"])
+                 for t in lg["teams"].values()
+                 for st in [(t.get("stats") or {}).get("season", {}).get(year) or {}]
+                 if st.get("record") and st["record"] != "0-0-0"}
+        if weeks:
+            out[year] = max(weeks)
     return out
 
 
@@ -118,10 +121,6 @@ def nfl_games(alias, reg_end):
     with open(RAW / "league_h2h.csv", newline="") as f:
         for row in csv.DictReader(f):
             year, rnd = row["year"], int(row["round"])
-            if (year, rnd) > LAST_SCRAPED:
-                continue
-            if PLACEHOLDER in (row["home_team"], row["away_team"]):
-                continue
             phase = "regular" if rnd <= reg_end.get(year, 99) else "playoff"
             yield (year, rnd, phase, alias[(year, row["home_team"])], float(row["home_score"]),
                    alias[(year, row["away_team"])], float(row["away_score"]))
@@ -428,7 +427,7 @@ def main():
     alias, _ = franchises(seasons)
     salias = sleeper_alias()
     badge = franchise_emoji()
-    reg_end = regular_season_end()
+    reg_end = regular_season_end(seasons)
 
     standings = list(nfl_standings(seasons, alias)) + list(sleeper_standings(salias))
     # Which franchises reached the championship bracket in a given year. Games

@@ -1,0 +1,23 @@
+# Franchise badges. Kept separate from sleeper_aliases.csv so that franchises
+# which have left the league can still carry one - they were never on a Sleeper
+# roster, so there was nowhere to put it.
+#
+# Blank or absent means the franchise renders with a faded placeholder.
+franchise,emoji
+AT Football Team,🚜
+Bearnaise Dynamics,🧨
+Kurlewless,👩🏼‍❤️‍💋‍👩🏿
+Leeannacondas,🐍
+Mikkels Manatees,🦭
+Not Enough Cooks,🥚
+SERPION,🦂
+Seamen,⚓️
+Standard Deviations,🗿
+The Aligators,🐊
+The Beer Barons,🍻
+The Dirty Birds,🐦‍⬛
+The Fishies,🐟
+The Hatters,🎩
+The Piggies,🐷
+The Puffins,🐧🪬
+Yorkshire Puddings,🍮
