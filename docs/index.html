@@ -166,31 +166,15 @@ footer code{font-size:11px;background:var(--sunk);padding:1px 5px;border-radius:
   </section>
 
   <section id="activity">
-    <div class="head"><h2>Trades &amp; transactions</h2>
-      <p class="hint">Whole league, every season · counts come from both platforms, trade detail only from Sleeper</p></div>
+    <div class="head"><h2>Trades</h2>
+      <p class="hint">Whole league, every season · counted once per trade, not once per team</p></div>
     <div class="card">
       <dl class="stats" id="actTotals"></dl>
       <div class="sparks">
-        <div class="spark"><h4>Waiver adds per season</h4><p id="addsNote"></p><div id="addsChart"></div></div>
         <div class="spark"><h4>Trades per season</h4><p id="tradesNote"></p><div id="tradesChart"></div></div>
       </div>
     </div>
 
-    <div class="head" style="margin-top:26px"><h2>Activity by franchise</h2></div>
-    <div class="card scroll">
-      <table id="actTable">
-        <thead><tr>
-          <th data-k="franchise">Franchise</th>
-          <th data-k="adds">Adds</th>
-          <th data-k="addsPer">Adds/season</th>
-          <th data-k="trades" aria-sort="descending">Trades</th>
-          <th data-k="tradesPer">Trades/season</th>
-          <th data-k="peakAdds">Busiest season</th>
-          <th data-k="seasons">Seasons</th>
-        </tr></thead>
-        <tbody></tbody>
-      </table>
-    </div>
 
   </section>
 
@@ -218,7 +202,6 @@ footer code{font-size:11px;background:var(--sunk);padding:1px 5px;border-radius:
           <th data-k="poWins">Playoffs</th>
           <th data-k="pointsFor">PF</th>
           <th data-k="pointsAgainst">PA</th>
-          <th data-k="adds">Adds</th>
           <th data-k="trades">Trades</th>
         </tr></thead>
         <tbody></tbody>
@@ -426,8 +409,6 @@ function renderRecords() {
   if (rivalries.length) add('Most one-sided', best(rivalries, (r) => r.winPercentage),
     (r) => [r.record, `over ${r.opponent}`], pct(best(rivalries, (r) => r.winPercentage).winPercentage));
   if (!PLAYOFF()) {
-    add('Busiest', best(pool, (t) => t.adds), (t) => [num(t.adds), 'waiver adds'],
-        `${(best(pool, (t) => t.adds).adds / best(pool, (t) => t.adds).seasons).toFixed(0)}/season`);
     add('Most trades', best(pool, (t) => t.trades), (t) => [t.trades, 'trades made'], '');
     const settled = pool.filter((t) => t.seasons >= 5);
     if (settled.length) add('Least trades', best(settled, (t) => -t.trades),
@@ -479,7 +460,6 @@ function select(name) {
     stat('Made playoffs', a.playoffAppearances, `of ${a.seasons} seasons`),
     stat('Points for', num(R.pointsFor), `${R.avgPointsFor.toFixed(1)} per game`),
     stat('Points against', num(R.pointsAgainst), `${R.avgPointsAgainst.toFixed(1)} per game`),
-    stat('Adds', num(a.adds), `${(a.adds / a.seasons).toFixed(0)} a season`),
     stat('Trades', a.trades, `${(a.trades / a.seasons).toFixed(1)} a season`),
     a.bestWeek ? stat('Best week', a.bestWeek.points, `${a.bestWeek.year} wk${a.bestWeek.round}`) : '',
     a.worstWeek ? stat('Worst week', a.worstWeek.points, `${a.worstWeek.year} wk${a.worstWeek.round}`) : '',
@@ -498,8 +478,7 @@ function select(name) {
       sparkLine(S.map((s) => ({ x: s.x, y: s.win, label: `${s.year}: ${s.record} (${pct(s.win)})` })), { baseline: 50 })) +
     panel('Trades by season', `${a.trades} all-time · ${S.filter((s) => !s.trades).length} quiet seasons`,
       sparkBars(S.map((s) => ({ x: s.x, y: s.trades || 0, label: `${s.year}: ${s.trades || 0} trades` })))) +
-    panel('Adds by season', `${num(a.adds)} all-time · peak ${Math.max(...S.map((s) => s.adds || 0))}`,
-      sparkBars(S.map((s) => ({ x: s.x, y: s.adds || 0, label: `${s.year}: ${s.adds || 0} adds` }))));
+    '';
 
   sortable($('#seasons'), S.map((s) => ({ ...s, year: +s.year, winPct: s.win, finishSort: s.finish ?? 99, poWins: s.playoff.wins })), (s) => {
     const tr = document.createElement('tr');
@@ -512,7 +491,7 @@ function select(name) {
            : s.finalStanding ? `${ord(s.finalStanding)} of 16` : '—'),
       cell(s.playoff.gamesPlayed ? s.playoff.record : '—'),
       cell(s.pointsFor.toFixed(1)), cell(s.pointsAgainst.toFixed(1)),
-      cell(s.adds || '—'), cell(s.trades || '—'),
+      cell(s.trades || '—'),
     );
     return tr;
   }, 'year', 1);
@@ -556,40 +535,22 @@ function barChart(rows, pick, label) {
 }
 
 function renderActivity() {
-  const m = DATA.meta, A = m.activityBySeason;
-  const adds = A.reduce((s, r) => s + r.adds, 0), trades = A.reduce((s, r) => s + r.trades, 0);
-  const busiest = A.reduce((a, b) => (b.adds > a.adds ? b : a));
-  const tradiest = A.reduce((a, b) => (b.trades > a.trades ? b : a));
+  const A = DATA.meta.activityBySeason;
+  const trades = A.reduce((s, r) => s + r.trades, 0);
+  const most = A.reduce((a, b) => (b.trades > a.trades ? b : a));
+  const least = A.reduce((a, b) => (b.trades < a.trades ? b : a));
+  const era = A.filter((r) => +r.year >= 2018);
   const stat = (l, v, n) => `<div><dt>${l}</dt><dd>${v}<small>${n}</small></dd></div>`;
   $('#actTotals').innerHTML = [
-    stat('Total adds', num(adds), `across ${A.length} seasons`),
-    stat('Total trades', trades, `${(trades / A.length).toFixed(1)} a season`),
-    stat('Busiest season', busiest.year, `${num(busiest.adds)} adds`),
-    stat('Most trades', tradiest.year, `${tradiest.trades} trades`),
-    stat('Quietest', A.reduce((a, b) => (b.trades < a.trades ? b : a)).year, 'for trades'),
+    stat('Total trades', trades, `across ${A.length} seasons`),
+    stat('Per season', (trades / A.length).toFixed(1), 'league-wide'),
+    stat('Most active', most.year, `${most.trades} trades`),
+    stat('Quietest', least.year, `${least.trades} trade${least.trades === 1 ? '' : 's'}`),
+    stat('Since 2018', era.reduce((s, r) => s + r.trades, 0),
+         `${(era.reduce((s, r) => s + r.trades, 0) / era.length).toFixed(1)} a season`),
   ].join('');
-  $('#addsNote').textContent = `${num(adds)} all-time · gold bar is the Sleeper era`;
-  $('#tradesNote').textContent = `${trades} all-time · counted once per trade, not per team`;
-  $('#addsChart').innerHTML = barChart(A, (r) => r.adds, (r) => `${r.adds} adds`);
+  $('#tradesNote').textContent = `${trades} all-time · gold is the Sleeper era`;
   $('#tradesChart').innerHTML = barChart(A, (r) => r.trades, (r) => `${r.trades} trades`);
-
-  const rows = Object.values(DATA.franchises).map((t) => {
-    const a = t.allTime, peak = t.seasons.reduce((x, y) => ((y.adds || 0) > (x.adds || 0) ? y : x));
-    return { franchise: t.franchise, emoji: t.emoji, adds: a.adds, trades: a.trades, seasons: a.seasons,
-             addsPer: +(a.adds / a.seasons).toFixed(1), tradesPer: +(a.trades / a.seasons).toFixed(2),
-             peakAdds: peak.adds || 0, peakYear: peak.year };
-  });
-  sortable($('#actTable'), rows, (r) => {
-    const tr = document.createElement('tr');
-    tr.append(
-      cell(badge(r) + `<span class="nm">${r.franchise}</span>`),
-      cell(num(r.adds)), cell(r.addsPer.toFixed(1)), cell(r.trades), cell(r.tradesPer.toFixed(2)),
-      cell(`${r.peakAdds} <span class="tag">${r.peakYear}</span>`), cell(r.seasons),
-    );
-    tr.onclick = () => { select(r.franchise); $('#profile').scrollIntoView({ block: 'start' }); };
-    return tr;
-  }, 'trades');
-
 }
 
 /* ---------- boot ---------- */
