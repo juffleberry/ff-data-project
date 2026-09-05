@@ -157,6 +157,14 @@ footer code{font-size:11px;background:var(--sunk);padding:1px 5px;border-radius:
   </section>
 
   <section>
+    <div class="head"><h2>Finals</h2>
+      <p class="hint">Every title game · from the final standings NFL kept for all 14 seasons</p></div>
+    <div class="card scroll"><table id="finals">
+      <thead><tr><th>Season</th><th>Champion</th><th>Runner-up</th><th>Third</th></tr></thead>
+      <tbody></tbody></table></div>
+  </section>
+
+  <section>
     <div class="head"><h2>League records</h2><p class="hint" id="recnote">Click any record to open that franchise</p></div>
     <div class="card"><dl class="recs" id="records"></dl></div>
   </section>
@@ -247,6 +255,7 @@ footer code{font-size:11px;background:var(--sunk);padding:1px 5px;border-radius:
           <th data-k="winPct">Win %</th>
           <th data-k="wins">Record</th>
           <th data-k="finishSort">Finish</th>
+          <th data-k="finalStanding">Final standing</th>
           <th data-k="poWins">Playoffs</th>
           <th data-k="pointsFor">PF</th>
           <th data-k="pointsAgainst">PA</th>
@@ -490,6 +499,8 @@ function select(name) {
     stat('Playoffs', P.gamesPlayed ? P.record : '—', P.gamesPlayed ? pct(P.winPercentage) : 'no games logged'),
     stat('All-time', C.record, `${pct(C.winPercentage)} · reg + playoffs`),
     stat('Titles', a.titles || '—', a.titles ? stars(a.titles) : 'never won it'),
+    stat('Finals', `${a.finalsWon}–${a.finalsLost}`,
+         a.finalsReached ? `reached ${a.finalsReached}` : 'never reached one'),
     stat('Made playoffs', a.playoffAppearances, `of ${a.seasons} seasons`),
     stat('Points for', num(R.pointsFor), `${R.avgPointsFor.toFixed(1)} per game`),
     stat('Points against', num(R.pointsAgainst), `${R.avgPointsAgainst.toFixed(1)} per game`),
@@ -521,6 +532,9 @@ function select(name) {
       cell(`${s.year} <span class="tag">${s.platform === 'Sleeper' ? 'SLPR' : 'NFL'}</span>`),
       cell(`<span class="nm">${s.teamName}</span>`), cell(meter(s.winPct)), cell(s.record),
       cell(s.finish === 1 ? `${stars(1)} 1st` : s.finish ? ord(s.finish) : (s.madePlayoffs ? '<span class="tag">playoffs</span>' : '—')),
+      cell(s.finalStanding === 1 ? `${stars(1)} champion`
+           : s.finalStanding === 2 ? '<span class="neg">lost final</span>'
+           : s.finalStanding ? `${ord(s.finalStanding)} of 16` : '—'),
       cell(s.playoff.gamesPlayed ? s.playoff.record : '—'),
       cell(s.pointsFor.toFixed(1)), cell(s.pointsAgainst.toFixed(1)),
       cell(s.adds || '—'), cell(s.trades || '—'),
@@ -670,6 +684,16 @@ async function init() {
     // Keep the open franchise selected even if the filter just hid its row.
     select($('#picker').value);
   };
+
+  const F2 = DATA.franchises;
+  $('#finals').tBodies[0].replaceChildren(...[...m.finals].reverse().map((f) => {
+    const tr = document.createElement('tr');
+    const who = (n) => n ? badge(F2[n]) + `<span class="nm">${n}</span>` : '—';
+    tr.append(cell(`${f.year} <span class="tag">${f.platform === 'Sleeper' ? 'SLPR' : 'NFL'}</span>`),
+              cell(`${stars(1)} ${who(f.champion)}`), cell(who(f.runnerUp)), cell(who(f.third)));
+    tr.onclick = () => { select(f.champion); $('#profile').scrollIntoView({ block: 'start' }); };
+    return tr;
+  }));
 
   renderActivity();
 

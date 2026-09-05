@@ -260,6 +260,46 @@ def trade_log(alias):
     return sorted(out, key=lambda t: (t["year"], t["week"]))
 
 
+def finals(seasons, alias, played):
+    """Champion, runner-up and podium for each season.
+
+    finalStandingsTeamIds is the league's finishing order, 1st to 16th, and NFL
+    kept it for every season including the three whose matchups are gone. It
+    doesn't give scores, but it does settle who reached the final and who lost
+    it - which no other surviving field says.
+    """
+    out = []
+    for year, lg in sorted(seasons.items()):
+        if year not in played or not lg.get("isSeasonOver"):
+            continue
+        by = {t["teamId"]: alias[(year, t["name"])] for t in lg["teams"].values()}
+        order = [by[t] for t in (lg.get("finalStandingsTeamIds") or []) if t in by]
+        if len(order) < 2:
+            continue
+        out.append({"year": year, "platform": "NFL.com", "order": order,
+                    "champion": order[0], "runnerUp": order[1],
+                    "third": order[2] if len(order) > 2 else None})
+    return out
+
+
+def sleeper_finals(alias):
+    """Sleeper states the podium directly in the winners bracket."""
+    out = []
+    for f in sorted(glob(str(RAW / "sleeper" / "*-winners_bracket.json"))):
+        year = re.match(r"(\d{4})", Path(f).name).group(1)
+        place = {}
+        for m in json.load(open(f)):
+            if m.get("p") and m.get("w"):
+                place[m["p"]] = alias[str(m["w"])]
+                if m.get("l"):
+                    place[m["p"] + 1] = alias[str(m["l"])]
+        if 1 in place:
+            out.append({"year": year, "platform": "Sleeper",
+                        "order": [place[k] for k in sorted(place)],
+                        "champion": place.get(1), "runnerUp": place.get(2), "third": place.get(3)})
+    return out
+
+
 def blank():
     return {"wins": 0, "losses": 0, "draws": 0, "pointsFor": 0.0, "pointsAgainst": 0.0}
 
@@ -406,6 +446,24 @@ def main():
     # A trade is counted once per team involved, so halve it for a league total.
     by_season = [dict(v, year=y, trades=v["trades"] // 2) for y, v in sorted(activity.items())]
 
+    # Seasons that were actually played on NFL.com. The 2025 NFL league rolled
+    # over when the league had already moved to Sleeper, so it carries a phantom
+    # finishing order over an all-zero season; exclude it.
+    played = {s["year"] for s in standings if s["platform"] == "NFL.com"}
+    podiums = finals(seasons, alias, played) + sleeper_finals(salias)
+    podium_by = defaultdict(dict)
+    for f_ in podiums:
+        for pos, who in enumerate(f_["order"], 1):
+            podium_by[who][f_["year"]] = pos
+    for name, t in out.items():
+        won = sum(1 for f_ in podiums if f_["champion"] == name)
+        lost = sum(1 for f_ in podiums if f_["runnerUp"] == name)
+        t["allTime"]["finalsWon"] = won
+        t["allTime"]["finalsLost"] = lost
+        t["allTime"]["finalsReached"] = won + lost
+        for srow in t["seasons"]:
+            srow["finalStanding"] = podium_by[name].get(srow["year"])
+
     payload = {
         "meta": {
             "seasons": sorted({s["year"] for s in standings}),
@@ -414,6 +472,7 @@ def main():
             "games": len(games),
             "franchises": len(out),
             "activityBySeason": by_season,
+            "finals": podiums,
             "tradeLog": trade_log(salias),
             "sources": [
                 "NFL.com fantasy league 1078038 - game log scraped 13 Nov 2022",
