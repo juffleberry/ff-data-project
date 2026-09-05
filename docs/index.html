@@ -7,80 +7,56 @@
 <style>
 :root {
   color-scheme: light dark;
-  --bg: #f6f6f4;
-  --panel: #ffffff;
-  --line: #e2e1dd;
-  --ink: #1a1a18;
-  --muted: #6d6c66;
-  --accent: #1f6f4a;
-  --win: #1f6f4a;
-  --loss: #a33a2c;
-  --bar: #d9d8d3;
-  --radius: 10px;
+  --bg:#f6f6f4; --panel:#fff; --line:#e3e2de; --ink:#1a1a18; --muted:#6d6c66;
+  --accent:#1f6f4a; --gold:#9a7b1f; --bar:#dedcd6; --radius:10px;
 }
 @media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #14140f;
-    --panel: #1c1c18;
-    --line: #2e2e28;
-    --ink: #ece9df;
-    --muted: #8f8d83;
-    --accent: #6fcf9a;
-    --win: #6fcf9a;
-    --loss: #e08272;
-    --bar: #2e2e28;
-  }
+  :root { --bg:#141410; --panel:#1c1c18; --line:#2e2e28; --ink:#ece9df; --muted:#8f8d83;
+          --accent:#6fcf9a; --gold:#d9b64e; --bar:#2e2e28; }
 }
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--ink);
-  font: 15px/1.5 ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  -webkit-text-size-adjust: 100%;
-}
-.wrap { max-width: 880px; margin: 0 auto; padding: 28px 18px 72px; }
-header { margin-bottom: 26px; }
-h1 { font-size: 24px; margin: 0 0 4px; letter-spacing: -0.01em; }
-.sub { color: var(--muted); font-size: 13px; }
-h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 32px 0 10px; font-weight: 600; }
-.panel { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
-.scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
-th, td { padding: 9px 12px; text-align: right; white-space: nowrap; border-bottom: 1px solid var(--line); }
-th:first-child, td:first-child { text-align: left; white-space: normal; min-width: 160px; }
-tbody tr:last-child td { border-bottom: 0; }
-thead th {
-  font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em;
-  color: var(--muted); font-weight: 600; cursor: pointer; user-select: none;
-  position: sticky; top: 0; background: var(--panel);
-}
-thead th:hover { color: var(--ink); }
-thead th[aria-sort]::after { content: " ↓"; }
-thead th[aria-sort="ascending"]::after { content: " ↑"; }
-tbody tr { cursor: pointer; }
-tbody tr:hover { background: color-mix(in srgb, var(--accent) 8%, transparent); }
-tbody tr[aria-selected="true"] { background: color-mix(in srgb, var(--accent) 14%, transparent); }
-.pct { font-weight: 600; }
-.bar { display: block; height: 3px; margin-top: 4px; background: var(--bar); border-radius: 2px; overflow: hidden; }
-.bar > i { display: block; height: 100%; background: var(--accent); }
-.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1px; background: var(--line); }
-.cards > div { background: var(--panel); padding: 12px 14px; }
-.cards dt { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 3px; }
-.cards dd { margin: 0; font-size: 19px; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
-.cards dd small { font-size: 12px; color: var(--muted); font-weight: 400; letter-spacing: 0; }
-.w { color: var(--win); }
-.l { color: var(--loss); }
-.empty { padding: 22px; color: var(--muted); font-size: 14px; }
-footer { margin-top: 42px; color: var(--muted); font-size: 12px; line-height: 1.7; }
-footer a { color: inherit; }
-#profile[hidden] { display: none; }
-.pick { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin: 32px 0 10px; }
-.pick h2 { margin: 0; }
-select {
-  font: inherit; padding: 5px 8px; border-radius: 6px;
-  border: 1px solid var(--line); background: var(--panel); color: var(--ink);
-}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.5 ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%}
+.wrap{max-width:960px;margin:0 auto;padding:28px 18px 80px}
+h1{font-size:25px;margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:13px;margin:0}
+h2{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:34px 0 10px;font-weight:600}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+th,td{padding:9px 11px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left;white-space:normal;min-width:150px}
+tbody tr:last-child td{border-bottom:0}
+thead th{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);
+  font-weight:600;cursor:pointer;user-select:none;position:sticky;top:0;background:var(--panel)}
+thead th:hover{color:var(--ink)}
+thead th[aria-sort]::after{content:" ↓"}
+thead th[aria-sort="ascending"]::after{content:" ↑"}
+tbody tr{cursor:pointer}
+tbody tr:hover{background:color-mix(in srgb,var(--accent) 8%,transparent)}
+tbody tr[aria-selected="true"]{background:color-mix(in srgb,var(--accent) 14%,transparent)}
+.pct{font-weight:600}
+.bar{display:block;height:3px;margin-top:4px;background:var(--bar);border-radius:2px;overflow:hidden}
+.bar>i{display:block;height:100%;background:var(--accent)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:1px;background:var(--line)}
+.cards>div{background:var(--panel);padding:11px 13px}
+.cards dt{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:3px}
+.cards dd{margin:0;font-size:18px;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.cards dd small{font-size:12px;color:var(--muted);letter-spacing:0}
+.titles{color:var(--gold);font-weight:600}
+.champs{display:flex;gap:1px;background:var(--line);overflow-x:auto}
+.champs>button{flex:0 0 auto;background:var(--panel);border:0;padding:9px 13px;cursor:pointer;
+  font:inherit;color:var(--ink);text-align:left;min-width:118px}
+.champs>button:hover{background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.champs b{display:block;font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.05em}
+.champs span{font-size:13px}
+.tag{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:1px 7px}
+footer{margin-top:44px;color:var(--muted);font-size:12px;line-height:1.75}
+footer code{font-size:11px}
+.pick{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:34px 0 10px}
+.pick h2{margin:0}
+select{font:inherit;padding:5px 8px;border-radius:6px;border:1px solid var(--line);background:var(--panel);color:var(--ink)}
+.note{color:var(--muted);font-size:12px;margin:8px 2px 0}
 </style>
 </head>
 <body>
@@ -90,14 +66,23 @@ select {
     <p class="sub" id="meta">Loading…</p>
   </header>
 
+  <h2>Champions</h2>
+  <div class="panel"><div class="champs" id="champs"></div></div>
+
+  <h2>League records</h2>
+  <div class="panel"><dl class="cards" id="records"></dl></div>
+
   <h2>All-time standings</h2>
   <div class="panel scroll">
     <table id="standings">
       <thead><tr>
         <th data-k="franchise">Franchise</th>
         <th data-k="winPercentage" aria-sort="descending">Win %</th>
-        <th data-k="wins">Record</th>
-        <th data-k="gamesPlayed">GP</th>
+        <th data-k="record">Record</th>
+        <th data-k="wins">W</th>
+        <th data-k="losses">L</th>
+        <th data-k="titles">Titles</th>
+        <th data-k="playoffAppearances">Playoffs</th>
         <th data-k="avgPointsFor">PF/g</th>
         <th data-k="avgPointsAgainst">PA/g</th>
         <th data-k="seasons">Seasons</th>
@@ -114,6 +99,24 @@ select {
   <section id="profile" hidden>
     <div class="panel"><dl class="cards" id="summary"></dl></div>
 
+    <h2>Season by season</h2>
+    <div class="panel scroll">
+      <table id="seasons">
+        <thead><tr>
+          <th data-k="year">Season</th>
+          <th data-k="teamName">Team name</th>
+          <th data-k="winPct">Win %</th>
+          <th data-k="wins">Record</th>
+          <th data-k="finishSort">Finish</th>
+          <th data-k="pointsFor">PF</th>
+          <th data-k="pointsAgainst">PA</th>
+          <th data-k="adds">Adds</th>
+          <th data-k="trades">Trades</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
     <h2>Head to head</h2>
     <div class="panel scroll">
       <table id="h2h">
@@ -121,26 +124,14 @@ select {
           <th data-k="opponent">Opponent</th>
           <th data-k="winPercentage" aria-sort="descending">Win %</th>
           <th data-k="wins">Record</th>
+          <th data-k="gamesPlayed">GP</th>
           <th data-k="avgPointsFor">PF/g</th>
           <th data-k="avgPointsAgainst">PA/g</th>
         </tr></thead>
         <tbody></tbody>
       </table>
     </div>
-
-    <h2>Season by season</h2>
-    <div class="panel scroll">
-      <table id="seasons">
-        <thead><tr>
-          <th data-k="year">Season</th>
-          <th data-k="winPercentage">Win %</th>
-          <th data-k="wins">Record</th>
-          <th data-k="pointsFor">PF</th>
-          <th data-k="pointsAgainst">PA</th>
-        </tr></thead>
-        <tbody></tbody>
-      </table>
-    </div>
+    <p class="note" id="h2hnote"></p>
   </section>
 
   <footer id="footnote"></footer>
@@ -149,34 +140,32 @@ select {
 <script>
 const $ = (s) => document.querySelector(s);
 const pct = (n) => n.toFixed(1) + '%';
+const ord = (n) => n ? n + ['th','st','nd','rd'][(n % 100 - n % 10 !== 10) * (n % 10 < 4) * n % 10] : '—';
 let DATA, LIST;
 
-// Sorting. Every table here is "click a header, sort by it"; numeric columns
-// start descending because the interesting end is always the top.
+// Every table is click-a-header-to-sort. Numeric columns open descending,
+// because the interesting end of a number column is always the top.
 function sortable(table, rows, render, initial, initialDir = -1) {
   let key = initial, dir = initialDir;
   const heads = [...table.tHead.rows[0].cells];
   const apply = () => {
     const sorted = [...rows].sort((a, b) => {
       const x = a[key], y = b[key];
-      const c = typeof x === 'number' ? x - y : String(x).localeCompare(String(y));
-      return c * dir;
+      if (x == null) return 1;
+      if (y == null) return -1;
+      return (typeof x === 'number' ? x - y : String(x).localeCompare(String(y))) * dir;
     });
     heads.forEach((h) => h.removeAttribute('aria-sort'));
-    heads.find((h) => h.dataset.k === key)
-      ?.setAttribute('aria-sort', dir === 1 ? 'ascending' : 'descending');
+    heads.find((h) => h.dataset.k === key)?.setAttribute('aria-sort', dir === 1 ? 'ascending' : 'descending');
     table.tBodies[0].replaceChildren(...sorted.map(render));
   };
   heads.forEach((h) => h.onclick = () => {
     const k = h.dataset.k;
-    // Same column toggles direction; a new column starts at its natural end —
-    // descending for numbers, ascending for names.
     if (k === key) dir = -dir;
-    else { key = k; dir = typeof rows[0][k] === 'number' ? -1 : 1; }
+    else { key = k; dir = typeof rows.find((r) => r[k] != null)?.[k] === 'number' ? -1 : 1; }
     apply();
   });
   apply();
-  return () => apply();
 }
 
 const cell = (html, cls) => {
@@ -185,19 +174,17 @@ const cell = (html, cls) => {
   td.innerHTML = html;
   return td;
 };
-
 const winBar = (n) => `<span class="pct">${pct(n)}</span><span class="bar"><i style="width:${n}%"></i></span>`;
+const trophies = (n) => n ? `<span class="titles">${'★'.repeat(Math.min(n, 4))}${n > 4 ? ` ${n}` : ''}</span>` : '—';
 
 function standingsRow(a) {
   const tr = document.createElement('tr');
   tr.append(
-    cell(a.franchise),
-    cell(winBar(a.winPercentage)),
-    cell(a.record),
-    cell(a.gamesPlayed),
-    cell(a.avgPointsFor.toFixed(1)),
-    cell(a.avgPointsAgainst.toFixed(1)),
-    cell(`${a.firstSeason}–${a.lastSeason}`),
+    cell(a.franchise), cell(winBar(a.winPercentage)), cell(a.record),
+    cell(a.wins), cell(a.losses),
+    cell(trophies(a.titles)), cell(a.playoffAppearances || '—'),
+    cell(a.avgPointsFor.toFixed(1)), cell(a.avgPointsAgainst.toFixed(1)),
+    cell(`${a.firstSeason}–${a.lastSeason} <span class="tag">${a.seasons}</span>`),
   );
   tr.onclick = () => select(a.franchise);
   tr.dataset.franchise = a.franchise;
@@ -208,79 +195,122 @@ function select(name) {
   const t = DATA.franchises[name];
   if (!t) return;
   $('#picker').value = name;
-  location.hash = encodeURIComponent(name);
-  for (const tr of $('#standings').tBodies[0].rows) {
-    tr.setAttribute('aria-selected', tr.dataset.franchise === name);
-  }
+  history.replaceState(null, '', '#' + encodeURIComponent(name));
+  for (const tr of $('#standings').tBodies[0].rows) tr.setAttribute('aria-selected', tr.dataset.franchise === name);
 
   const a = t.allTime;
-  const stat = (label, value, note = '') =>
-    `<div><dt>${label}</dt><dd>${value}${note ? ` <small>${note}</small>` : ''}</dd></div>`;
+  const stat = (l, v, n = '') => `<div><dt>${l}</dt><dd>${v}${n ? ` <small>${n}</small>` : ''}</dd></div>`;
   $('#summary').innerHTML = [
-    stat('All-time', a.record),
-    stat('Win %', pct(a.winPercentage)),
-    stat('Points for', a.pointsFor.toLocaleString(), `${a.avgPointsFor.toFixed(1)}/g`),
-    stat('Points against', a.pointsAgainst.toLocaleString(), `${a.avgPointsAgainst.toFixed(1)}/g`),
+    stat('All-time', a.record, pct(a.winPercentage)),
+    stat('Titles', a.titles ? trophies(a.titles) : '—', a.titles ? `${a.titles}×` : ''),
+    stat('Playoffs', a.playoffAppearances, `of ${a.seasons}`),
+    stat('Points for', Math.round(a.pointsFor).toLocaleString(), `${a.avgPointsFor.toFixed(1)}/g`),
+    stat('Points against', Math.round(a.pointsAgainst).toLocaleString(), `${a.avgPointsAgainst.toFixed(1)}/g`),
     stat('Seasons', a.seasons, `${a.firstSeason}–${a.lastSeason}`),
-    stat('Best week', a.bestWeek.points, `${a.bestWeek.year} wk${a.bestWeek.round}`),
-    stat('Worst week', a.worstWeek.points, `${a.worstWeek.year} wk${a.worstWeek.round}`),
+    stat('Adds', a.adds.toLocaleString()),
+    stat('Trades', a.trades),
+    a.bestWeek ? stat('Best week', a.bestWeek.points, `${a.bestWeek.year} wk${a.bestWeek.round}`) : '',
+    a.worstWeek ? stat('Worst week', a.worstWeek.points, `${a.worstWeek.year} wk${a.worstWeek.round}`) : '',
   ].join('');
 
-  sortable($('#h2h'), t.opponentHistory, (o) => {
+  sortable($('#seasons'), t.seasons.map((s) => ({
+    ...s, year: +s.year,
+    winPct: (s.wins + s.ties * 0.5) / Math.max(1, s.wins + s.losses + s.ties) * 100,
+    finishSort: s.finish ?? 99,
+  })), (s) => {
     const tr = document.createElement('tr');
     tr.append(
-      cell(o.opponent),
-      cell(winBar(o.winPercentage)),
-      cell(o.record),
-      cell(o.avgPointsFor.toFixed(1)),
-      cell(o.avgPointsAgainst.toFixed(1)),
-    );
-    tr.onclick = () => select(o.opponent);
-    return tr;
-  }, 'winPercentage');
-
-  sortable($('#seasons'), t.seasons.map((s) => ({ ...s, year: +s.year })), (s) => {
-    const tr = document.createElement('tr');
-    tr.append(
-      cell(s.year),
-      cell(winBar(s.winPercentage)),
-      cell(s.record, s.winPercentage >= 50 ? 'w' : 'l'),
-      cell(s.pointsFor.toFixed(1)),
-      cell(s.pointsAgainst.toFixed(1)),
+      cell(`${s.year} <span class="tag">${s.platform === 'Sleeper' ? 'S' : 'NFL'}</span>`),
+      cell(s.teamName), cell(winBar(s.winPct)), cell(s.record),
+      cell(s.finish === 1 ? `${trophies(1)} 1st` : s.finish ? ord(s.finish) : (s.madePlayoffs ? 'playoffs' : '—')),
+      cell(s.pointsFor.toFixed(1)), cell(s.pointsAgainst.toFixed(1)),
+      cell(s.adds || '—'), cell(s.trades || '—'),
     );
     return tr;
   }, 'year', 1);
 
+  sortable($('#h2h'), t.opponentHistory, (o) => {
+    const tr = document.createElement('tr');
+    tr.append(cell(o.opponent), cell(winBar(o.winPercentage)), cell(o.record),
+              cell(o.gamesPlayed), cell(o.avgPointsFor.toFixed(1)), cell(o.avgPointsAgainst.toFixed(1)));
+    tr.onclick = () => select(o.opponent);
+    return tr;
+  }, 'winPercentage');
+
+  $('#h2hnote').textContent = `Matchup-level data exists only for ${DATA.meta.matchupSeasons.join(', ')}.`;
   $('#profile').hidden = false;
 }
 
 async function init() {
-  const res = await fetch('data/league_records.json');
-  DATA = await res.json();
-  LIST = Object.values(DATA.franchises).map((t) => ({ ...t.allTime, franchise: t.franchise }));
-
+  DATA = await (await fetch('data/league_records.json')).json();
+  const F = DATA.franchises;
+  LIST = Object.values(F).map((t) => ({ ...t.allTime, franchise: t.franchise }));
   const m = DATA.meta;
+
   $('#meta').textContent =
-    `${m.games.toLocaleString()} games · ${LIST.length} franchises · ${m.seasons[0]}–${m.seasons.at(-1)}`;
-  $('#footnote').innerHTML =
-    `${m.source}. ${m.note}<br>Rebuilt by <code>build.py</code> from <code>data/league_h2h.csv</code>.`;
+    `${m.seasons[0]}–${m.seasons.at(-1)} · ${LIST.length} franchises · ${m.games.toLocaleString()} logged games`;
+
+  // Champions strip, oldest first — one button per season that has a winner.
+  const champs = [];
+  for (const t of Object.values(F))
+    for (const s of t.seasons) if (s.finish === 1) champs.push({ year: s.year, name: t.franchise, team: s.teamName });
+  champs.sort((a, b) => a.year.localeCompare(b.year));
+  $('#champs').replaceChildren(...champs.map((c) => {
+    const b = document.createElement('button');
+    b.innerHTML = `<b>${c.year}</b><span>${c.team}</span>`;
+    b.onclick = () => { select(c.name); $('#profile').scrollIntoView({ behavior: 'smooth' }); };
+    return b;
+  }));
+
+  // Superlatives. Win % is restricted to franchises with a real sample so a
+  // single 9-5 season can't top a decade of results.
+  const QUALIFIED = 60;
+  const best = (rows, pick, fmt) => {
+    const w = rows.reduce((a, b) => (pick(b) > pick(a) ? b : a));
+    return { name: w.franchise, value: fmt(w) };
+  };
+  const worst = (rows, pick, fmt) => best(rows, (r) => -pick(r), fmt);
+  const seasoned = LIST.filter((t) => t.gamesPlayed >= QUALIFIED);
+  const weeks = [];
+  for (const t of Object.values(F)) {
+    if (t.allTime.bestWeek) weeks.push({ franchise: t.franchise, ...t.allTime.bestWeek });
+    if (t.allTime.worstWeek) weeks.push({ franchise: t.franchise, ...t.allTime.worstWeek });
+  }
+  const rivalries = [];
+  for (const t of Object.values(F))
+    for (const o of t.opponentHistory)
+      if (o.gamesPlayed >= 8) rivalries.push({ franchise: t.franchise, ...o });
+
+  const rec = (label, r, note) =>
+    `<div><dt>${label}</dt><dd style="font-size:15px">${r.name}<br><small>${r.value}${note ? ' · ' + note : ''}</small></dd></div>`;
+  $('#records').innerHTML = [
+    rec('Best win %', best(seasoned, (t) => t.winPercentage, (t) => pct(t.winPercentage)), `${QUALIFIED}+ games`),
+    rec('Most wins', best(LIST, (t) => t.wins, (t) => `${t.wins} wins`)),
+    rec('Most losses', best(LIST, (t) => t.losses, (t) => `${t.losses} losses`)),
+    rec('Most titles', best(LIST, (t) => t.titles, (t) => `${t.titles} title${t.titles === 1 ? '' : 's'}`)),
+    rec('Most playoffs', best(LIST, (t) => t.playoffAppearances, (t) => `${t.playoffAppearances} of ${t.seasons}`)),
+    rec('Most points', best(LIST, (t) => t.pointsFor, (t) => Math.round(t.pointsFor).toLocaleString())),
+    rec('Highest week', best(weeks, (w) => w.points, (w) => `${w.points} — ${w.year} wk${w.round}`)),
+    rec('Lowest week', worst(weeks, (w) => w.points, (w) => `${w.points} — ${w.year} wk${w.round}`)),
+    rec('Most one-sided', best(rivalries, (r) => r.winPercentage, (r) => `${r.record} vs ${r.opponent}`)),
+    rec('Most active', best(LIST, (t) => t.adds, (t) => `${t.adds.toLocaleString()} adds`)),
+  ].join('');
 
   sortable($('#standings'), LIST, standingsRow, 'winPercentage');
 
-  $('#picker').replaceChildren(
-    new Option('Pick a franchise…', ''),
-    ...LIST.map((t) => t.franchise).sort().map((n) => new Option(n, n)),
-  );
+  $('#picker').replaceChildren(new Option('Pick a franchise…', ''),
+    ...LIST.map((t) => t.franchise).sort().map((n) => new Option(n, n)));
   $('#picker').onchange = (e) => e.target.value && select(e.target.value);
 
+  $('#footnote').innerHTML = m.note + '<br><br>Sources: ' +
+    m.sources.map((s) => `<code>${s}</code>`).join('<br>') +
+    '<br><br>Rebuilt by <code>build.py</code>; raw API responses are archived in <code>data/</code>.';
+
   const initial = decodeURIComponent(location.hash.slice(1));
-  if (DATA.franchises[initial]) select(initial);
+  select(F[initial] ? initial : 'The Puffins');
 }
 
-init().catch((err) => {
-  $('#meta').textContent = 'Could not load the record book.';
-  console.error(err);
-});
+init().catch((e) => { $('#meta').textContent = 'Could not load the record book.'; console.error(e); });
 </script>
 </body>
 </html>
