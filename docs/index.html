@@ -4,103 +4,208 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Fantasy League — Record Book</title>
+<meta name="description" content="Fourteen seasons of a 16-team fantasy football league, 2012-2026.">
 <style>
-:root {
-  color-scheme: light dark;
-  --bg:#f6f6f4; --panel:#fff; --line:#e3e2de; --ink:#1a1a18; --muted:#6d6c66;
-  --accent:#1f6f4a; --gold:#9a7b1f; --bar:#dedcd6; --radius:10px;
+:root{
+  color-scheme:light dark;
+  --bg:#faf9f6; --panel:#fff; --sunk:#f3f1ea; --line:#e7e4da; --hair:#efece4;
+  --ink:#17171a; --dim:#4a4943; --muted:#7b7970;
+  --accent:#1f7a4d; --accent-soft:#1f7a4d1f; --gold:#a8801f; --loss:#a8462f;
+  --shadow:0 1px 2px #0000000a, 0 4px 16px #00000008;
 }
-@media (prefers-color-scheme: dark) {
-  :root { --bg:#141410; --panel:#1c1c18; --line:#2e2e28; --ink:#ece9df; --muted:#8f8d83;
-          --accent:#6fcf9a; --gold:#d9b64e; --bar:#2e2e28; }
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0f0f12; --panel:#17171b; --sunk:#131316; --line:#26262c; --hair:#1f1f24;
+    --ink:#edebe4; --dim:#b8b5ab; --muted:#86847c;
+    --accent:#5fd39b; --accent-soft:#5fd39b1f; --gold:#d9b45c; --loss:#e08a76;
+    --shadow:0 1px 2px #00000040, 0 4px 20px #00000030;
+  }
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);
-  font:15px/1.5 ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%}
-.wrap{max-width:960px;margin:0 auto;padding:28px 18px 80px}
-h1{font-size:25px;margin:0 0 4px;letter-spacing:-.01em}
-.sub{color:var(--muted);font-size:13px;margin:0}
-h2{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:34px 0 10px;font-weight:600}
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
-.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  font:15px/1.55 ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px 96px}
+
+/* ---------- hero ---------- */
+.hero{padding:52px 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px}
+.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+h1{font-family:ui-serif,Georgia,"Times New Roman",serif;font-weight:500;
+  font-size:clamp(32px,6vw,50px);line-height:1.03;letter-spacing:-.02em;margin:0 0 18px}
+.chips{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--line);border-radius:12px;
+  overflow:hidden;background:var(--line);box-shadow:var(--shadow)}
+.chips>div{flex:1 1 120px;background:var(--panel);padding:12px 16px}
+.chips b{display:block;font-size:22px;font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.chips span{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+
+/* ---------- section furniture ---------- */
+section{margin-bottom:46px}
+.head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:0 0 14px}
+h2{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0;font-weight:600}
+.hint{font-size:12px;color:var(--muted);margin:0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);overflow:hidden}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+
+/* ---------- champions ---------- */
+.champs{display:flex;gap:10px;padding:4px 2px 10px;overflow-x:auto;scrollbar-width:thin}
+.champ{flex:0 0 auto;min-width:132px;text-align:left;cursor:pointer;font:inherit;color:inherit;
+  background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:12px 14px;
+  box-shadow:var(--shadow);transition:transform .12s,border-color .12s}
+.champ:hover{transform:translateY(-2px);border-color:var(--accent)}
+.champ .yr{font-size:11px;letter-spacing:.1em;color:var(--muted);font-variant-numeric:tabular-nums}
+.champ .tm{display:block;margin-top:3px;font-size:13.5px;line-height:1.3}
+.champ.now{border-color:var(--gold);background:linear-gradient(180deg,#0000,var(--accent-soft))}
+.champ.now .yr{color:var(--gold)}
+
+/* ---------- records ---------- */
+.recs{display:grid;grid-template-columns:repeat(auto-fill,minmax(186px,1fr));gap:1px;background:var(--line)}
+.rec{background:var(--panel);padding:15px 16px;cursor:pointer;transition:background .12s}
+.rec:hover{background:var(--sunk)}
+.rec dt{font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.rec .v{font-size:23px;font-weight:600;letter-spacing:-.025em;font-variant-numeric:tabular-nums;line-height:1.1}
+.rec .who{font-size:13px;color:var(--dim);margin-top:3px}
+.rec .ctx{font-size:11.5px;color:var(--muted);margin-top:1px}
+
+/* ---------- tables ---------- */
 table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
-th,td{padding:9px 11px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--line)}
-th:first-child,td:first-child{text-align:left;white-space:normal;min-width:150px}
+th,td{padding:10px 12px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--hair)}
+th:first-child,td:first-child{text-align:left;white-space:normal}
 tbody tr:last-child td{border-bottom:0}
-thead th{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);
-  font-weight:600;cursor:pointer;user-select:none;position:sticky;top:0;background:var(--panel)}
+thead th{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600;
+  cursor:pointer;user-select:none;position:sticky;top:0;background:var(--panel);
+  border-bottom:1px solid var(--line);z-index:1}
 thead th:hover{color:var(--ink)}
-thead th[aria-sort]::after{content:" ↓"}
-thead th[aria-sort="ascending"]::after{content:" ↑"}
+thead th[aria-sort]{color:var(--ink)}
+thead th[aria-sort]::after{content:"↓";margin-left:4px;font-size:10px;color:var(--accent)}
+thead th[aria-sort=ascending]::after{content:"↑"}
 tbody tr{cursor:pointer}
-tbody tr:hover{background:color-mix(in srgb,var(--accent) 8%,transparent)}
-tbody tr[aria-selected="true"]{background:color-mix(in srgb,var(--accent) 14%,transparent)}
-.pct{font-weight:600}
-.bar{display:block;height:3px;margin-top:4px;background:var(--bar);border-radius:2px;overflow:hidden}
-.bar>i{display:block;height:100%;background:var(--accent)}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:1px;background:var(--line)}
-.cards>div{background:var(--panel);padding:11px 13px}
-.cards dt{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:3px}
-.cards dd{margin:0;font-size:18px;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
-.cards dd small{font-size:12px;color:var(--muted);letter-spacing:0}
-.titles{color:var(--gold);font-weight:600}
-.champs{display:flex;gap:1px;background:var(--line);overflow-x:auto}
-.champs>button{flex:0 0 auto;background:var(--panel);border:0;padding:9px 13px;cursor:pointer;
-  font:inherit;color:var(--ink);text-align:left;min-width:118px}
-.champs>button:hover{background:color-mix(in srgb,var(--accent) 10%,transparent)}
-.champs b{display:block;font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.05em}
-.champs span{font-size:13px}
-.tag{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:1px 7px}
-footer{margin-top:44px;color:var(--muted);font-size:12px;line-height:1.75}
-footer code{font-size:11px}
-.pick{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:34px 0 10px}
-.pick h2{margin:0}
-select{font:inherit;padding:5px 8px;border-radius:6px;border:1px solid var(--line);background:var(--panel);color:var(--ink)}
-.note{color:var(--muted);font-size:12px;margin:8px 2px 0}
+tbody tr:hover{background:var(--sunk)}
+tbody tr[aria-selected=true]{background:var(--accent-soft);box-shadow:inset 3px 0 0 var(--accent)}
+.rk{color:var(--muted);font-size:12px;display:inline-block;min-width:1.7em;font-variant-numeric:tabular-nums}
+.nm{font-weight:500}
+.pctv{font-weight:600;font-size:13.5px}
+.meter{display:block;width:66px;height:3px;margin-top:5px;margin-left:auto;background:var(--line);border-radius:2px;overflow:hidden}
+.meter>i{display:block;height:100%;background:var(--accent);border-radius:2px}
+.dv{display:flex;align-items:center;justify-content:flex-end;gap:8px}
+.dvbar{position:relative;width:74px;height:6px;background:var(--line);border-radius:3px;flex:0 0 auto}
+.dvbar>i{position:absolute;top:0;height:100%;border-radius:3px}
+.dvbar::after{content:"";position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:var(--muted);opacity:.45}
+.star{color:var(--gold);letter-spacing:-1px}
+.tag{font-size:10px;letter-spacing:.06em;color:var(--muted);border:1px solid var(--line);
+  border-radius:99px;padding:1px 6px;vertical-align:1px}
+.pos{color:var(--accent)} .neg{color:var(--loss)}
+.em{display:inline-block;width:1.7em;margin-right:.35em;text-align:center;
+  font-size:1.05em;line-height:1;vertical-align:-.08em;
+  font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif}
+.em.none{opacity:.28}
+.fhead .em{width:auto;margin-right:.3em;font-size:.92em}
+
+/* ---------- franchise panel ---------- */
+.fhead{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  padding:20px 20px 18px;border-bottom:1px solid var(--line);background:var(--sunk)}
+.fhead h3{font-family:ui-serif,Georgia,serif;font-weight:500;font-size:29px;letter-spacing:-.02em;margin:0}
+.fhead .sub{font-size:12.5px;color:var(--muted);margin-top:4px}
+.fhead select{font:inherit;font-size:13px;padding:7px 10px;border-radius:8px;
+  border:1px solid var(--line);background:var(--panel);color:var(--ink);max-width:100%}
+.stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:1px;background:var(--line)}
+.stats>div{background:var(--panel);padding:13px 16px}
+.stats dt{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.stats dd{margin:0;font-size:20px;font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.15}
+.stats dd small{display:block;font-size:11.5px;font-weight:400;color:var(--muted);letter-spacing:0;margin-top:1px}
+.sparks{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:var(--line);
+  border-top:1px solid var(--line)}
+.spark{background:var(--panel);padding:16px 18px 12px}
+.spark h4{margin:0 0 2px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.spark p{margin:0 0 10px;font-size:12px;color:var(--muted)}
+.spark svg{display:block;width:100%;height:auto;overflow:visible}
+.ctl{display:flex;align-items:center;gap:10px;margin-left:auto;flex-wrap:wrap}
+.seg{display:inline-flex;background:var(--sunk);border:1px solid var(--line);border-radius:9px;padding:2px}
+.seg button{font:inherit;font-size:12.5px;padding:5px 12px;border:0;border-radius:7px;cursor:pointer;
+  background:none;color:var(--muted);transition:background .12s,color .12s}
+.seg button[aria-selected=true]{background:var(--panel);color:var(--ink);font-weight:500;box-shadow:var(--shadow)}
+.seg button:hover{color:var(--ink)}
+.sw{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--muted);cursor:pointer;user-select:none}
+.sw input{appearance:none;width:34px;height:19px;border-radius:99px;background:var(--line);
+  position:relative;cursor:pointer;transition:background .15s;margin:0;border:0}
+.sw input::after{content:"";position:absolute;top:2px;left:2px;width:15px;height:15px;border-radius:50%;
+  background:var(--panel);box-shadow:var(--shadow);transition:transform .15s}
+.sw input:checked{background:var(--accent)}
+.sw input:checked::after{transform:translateX(15px)}
+.sw input:checked+span{color:var(--ink)}
+.empty{padding:26px 20px;color:var(--muted);font-size:13.5px;text-align:center}
+footer{border-top:1px solid var(--line);padding-top:22px;color:var(--muted);font-size:12px;line-height:1.8}
+footer code{font-size:11px;background:var(--sunk);padding:1px 5px;border-radius:4px}
+@media (max-width:560px){
+  th,td{padding:9px 10px}
+  .hero{padding:36px 0 24px}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header>
+
+  <header class="hero">
+    <p class="eyebrow">Record Book</p>
     <h1>The Fantasy League</h1>
-    <p class="sub" id="meta">Loading…</p>
+    <div class="chips" id="chips"></div>
   </header>
 
-  <h2>Champions</h2>
-  <div class="panel"><div class="champs" id="champs"></div></div>
+  <section>
+    <div class="head"><h2>Champions</h2><p class="hint">Every title, with the name they carried that year</p></div>
+    <div class="champs" id="champs"></div>
+  </section>
 
-  <h2>League records</h2>
-  <div class="panel"><dl class="cards" id="records"></dl></div>
+  <section>
+    <div class="head"><h2>League records</h2><p class="hint" id="recnote">Click any record to open that franchise</p></div>
+    <div class="card"><dl class="recs" id="records"></dl></div>
+  </section>
 
-  <h2>All-time standings</h2>
-  <div class="panel scroll">
-    <table id="standings">
-      <thead><tr>
-        <th data-k="franchise">Franchise</th>
-        <th data-k="winPercentage" aria-sort="descending">Win %</th>
-        <th data-k="record">Record</th>
-        <th data-k="wins">W</th>
-        <th data-k="losses">L</th>
-        <th data-k="titles">Titles</th>
-        <th data-k="playoffAppearances">Playoffs</th>
-        <th data-k="avgPointsFor">PF/g</th>
-        <th data-k="avgPointsAgainst">PA/g</th>
-        <th data-k="seasons">Seasons</th>
-      </tr></thead>
-      <tbody></tbody>
-    </table>
-  </div>
+  <section>
+    <div class="head">
+      <h2>All-time standings</h2>
+      <p class="hint">Click a column to sort, a row to open</p>
+      <div class="ctl">
+        <div class="seg" id="phase" role="tablist">
+          <button role="tab" data-p="regular" aria-selected="true">Regular season</button>
+          <button role="tab" data-p="playoff" aria-selected="false">Playoffs</button>
+        </div>
+        <label class="sw"><input type="checkbox" id="activeOnly" checked><span>Active only</span></label>
+      </div>
+    </div>
+    <div class="card scroll">
+      <table id="standings">
+        <thead><tr>
+          <th data-k="franchise">Franchise</th>
+          <th data-k="winPercentage" aria-sort="descending">Win %</th>
+          <th data-k="record">Record</th>
+          <th data-k="wins">W</th>
+          <th data-k="losses">L</th>
+          <th data-k="titles">Titles</th>
+          <th data-k="playoffAppearances">Playoffs</th>
+          <th data-k="avgPointsFor">PF/g</th>
+          <th data-k="avgPointsAgainst">PA/g</th>
+          <th data-k="trades">Trades</th>
+          <th data-k="seasons">Tenure</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
 
-  <div class="pick">
-    <h2>Franchise</h2>
-    <select id="picker"></select>
-  </div>
+  <section id="profile">
+    <div class="head"><h2>Franchise</h2></div>
+    <div class="card">
+      <div class="fhead">
+        <div><h3 id="fname">—</h3><div class="sub" id="fsub"></div></div>
+        <select id="picker" aria-label="Choose a franchise"></select>
+      </div>
+      <dl class="stats" id="summary"></dl>
+      <div class="sparks" id="sparks"></div>
+    </div>
 
-  <section id="profile" hidden>
-    <div class="panel"><dl class="cards" id="summary"></dl></div>
-
-    <h2>Season by season</h2>
-    <div class="panel scroll">
+    <div class="head" style="margin-top:26px"><h2>Season by season</h2></div>
+    <div class="card scroll">
       <table id="seasons">
         <thead><tr>
           <th data-k="year">Season</th>
@@ -108,6 +213,7 @@ select{font:inherit;padding:5px 8px;border-radius:6px;border:1px solid var(--lin
           <th data-k="winPct">Win %</th>
           <th data-k="wins">Record</th>
           <th data-k="finishSort">Finish</th>
+          <th data-k="poWins">Playoffs</th>
           <th data-k="pointsFor">PF</th>
           <th data-k="pointsAgainst">PA</th>
           <th data-k="adds">Adds</th>
@@ -117,21 +223,22 @@ select{font:inherit;padding:5px 8px;border-radius:6px;border:1px solid var(--lin
       </table>
     </div>
 
-    <h2>Head to head</h2>
-    <div class="panel scroll">
+    <div class="head" style="margin-top:26px"><h2>Head to head</h2><p class="hint" id="h2hnote"></p></div>
+    <div class="card scroll">
       <table id="h2h">
         <thead><tr>
           <th data-k="opponent">Opponent</th>
           <th data-k="winPercentage" aria-sort="descending">Win %</th>
           <th data-k="wins">Record</th>
           <th data-k="gamesPlayed">GP</th>
+          <th data-k="margin">Margin/g</th>
           <th data-k="avgPointsFor">PF/g</th>
           <th data-k="avgPointsAgainst">PA/g</th>
         </tr></thead>
         <tbody></tbody>
       </table>
     </div>
-    <p class="note" id="h2hnote"></p>
+    <p class="empty" id="h2hempty" style="display:none"></p>
   </section>
 
   <footer id="footnote"></footer>
@@ -140,11 +247,56 @@ select{font:inherit;padding:5px 8px;border-radius:6px;border:1px solid var(--lin
 <script>
 const $ = (s) => document.querySelector(s);
 const pct = (n) => n.toFixed(1) + '%';
-const ord = (n) => n ? n + ['th','st','nd','rd'][(n % 100 - n % 10 !== 10) * (n % 10 < 4) * n % 10] : '—';
+const num = (n) => Math.round(n).toLocaleString();
+const ord = (n) => { const s = ['th','st','nd','rd'], v = n % 100; return n + (s[(v - 20) % 10] || s[v] || s[0]); };
+const badge = (t) => `<span class="em${t && t.emoji ? '' : ' none'}">${(t && t.emoji) || '·'}</span>`;
+const stars = (n) => n ? `<span class="star" title="${n} title${n === 1 ? '' : 's'}">${'★'.repeat(Math.min(n, 3))}${n > 3 ? `+${n - 3}` : ''}</span>` : '<span style="color:var(--muted)">—</span>';
 let DATA, LIST;
+let PHASE = 'regular', ACTIVE_ONLY = true;
+const PLAYOFF = () => PHASE === 'playoff';
 
-// Every table is click-a-header-to-sort. Numeric columns open descending,
-// because the interesting end of a number column is always the top.
+/* ---------- sparklines: inline SVG, sized in a 100x32 user space ---------- */
+const VB = { w: 100, h: 32 };
+
+function sparkLine(pts, { baseline = null, fmt = (v) => v } = {}) {
+  // pts: [{x, y, label}]. x is a season, so gaps in a career show as gaps.
+  const xs = pts.map((p) => p.x), ys = pts.map((p) => p.y);
+  const x0 = Math.min(...xs), x1 = Math.max(...xs);
+  const lo = Math.min(...ys, baseline ?? Infinity), hi = Math.max(...ys, baseline ?? -Infinity);
+  const pad = (hi - lo) * 0.15 || 1;
+  const sx = (x) => x1 === x0 ? VB.w / 2 : ((x - x0) / (x1 - x0)) * VB.w;
+  const sy = (y) => VB.h - ((y - (lo - pad)) / ((hi + pad) - (lo - pad))) * VB.h;
+  const d = pts.map((p, i) => `${i ? 'L' : 'M'}${sx(p.x).toFixed(2)},${sy(p.y).toFixed(2)}`).join('');
+  const area = `${d}L${sx(x1).toFixed(2)},${VB.h}L${sx(x0).toFixed(2)},${VB.h}Z`;
+  const base = baseline == null ? '' :
+    `<line x1="0" y1="${sy(baseline).toFixed(2)}" x2="${VB.w}" y2="${sy(baseline).toFixed(2)}"
+       stroke="var(--muted)" stroke-width=".4" stroke-dasharray="2 2" opacity=".55"/>`;
+  const dots = pts.map((p) =>
+    `<circle cx="${sx(p.x).toFixed(2)}" cy="${sy(p.y).toFixed(2)}" r="1.5"
+       fill="${baseline != null && p.y < baseline ? 'var(--loss)' : 'var(--accent)'}"><title>${p.label}</title></circle>`).join('');
+  return `<svg viewBox="0 0 ${VB.w} ${VB.h}" preserveAspectRatio="none" role="img" style="height:56px">
+    <defs><linearGradient id="fade" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="var(--accent)" stop-opacity=".22"/>
+      <stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient></defs>
+    <path d="${area}" fill="url(#fade)"/>${base}
+    <path d="${d}" fill="none" stroke="var(--accent)" stroke-width="1.2"
+          stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>${dots}</svg>`;
+}
+
+function sparkBars(pts) {
+  const hi = Math.max(...pts.map((p) => p.y), 1);
+  const n = pts.length, gap = n > 20 ? 0.6 : 1.4;
+  const w = (VB.w - gap * (n - 1)) / n;
+  return `<svg viewBox="0 0 ${VB.w} ${VB.h}" preserveAspectRatio="none" role="img" style="height:56px">` +
+    pts.map((p, i) => {
+      const h = p.y / hi * VB.h, x = i * (w + gap);
+      return `<rect x="${x.toFixed(2)}" y="${(VB.h - h).toFixed(2)}" width="${w.toFixed(2)}"
+        height="${Math.max(h, p.y ? 0.6 : 0).toFixed(2)}" rx=".5"
+        fill="${p.y ? 'var(--accent)' : 'var(--line)'}" opacity="${p.y ? 1 : .7}"><title>${p.label}</title></rect>`;
+    }).join('') + '</svg>';
+}
+
+/* ---------- sorting ---------- */
 function sortable(table, rows, render, initial, initialDir = -1) {
   let key = initial, dir = initialDir;
   const heads = [...table.tHead.rows[0].cells];
@@ -168,22 +320,30 @@ function sortable(table, rows, render, initial, initialDir = -1) {
   apply();
 }
 
-const cell = (html, cls) => {
-  const td = document.createElement('td');
-  if (cls) td.className = cls;
-  td.innerHTML = html;
-  return td;
-};
-const winBar = (n) => `<span class="pct">${pct(n)}</span><span class="bar"><i style="width:${n}%"></i></span>`;
-const trophies = (n) => n ? `<span class="titles">${'★'.repeat(Math.min(n, 4))}${n > 4 ? ` ${n}` : ''}</span>` : '—';
+const cell = (html, cls) => { const td = document.createElement('td'); if (cls) td.className = cls; td.innerHTML = html; return td; };
+const meter = (n) => `<span class="pctv">${pct(n)}</span><span class="meter"><i style="width:${n}%"></i></span>`;
 
-function standingsRow(a) {
+function diverging(n) {
+  // Centred at 50%: green to the right of the midline, red to the left.
+  const d = n - 50, w = Math.abs(d) / 50 * 50;
+  const style = d >= 0 ? `left:50%;width:${w}%;background:var(--accent)` : `right:50%;width:${w}%;background:var(--loss)`;
+  return `<span class="dv"><span class="pctv ${d >= 0 ? 'pos' : 'neg'}">${pct(n)}</span>
+    <span class="dvbar"><i style="${style}"></i></span></span>`;
+}
+
+/* ---------- rows ---------- */
+function standingsRow(a, i) {
   const tr = document.createElement('tr');
+  const dim = a.gamesPlayed ? '' : ' style="color:var(--muted)"';
   tr.append(
-    cell(a.franchise), cell(winBar(a.winPercentage)), cell(a.record),
-    cell(a.wins), cell(a.losses),
-    cell(trophies(a.titles)), cell(a.playoffAppearances || '—'),
-    cell(a.avgPointsFor.toFixed(1)), cell(a.avgPointsAgainst.toFixed(1)),
+    cell(`<span class="rk">${i + 1}</span>${badge(a)}<span class="nm">${a.franchise}</span>` +
+         (a.active ? '' : ' <span class="tag">former</span>')),
+    cell(a.gamesPlayed ? meter(a.winPercentage) : '<span style="color:var(--muted)">—</span>'),
+    cell(`<span${dim}>${a.record}</span>`), cell(a.wins), cell(a.losses),
+    cell(stars(a.titles)), cell(a.playoffAppearances || '—'),
+    cell(a.gamesPlayed ? a.avgPointsFor.toFixed(1) : '—'),
+    cell(a.gamesPlayed ? a.avgPointsAgainst.toFixed(1) : '—'),
+    cell(a.trades || '—'),
     cell(`${a.firstSeason}–${a.lastSeason} <span class="tag">${a.seasons}</span>`),
   );
   tr.onclick = () => select(a.franchise);
@@ -191,129 +351,229 @@ function standingsRow(a) {
   return tr;
 }
 
+// Flatten each franchise to the phase currently being viewed. Titles, tenure
+// and trade totals are career facts and stay put in both views.
+function rowsFor(phase) {
+  return Object.values(DATA.franchises)
+    .filter((t) => !ACTIVE_ONLY || t.active)
+    .map((t) => ({ ...t.allTime[phase], ...{
+      franchise: t.franchise, emoji: t.emoji, active: t.active, titles: t.allTime.titles,
+      playoffAppearances: t.allTime.playoffAppearances, trades: t.allTime.trades,
+      adds: t.allTime.adds, seasons: t.allTime.seasons,
+      firstSeason: t.allTime.firstSeason, lastSeason: t.allTime.lastSeason,
+    } }));
+}
+
+// Superlatives for the phase on screen. The win-% record needs a real sample,
+// so one hot season can't outrank a decade; the playoff bar is necessarily lower.
+function renderRecords() {
+  const F = DATA.franchises, phase = PHASE;
+  const pool = LIST.filter((t) => t.gamesPlayed);
+  if (!pool.length) { $('#records').innerHTML = '<div class="empty">No games logged for this selection.</div>'; return; }
+  const MIN = PLAYOFF() ? 6 : 60;
+  const best = (rows, pick) => rows.reduce((a, b) => (pick(b) > pick(a) ? b : a));
+  const seasoned = pool.filter((t) => t.gamesPlayed >= MIN);
+  const shown = new Set(pool.map((t) => t.franchise));
+
+  const weeks = [];
+  for (const t of Object.values(F)) {
+    if (!shown.has(t.franchise)) continue;
+    for (const k of ['bestWeek', 'worstWeek'])
+      if (t.allTime[k] && (!PLAYOFF() || t.allTime[k].phase === 'playoff'))
+        weeks.push({ franchise: t.franchise, ...t.allTime[k] });
+  }
+  const rivalries = [];
+  for (const t of Object.values(F)) {
+    if (!shown.has(t.franchise)) continue;
+    for (const o of t.opponentHistory[phase])
+      if (o.gamesPlayed >= (PLAYOFF() ? 3 : 8)) rivalries.push({ franchise: t.franchise, ...o });
+  }
+
+  const R = [];
+  const add = (label, row, fmt, ctx) => row && R.push([label, row, fmt, ctx]);
+  if (seasoned.length) add(`Best win %`, best(seasoned, (t) => t.winPercentage),
+    (t) => [pct(t.winPercentage), t.record], `${MIN}+ games`);
+  add('Most wins', best(pool, (t) => t.wins), (t) => [t.wins, t.record], `${best(pool, (t) => t.wins).seasons} seasons`);
+  add('Most losses', best(pool, (t) => t.losses), (t) => [t.losses, t.record], 'someone has to');
+  add('Most titles', best(pool, (t) => t.titles), (t) => [t.titles, stars(t.titles)], '');
+  add('Most playoffs', best(pool, (t) => t.playoffAppearances),
+      (t) => [t.playoffAppearances, `of ${t.seasons} seasons`], '');
+  add('Most points', best(pool, (t) => t.pointsFor), (t) => [num(t.pointsFor), `${t.avgPointsFor.toFixed(1)}/g`], '');
+  if (weeks.length) {
+    add('Highest week', best(weeks, (w) => w.points), (w) => [w.points, `${w.year} week ${w.round}`],
+        `vs ${best(weeks, (w) => w.points).opponent}`);
+    add('Lowest week', best(weeks, (w) => -w.points), (w) => [w.points, `${w.year} week ${w.round}`],
+        `vs ${best(weeks, (w) => -w.points).opponent}`);
+  }
+  if (rivalries.length) add('Most one-sided', best(rivalries, (r) => r.winPercentage),
+    (r) => [r.record, `over ${r.opponent}`], pct(best(rivalries, (r) => r.winPercentage).winPercentage));
+  if (!PLAYOFF()) {
+    add('Busiest', best(pool, (t) => t.adds), (t) => [num(t.adds), 'waiver adds'],
+        `${(best(pool, (t) => t.adds).adds / best(pool, (t) => t.adds).seasons).toFixed(0)}/season`);
+    add('Most trades', best(pool, (t) => t.trades), (t) => [t.trades, 'trades made'], '');
+    const settled = pool.filter((t) => t.seasons >= 5);
+    if (settled.length) add('Least trades', best(settled, (t) => -t.trades),
+      (t) => [t.trades, `in ${t.seasons} seasons`], 'stands pat');
+  }
+
+  $('#records').innerHTML = R.map(([label, row, fmt, ctx]) => {
+    const [v, who] = fmt(row);
+    return `<div class="rec" data-f="${row.franchise}"><dt>${label}</dt>
+      <div class="v">${v}</div>
+      <div class="who">${badge(DATA.franchises[row.franchise])}${row.franchise}</div>
+      <div class="ctx">${[who, ctx].filter(Boolean).join(' · ')}</div></div>`;
+  }).join('');
+  $('#recnote').textContent = PLAYOFF()
+    ? 'Playoffs only — reconstructed from the surviving game logs'
+    : 'Regular season only · click any record to open that franchise';
+}
+
+function renderStandings() {
+  LIST = rowsFor(PHASE);
+  sortable($('#standings'), LIST, standingsRow, 'winPercentage');
+  renderRecords();
+}
+
 function select(name) {
   const t = DATA.franchises[name];
   if (!t) return;
+  const a = t.allTime;
   $('#picker').value = name;
   history.replaceState(null, '', '#' + encodeURIComponent(name));
   for (const tr of $('#standings').tBodies[0].rows) tr.setAttribute('aria-selected', tr.dataset.franchise === name);
 
-  const a = t.allTime;
-  const stat = (l, v, n = '') => `<div><dt>${l}</dt><dd>${v}${n ? ` <small>${n}</small>` : ''}</dd></div>`;
+  $('#fname').innerHTML = badge(t) + name;
+  $('#fsub').innerHTML = `${a.firstSeason}–${a.lastSeason} · ${a.seasons} seasons · ` +
+    `${a.regular.gamesPlayed} regular-season games` +
+    (t.active ? '' : ' · <span class="tag">no longer in the league</span>');
+
+  const R = a.regular, P = a.playoff;
+  const stat = (l, v, n = '') => `<div><dt>${l}</dt><dd>${v}${n ? `<small>${n}</small>` : ''}</dd></div>`;
   $('#summary').innerHTML = [
-    stat('All-time', a.record, pct(a.winPercentage)),
-    stat('Titles', a.titles ? trophies(a.titles) : '—', a.titles ? `${a.titles}×` : ''),
-    stat('Playoffs', a.playoffAppearances, `of ${a.seasons}`),
-    stat('Points for', Math.round(a.pointsFor).toLocaleString(), `${a.avgPointsFor.toFixed(1)}/g`),
-    stat('Points against', Math.round(a.pointsAgainst).toLocaleString(), `${a.avgPointsAgainst.toFixed(1)}/g`),
-    stat('Seasons', a.seasons, `${a.firstSeason}–${a.lastSeason}`),
-    stat('Adds', a.adds.toLocaleString()),
-    stat('Trades', a.trades),
+    stat('Regular season', R.record, pct(R.winPercentage)),
+    stat('Playoffs', P.gamesPlayed ? P.record : '—', P.gamesPlayed ? pct(P.winPercentage) : 'no games logged'),
+    stat('Titles', a.titles || '—', a.titles ? stars(a.titles) : 'never won it'),
+    stat('Made playoffs', a.playoffAppearances, `of ${a.seasons} seasons`),
+    stat('Points for', num(R.pointsFor), `${R.avgPointsFor.toFixed(1)} per game`),
+    stat('Points against', num(R.pointsAgainst), `${R.avgPointsAgainst.toFixed(1)} per game`),
+    stat('Adds', num(a.adds), `${(a.adds / a.seasons).toFixed(0)} a season`),
+    stat('Trades', a.trades, `${(a.trades / a.seasons).toFixed(1)} a season`),
     a.bestWeek ? stat('Best week', a.bestWeek.points, `${a.bestWeek.year} wk${a.bestWeek.round}`) : '',
     a.worstWeek ? stat('Worst week', a.worstWeek.points, `${a.worstWeek.year} wk${a.worstWeek.round}`) : '',
   ].join('');
 
-  sortable($('#seasons'), t.seasons.map((s) => ({
-    ...s, year: +s.year,
-    winPct: (s.wins + s.ties * 0.5) / Math.max(1, s.wins + s.losses + s.ties) * 100,
-    finishSort: s.finish ?? 99,
-  })), (s) => {
+  // Sparklines. Seasons are plotted on the real year axis, so a gap in a
+  // franchise's tenure reads as a gap rather than being closed up.
+  const S = t.seasons.map((s) => ({
+    ...s, x: +s.year,
+    win: (s.wins + s.ties * 0.5) / Math.max(1, s.wins + s.losses + s.ties) * 100,
+  }));
+  const panel = (title, note, svg) => `<div class="spark"><h4>${title}</h4><p>${note}</p>${svg}</div>`;
+  const swing = S.length > 1 ? `${S.at(-1).win >= S[0].win ? '+' : ''}${(S.at(-1).win - S[0].win).toFixed(0)} pts since ${S[0].year}` : 'one season';
+  $('#sparks').innerHTML =
+    panel('Win % by season', `Dashed line is .500 · ${swing}`,
+      sparkLine(S.map((s) => ({ x: s.x, y: s.win, label: `${s.year}: ${s.record} (${pct(s.win)})` })), { baseline: 50 })) +
+    panel('Trades by season', `${a.trades} all-time · ${S.filter((s) => !s.trades).length} quiet seasons`,
+      sparkBars(S.map((s) => ({ x: s.x, y: s.trades || 0, label: `${s.year}: ${s.trades || 0} trades` })))) +
+    panel('Adds by season', `${num(a.adds)} all-time · peak ${Math.max(...S.map((s) => s.adds || 0))}`,
+      sparkBars(S.map((s) => ({ x: s.x, y: s.adds || 0, label: `${s.year}: ${s.adds || 0} adds` }))));
+
+  sortable($('#seasons'), S.map((s) => ({ ...s, year: +s.year, winPct: s.win, finishSort: s.finish ?? 99, poWins: s.playoff.wins })), (s) => {
     const tr = document.createElement('tr');
     tr.append(
-      cell(`${s.year} <span class="tag">${s.platform === 'Sleeper' ? 'S' : 'NFL'}</span>`),
-      cell(s.teamName), cell(winBar(s.winPct)), cell(s.record),
-      cell(s.finish === 1 ? `${trophies(1)} 1st` : s.finish ? ord(s.finish) : (s.madePlayoffs ? 'playoffs' : '—')),
+      cell(`${s.year} <span class="tag">${s.platform === 'Sleeper' ? 'SLPR' : 'NFL'}</span>`),
+      cell(`<span class="nm">${s.teamName}</span>`), cell(meter(s.winPct)), cell(s.record),
+      cell(s.finish === 1 ? `${stars(1)} 1st` : s.finish ? ord(s.finish) : (s.madePlayoffs ? '<span class="tag">playoffs</span>' : '—')),
+      cell(s.playoff.gamesPlayed ? s.playoff.record : '—'),
       cell(s.pointsFor.toFixed(1)), cell(s.pointsAgainst.toFixed(1)),
       cell(s.adds || '—'), cell(s.trades || '—'),
     );
     return tr;
   }, 'year', 1);
 
-  sortable($('#h2h'), t.opponentHistory, (o) => {
+  const h2h = t.opponentHistory[PHASE].map((o) => ({ ...o, margin: o.avgPointsFor - o.avgPointsAgainst }));
+  $('#h2h').parentElement.style.display = h2h.length ? '' : 'none';
+  $('#h2hempty').style.display = h2h.length ? 'none' : '';
+  $('#h2hempty').textContent = PLAYOFF()
+    ? `${name} has no playoff games in the surviving logs.`
+    : `No head-to-head games logged for ${name}.`;
+  sortable($('#h2h'), h2h, (o) => {
     const tr = document.createElement('tr');
-    tr.append(cell(o.opponent), cell(winBar(o.winPercentage)), cell(o.record),
-              cell(o.gamesPlayed), cell(o.avgPointsFor.toFixed(1)), cell(o.avgPointsAgainst.toFixed(1)));
+    tr.append(
+      cell(badge(DATA.franchises[o.opponent]) + `<span class="nm">${o.opponent}</span>`),
+      cell(diverging(o.winPercentage)), cell(o.record),
+      cell(o.gamesPlayed),
+      cell(`${o.margin >= 0 ? '+' : ''}${o.margin.toFixed(1)}`, o.margin >= 0 ? 'pos' : 'neg'),
+      cell(o.avgPointsFor.toFixed(1)), cell(o.avgPointsAgainst.toFixed(1)),
+    );
     tr.onclick = () => select(o.opponent);
     return tr;
   }, 'winPercentage');
-
-  $('#h2hnote').textContent = `Matchup-level data exists only for ${DATA.meta.matchupSeasons.join(', ')}.`;
-  $('#profile').hidden = false;
 }
 
+/* ---------- boot ---------- */
 async function init() {
   DATA = await (await fetch('data/league_records.json')).json();
-  const F = DATA.franchises;
+  const F = DATA.franchises, m = DATA.meta;
   LIST = Object.values(F).map((t) => ({ ...t.allTime, franchise: t.franchise }));
-  const m = DATA.meta;
 
-  $('#meta').textContent =
-    `${m.seasons[0]}–${m.seasons.at(-1)} · ${LIST.length} franchises · ${m.games.toLocaleString()} logged games`;
-
-  // Champions strip, oldest first — one button per season that has a winner.
   const champs = [];
   for (const t of Object.values(F))
     for (const s of t.seasons) if (s.finish === 1) champs.push({ year: s.year, name: t.franchise, team: s.teamName });
   champs.sort((a, b) => a.year.localeCompare(b.year));
-  $('#champs').replaceChildren(...champs.map((c) => {
+
+  $('#chips').innerHTML = [
+    [`${m.seasons[0]}–${m.seasons.at(-1)}`, 'Seasons covered'],
+    [LIST.length, 'Franchises'],
+    [m.games.toLocaleString(), 'Games logged'],
+    [champs.length, 'Champions crowned'],
+  ].map(([v, l]) => `<div><b>${v}</b><span>${l}</span></div>`).join('');
+
+  $('#champs').replaceChildren(...champs.map((c, i) => {
     const b = document.createElement('button');
-    b.innerHTML = `<b>${c.year}</b><span>${c.team}</span>`;
-    b.onclick = () => { select(c.name); $('#profile').scrollIntoView({ behavior: 'smooth' }); };
+    b.className = 'champ' + (i === champs.length - 1 ? ' now' : '');
+    b.innerHTML = `<span class="yr">${c.year}${i === champs.length - 1 ? ' ★' : ''}</span>` +
+      `<span class="tm">${badge(F[c.name])}${c.team}</span>`;
+    b.title = c.team === c.name ? c.name : `${c.name} — as "${c.team}"`;
+    b.onclick = () => { select(c.name); $('#profile').scrollIntoView({ block: 'start' }); };
     return b;
   }));
 
-  // Superlatives. Win % is restricted to franchises with a real sample so a
-  // single 9-5 season can't top a decade of results.
-  const QUALIFIED = 60;
-  const best = (rows, pick, fmt) => {
-    const w = rows.reduce((a, b) => (pick(b) > pick(a) ? b : a));
-    return { name: w.franchise, value: fmt(w) };
-  };
-  const worst = (rows, pick, fmt) => best(rows, (r) => -pick(r), fmt);
-  const seasoned = LIST.filter((t) => t.gamesPlayed >= QUALIFIED);
-  const weeks = [];
-  for (const t of Object.values(F)) {
-    if (t.allTime.bestWeek) weeks.push({ franchise: t.franchise, ...t.allTime.bestWeek });
-    if (t.allTime.worstWeek) weeks.push({ franchise: t.franchise, ...t.allTime.worstWeek });
-  }
-  const rivalries = [];
-  for (const t of Object.values(F))
-    for (const o of t.opponentHistory)
-      if (o.gamesPlayed >= 8) rivalries.push({ franchise: t.franchise, ...o });
+  renderStandings();
 
-  const rec = (label, r, note) =>
-    `<div><dt>${label}</dt><dd style="font-size:15px">${r.name}<br><small>${r.value}${note ? ' · ' + note : ''}</small></dd></div>`;
-  $('#records').innerHTML = [
-    rec('Best win %', best(seasoned, (t) => t.winPercentage, (t) => pct(t.winPercentage)), `${QUALIFIED}+ games`),
-    rec('Most wins', best(LIST, (t) => t.wins, (t) => `${t.wins} wins`)),
-    rec('Most losses', best(LIST, (t) => t.losses, (t) => `${t.losses} losses`)),
-    rec('Most titles', best(LIST, (t) => t.titles, (t) => `${t.titles} title${t.titles === 1 ? '' : 's'}`)),
-    rec('Most playoffs', best(LIST, (t) => t.playoffAppearances, (t) => `${t.playoffAppearances} of ${t.seasons}`)),
-    rec('Most points', best(LIST, (t) => t.pointsFor, (t) => Math.round(t.pointsFor).toLocaleString())),
-    rec('Highest week', best(weeks, (w) => w.points, (w) => `${w.points} — ${w.year} wk${w.round}`)),
-    rec('Lowest week', worst(weeks, (w) => w.points, (w) => `${w.points} — ${w.year} wk${w.round}`)),
-    rec('Most one-sided', best(rivalries, (r) => r.winPercentage, (r) => `${r.record} vs ${r.opponent}`)),
-    rec('Most active', best(LIST, (t) => t.adds, (t) => `${t.adds.toLocaleString()} adds`)),
-    rec('Most trades', best(LIST, (t) => t.trades, (t) => `${t.trades} trades`)),
-    rec('Never trades', worst(LIST.filter((t) => t.seasons >= 5), (t) => t.trades,
-                             (t) => `${t.trades} in ${t.seasons} seasons`)),
-  ].join('');
-
-  sortable($('#standings'), LIST, standingsRow, 'winPercentage');
-
-  $('#picker').replaceChildren(new Option('Pick a franchise…', ''),
-    ...LIST.map((t) => t.franchise).sort().map((n) => new Option(n, n)));
-  $('#picker').onchange = (e) => e.target.value && select(e.target.value);
-
-  $('#footnote').innerHTML = m.note + '<br><br>Sources: ' +
+  $('#picker').replaceChildren(...Object.values(F)
+    .sort((a, b) => a.franchise.localeCompare(b.franchise))
+    .map((t) => new Option(`${t.emoji || '·'}  ${t.franchise}`, t.franchise)));
+  $('#picker').onchange = (e) => select(e.target.value);
+  $('#h2hnote').textContent = `Matchups survive only for ${DATA.meta.matchupSeasons.join(', ')}`;
+  $('#footnote').innerHTML = m.note + '<br><br>' +
     m.sources.map((s) => `<code>${s}</code>`).join('<br>') +
-    '<br><br>Rebuilt by <code>build.py</code>; raw API responses are archived in <code>data/</code>.';
+    '<br><br>Rebuilt by <code>build.py</code>; raw API responses archived in <code>data/</code>.';
+
+  $('#records').onclick = (e) => {
+    const f = e.target.closest('.rec')?.dataset.f;
+    if (f) { select(f); $('#profile').scrollIntoView({ block: 'start' }); }
+  };
+  $('#phase').onclick = (e) => {
+    const b = e.target.closest('button[data-p]');
+    if (!b || b.dataset.p === PHASE) return;
+    PHASE = b.dataset.p;
+    for (const x of $('#phase').children) x.setAttribute('aria-selected', x === b);
+    renderStandings();
+    select($('#picker').value);
+  };
+  $('#activeOnly').onchange = (e) => {
+    ACTIVE_ONLY = e.target.checked;
+    renderStandings();
+    // Keep the open franchise selected even if the filter just hid its row.
+    select($('#picker').value);
+  };
 
   const initial = decodeURIComponent(location.hash.slice(1));
   select(F[initial] ? initial : 'The Puffins');
 }
 
-init().catch((e) => { $('#meta').textContent = 'Could not load the record book.'; console.error(e); });
+init().catch((e) => { $('#chips').innerHTML = '<div><b>—</b><span>Could not load the record book</span></div>'; console.error(e); });
 </script>
 </body>
 </html>

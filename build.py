@@ -83,10 +83,38 @@ def sleeper_alias():
         return {r["roster_id"]: r["franchise"] for r in csv.DictReader(f)}
 
 
+def franchise_emoji():
+    """The badge each current franchise goes by. Departed franchises have none."""
+    with open(RAW / "sleeper_aliases.csv", newline="") as f:
+        return {r["franchise"]: r["emoji"] for r in csv.DictReader(f) if r.get("emoji")}
+
+
 # ---------- game logs ----------
 
-def nfl_games(alias):
-    """Individual 2012-2022 matchups from the scrape."""
+def regular_season_end():
+    """Last week of the regular season, per year, read off the game log.
+
+    The league has moved its playoff start around - week 14 in 2012-14 and
+    2021-22, week 13 in between - so it can't be hardcoded. Every team plays in
+    a regular-season week, so the regular season is the run of weeks carrying a
+    full slate; the slate shrinks the moment the brackets start. This agrees
+    exactly with the game counts in NFL's own season records.
+    """
+    per_week = defaultdict(int)
+    with open(RAW / "league_h2h.csv", newline="") as f:
+        for row in csv.DictReader(f):
+            if PLACEHOLDER not in (row["home_team"], row["away_team"]):
+                per_week[(row["year"], int(row["round"]))] += 1
+    out = {}
+    for (year, week), n in per_week.items():
+        full = max(v for (y, _), v in per_week.items() if y == year)
+        if n == full:
+            out[year] = max(out.get(year, 0), week)
+    return out
+
+
+def nfl_games(alias, reg_end):
+    """Individual 2012-2022 matchups from the scrape, tagged regular or playoff."""
     with open(RAW / "league_h2h.csv", newline="") as f:
         for row in csv.DictReader(f):
             year, rnd = row["year"], int(row["round"])
@@ -94,7 +122,8 @@ def nfl_games(alias):
                 continue
             if PLACEHOLDER in (row["home_team"], row["away_team"]):
                 continue
-            yield (year, rnd, alias[(year, row["home_team"])], float(row["home_score"]),
+            phase = "regular" if rnd <= reg_end.get(year, 99) else "playoff"
+            yield (year, rnd, phase, alias[(year, row["home_team"])], float(row["home_score"]),
                    alias[(year, row["away_team"])], float(row["away_score"]))
 
 
@@ -102,6 +131,8 @@ def sleeper_games(alias):
     """Individual matchups from Sleeper, which pairs rosters by matchup_id."""
     for f in sorted(glob(str(RAW / "sleeper" / "*-matchups-*.json"))):
         year, week = re.search(r"(\d{4})-matchups-(\d+)", Path(f).name).groups()
+        start = json.load(open(RAW / "sleeper" / f"{year}-league.json"))["settings"]["playoff_week_start"]
+        phase = "regular" if int(week) < start else "playoff"
         pairs = defaultdict(list)
         for m in json.load(open(f)):
             if m.get("matchup_id") is not None:
@@ -114,7 +145,7 @@ def sleeper_games(alias):
             # than recording sixteen scoreless draws.
             if not a["points"] and not b["points"]:
                 continue
-            yield (year, int(week), alias[str(a["roster_id"])], float(a["points"]),
+            yield (year, int(week), phase, alias[str(a["roster_id"])], float(a["points"]),
                    alias[str(b["roster_id"])], float(b["points"]))
 
 
@@ -220,91 +251,127 @@ def main():
     seasons = nfl_seasons()
     alias, _ = franchises(seasons)
     salias = sleeper_alias()
+    badge = franchise_emoji()
+    reg_end = regular_season_end()
 
-    games = list(nfl_games(alias)) + list(sleeper_games(salias))
     standings = list(nfl_standings(seasons, alias)) + list(sleeper_standings(salias))
+    # Which franchises reached the championship bracket in a given year. Games
+    # played in a playoff week by a team that didn't are consolation games, and
+    # belong to neither the regular season nor the playoffs.
+    bracket = {(s["year"], s["franchise"]) for s in standings if s["madePlayoffs"]}
 
-    overall, versus, weeks = defaultdict(blank), defaultdict(lambda: defaultdict(blank)), defaultdict(list)
+    games = list(nfl_games(alias, reg_end)) + list(sleeper_games(salias))
+
+    overall = defaultdict(lambda: defaultdict(blank))          # [team][phase]
+    versus = defaultdict(lambda: defaultdict(lambda: defaultdict(blank)))  # [team][phase][opp]
+    per_season = defaultdict(lambda: defaultdict(blank))       # [(team, year)][phase]
+    weeks = defaultdict(list)
     logged = set()
-    for year, rnd, a, sa, b, sb in games:
+
+    for year, rnd, phase, a, sa, b, sb in games:
         logged.add(year)
         for me, mine, them, theirs in ((a, sa, b, sb), (b, sb, a, sa)):
+            if phase == "playoff" and (year, me) not in bracket:
+                continue  # consolation bracket
             # Recomputed from the scores: the scraped winner column fell through
             # to the away team on equal scores, filing every draw as an away win.
             res = "wins" if mine > theirs else "losses" if mine < theirs else "draws"
-            for acc in (overall[me], versus[me][them]):
+            for acc in (overall[me][phase], versus[me][phase][them], per_season[(me, year)][phase]):
                 acc[res] += 1
                 acc["pointsFor"] += mine
                 acc["pointsAgainst"] += theirs
-            weeks[me].append({"points": round(mine, 2), "year": year, "round": rnd, "opponent": them})
+            weeks[me].append({"points": round(mine, 2), "year": year, "round": rnd,
+                              "opponent": them, "phase": phase})
 
     by_team = defaultdict(list)
     for s in standings:
         by_team[s["franchise"]].append(s)
 
+    current = max(s["year"] for s in standings if s["platform"] == "Sleeper")
+    active = {s["franchise"] for s in standings if s["year"] == current}
+    # 2026 has no results yet, so roster membership is the honest liveness test.
+    live = json.load(open(RAW / "sleeper" / "2026-rosters.json"))
+    active |= {salias[str(r["roster_id"])] for r in live}
+
     out = {}
     for name in sorted(by_team):
         yrs = sorted(by_team[name], key=lambda s: s["year"])
-        career = blank()
+        # The regular-season career comes from the platforms' own season records,
+        # which cover every year including the ones with no surviving game log.
+        reg = blank()
         for s in yrs:
-            career["wins"] += s["wins"]
-            career["losses"] += s["losses"]
-            career["draws"] += s["ties"]
-            career["pointsFor"] += s["pointsFor"]
-            career["pointsAgainst"] += s["pointsAgainst"]
+            reg["wins"] += s["wins"]
+            reg["losses"] += s["losses"]
+            reg["draws"] += s["ties"]
+            reg["pointsFor"] += s["pointsFor"]
+            reg["pointsAgainst"] += s["pointsAgainst"]
+        post = overall[name]["playoff"]
+
+        for s in yrs:
+            ps = per_season[(name, s["year"])]["playoff"]
+            s["playoff"] = summarise(ps)
+
         wk = sorted(weeks.get(name, []), key=lambda w: w["points"])
         out[name] = {
             "franchise": name,
-            "allTime": dict(
-                summarise(career),
-                seasons=len(yrs),
-                firstSeason=yrs[0]["year"],
-                lastSeason=yrs[-1]["year"],
-                titles=sum(1 for s in yrs if s["finish"] == 1),
-                adds=sum(s.get("adds", 0) for s in yrs),
-                trades=sum(s.get("trades", 0) for s in yrs),
-                playoffAppearances=sum(1 for s in yrs if s["madePlayoffs"]),
-                bestWeek=wk[-1] if wk else None,
-                worstWeek=wk[0] if wk else None,
-            ),
+            "emoji": badge.get(name, ""),
+            "active": name in active,
+            "allTime": {
+                "regular": summarise(reg),
+                "playoff": summarise(post),
+                "seasons": len(yrs),
+                "firstSeason": yrs[0]["year"],
+                "lastSeason": yrs[-1]["year"],
+                "titles": sum(1 for s in yrs if s["finish"] == 1),
+                "playoffAppearances": sum(1 for s in yrs if s["madePlayoffs"]),
+                "adds": sum(s.get("adds", 0) for s in yrs),
+                "trades": sum(s.get("trades", 0) for s in yrs),
+                "bestWeek": wk[-1] if wk else None,
+                "worstWeek": wk[0] if wk else None,
+            },
             "seasons": yrs,
-            "opponentHistory": sorted(
-                (dict(summarise(versus[name][o]), opponent=o) for o in versus.get(name, {})),
-                key=lambda r: (-r["winPercentage"], -r["gamesPlayed"], r["opponent"]),
-            ),
+            "opponentHistory": {
+                phase: sorted(
+                    (dict(summarise(versus[name][phase][o]), opponent=o) for o in versus[name][phase]),
+                    key=lambda r: (-r["winPercentage"], -r["gamesPlayed"], r["opponent"]),
+                )
+                for phase in ("regular", "playoff")
+            },
         }
 
-    # Emit the franchise map as a reviewable artefact. It is derived, not input,
-    # but it is the one table a human would want to check by eye.
+    OUT.mkdir(parents=True, exist_ok=True)
     with open(RAW / "franchises.csv", "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(["year", "team_name", "franchise"])
         w.writerows(sorted((y, n, fr) for (y, n), fr in alias.items()))
 
-    OUT.mkdir(parents=True, exist_ok=True)
     payload = {
         "meta": {
             "seasons": sorted({s["year"] for s in standings}),
             "matchupSeasons": sorted(logged),
+            "regularSeasonEnd": dict(sorted(reg_end.items())),
             "games": len(games),
             "franchises": len(out),
             "sources": [
-                "NFL.com fantasy league 1078038 — game log scraped 13 Nov 2022",
-                "api.fantasy.nfl.com — season standings, 2012-2024",
-                "api.sleeper.app — league 1262684581069332480 (2025) and 1380142135487004672 (2026)",
+                "NFL.com fantasy league 1078038 - game log scraped 13 Nov 2022",
+                "api.fantasy.nfl.com - season standings, 2012-2024",
+                "api.sleeper.app - leagues 1262684581069332480 (2025) and 1380142135487004672 (2026)",
             ],
-            "note": ("Season records cover every year. Head-to-head covers only the years "
-                     "with a surviving game log: 2012 to 2022 week 9, and 2025 onward. "
-                     "NFL's website was retired before 2022 wk10-2024 could be captured."),
+            "note": ("Regular-season records come from the platforms' own season records and cover "
+                     "every year. Playoff records are reconstructed from the surviving game logs, so "
+                     "they exist only for 2012-2021 and 2025 - NFL's website was retired before "
+                     "2022 wk10-2024 could be captured. Consolation-bracket games count as neither."),
         },
         "franchises": out,
     }
     with open(OUT / "league_records.json", "w") as f:
         json.dump(payload, f, indent=2)
         f.write("\n")
+
+    pl = sum(t["allTime"]["playoff"]["gamesPlayed"] for t in out.values()) // 2
     print(f"{len(out)} franchises · {len(standings)} team-seasons · {len(games)} logged games")
-    print(f"seasons {payload['meta']['seasons'][0]}-{payload['meta']['seasons'][-1]}, "
-          f"matchups for {', '.join(payload['meta']['matchupSeasons'])}")
+    print(f"regular-season end by year: {dict(sorted(reg_end.items()))}")
+    print(f"playoff games reconstructed: {pl}")
 
 
 if __name__ == "__main__":
