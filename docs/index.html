@@ -395,9 +395,9 @@ function standingsRow(a, i) {
 
 // Flatten each franchise to the phase currently being viewed. Titles, tenure
 // and trade totals are career facts and stay put in both views.
-function rowsFor(phase) {
+function rowsFor(phase, everyone = false) {
   return Object.values(DATA.franchises)
-    .filter((t) => !ACTIVE_ONLY || t.active)
+    .filter((t) => everyone || !ACTIVE_ONLY || t.active)
     .map((t) => ({ ...t.allTime[phase], ...{
       franchise: t.franchise, emoji: t.emoji, active: t.active, titles: t.allTime.titles,
       playoffAppearances: t.allTime.playoffAppearances, trades: t.allTime.trades,
@@ -411,7 +411,10 @@ function rowsFor(phase) {
 // so one hot season can't outrank a decade; the playoff bar is necessarily lower.
 function renderRecords() {
   const F = DATA.franchises, phase = PHASE;
-  const pool = LIST.filter((t) => t.gamesPlayed);
+  // Records are all-time and ignore the active filter. A franchise that has left
+  // still holds what it won or suffered - Mikkels Manatees took three shitbowls
+  // and are gone, and hiding that behind a display toggle would be wrong.
+  const pool = rowsFor(phase, true).filter((t) => t.gamesPlayed);
   if (!pool.length) { $('#records').innerHTML = '<div class="empty">No games logged for this selection.</div>'; return; }
   const MIN = PLAYOFF() ? 6 : 60;
   const best = (rows, pick) => rows.reduce((a, b) => (pick(b) > pick(a) ? b : a));
@@ -467,8 +470,8 @@ function renderRecords() {
       <div class="ctx">${[who, ctx].filter(Boolean).join(' · ')}</div></div>`;
   }).join('');
   $('#recnote').textContent = {
-    regular: 'Regular season only · click any record to open that franchise',
-    playoff: 'Playoffs only — reconstructed from the surviving game logs',
+    regular: 'Regular season · all-time, including franchises that have left',
+    playoff: 'Playoffs · all-time, reconstructed from seeds and placings',
     combined: 'Regular season plus playoffs · playoff games are missing for 2022–24',
   }[PHASE];
 }
