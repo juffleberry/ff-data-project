@@ -444,8 +444,11 @@ function renderRecords() {
   add('Most titles', best(pool, (t) => t.titles), (t) => [t.titles, stars(t.titles)], '');
   // Only worth a card once someone has more than one; four franchises tied on a
   // single shitbowl is not a record, it is a list.
-  if (!PLAYOFF() && best(pool, (t) => t.shitbowls).shitbowls > 1)
-    add('Most shitbowls', best(pool, (t) => t.shitbowls), (t) => [`💩 ${t.shitbowls}`, 'crowned worst'], '');
+  const spoonTop = best(pool, (t) => t.shitbowls).shitbowls;
+  const spoonTied = pool.filter((t) => t.shitbowls === spoonTop);
+  if (!PLAYOFF() && spoonTop > 1)
+    add('Most shitbowls', spoonTied[0], (t) => [`💩 ${t.shitbowls}`, 'crowned worst'],
+        spoonTied.length > 1 ? `tied with ${spoonTied.slice(1).map((t) => t.franchise).join(', ')}` : '');
   add('Most playoffs', best(pool, (t) => t.playoffAppearances),
       (t) => [t.playoffAppearances, `of ${t.seasons} seasons`], '');
   add('Most points', best(pool, (t) => t.pointsFor), (t) => [num(t.pointsFor), `${t.avgPointsFor.toFixed(1)}/g`], '');
@@ -681,7 +684,7 @@ async function init() {
               cell(named && named !== f.champion ? `<span style="color:var(--muted)">${named}</span>` : '—'),
               cell(who(f.runnerUp)), cell(who(f.third)),
               cell(f.shitbowl
-                   ? `<span title="${{'derived-winless': 'Derived: lost every consolation game',
+                   ? `<span title="${{'derived-confirmed': 'Worked out from the game log, then confirmed',
                         'recalled': 'From memory — the postseason results for this season are gone',
                         'sleeper-bracket': "Sleeper's losers bracket states it"}[f.shitbowlSource] || ''}">` +
                      `💩 ${who(f.shitbowl)}</span>`

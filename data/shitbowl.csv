@@ -1,46 +1,36 @@
-# Who came last in the consolation bracket, by season.
+# Who took the shitbowl, by season. Hand-maintained, because it cannot be
+# derived - every attempt to find a rule failed against the evidence:
 #
-# This is a hand-maintained record, not a derivation. NFL's API exposes no
-# consolation bracket detail, and its `place` field demonstrably does not follow
-# consolation results - in 2019 the seed that went 2-0 was placed 9th and the
-# seed that went 0-3 was placed 8th. So there is nothing to compute against, and
-# for 2022-24 the postseason game results are gone entirely.
+#   * NFL's API exposes no consolation bracket detail at all. The whole response
+#     is 51 fields and none of them is a bracket.
+#   * Its `place` field does not follow consolation results. In 2019 the seed
+#     that went 2-0 was placed 9th and the seed that went 0-3 was placed 8th.
+#   * It does not even track bracket type. 2019 went to a team seeded 4th in the
+#     CHAMPIONSHIP bracket; 2024 went to one in the consolation bracket.
+#   * For 2022-24 the postseason results are gone outright, so there is nothing
+#     left to compute from even in principle.
 #
-# The shitbowl is WON, not lost - whoever comes out of the consolation bracket
-# on top is crowned worst. 2025 confirms it: Yorkshire Puddings won the
-# losers-bracket final and took the spoon.
+# Names must match data/franchises.csv, which files each franchise under its
+# most recent team name. 2019's "Chicken Karama with rice" is therefore under
+# "Mooreccan chicken with rice", the same manager's 2020 name.
 #
-# 2012-21 were briefly filled in from the game log with the opposite reading -
-# the team that lost every consolation game - which is wrong, so they are blank
-# again. Deriving the right answer needs the consolation FINAL identified, and
-# those brackets are irregular enough (byes in odd rounds, two teams finishing
-# 2-0) that it cannot be picked out reliably. Fill them in by hand.
+# Blank means nobody has confirmed it; blank rows render as "unknown" rather
+# than a guess. 2025 onwards derives itself from Sleeper's losers bracket, whose
+# placement final names the winner outright, and needs no row here.
 #
-# It does not even track bracket type: 2019 went to a team seeded 4th in the
-# CHAMPIONSHIP bracket, while 2024 went to one in the consolation bracket. So
-# there is no rule to derive against, only the record below.
-#
-# Names must match data/franchises.csv, which uses each franchise's most recent
-# team name - 2019's "Chicken Karama with rice" is filed under "Mooreccan
-# chicken with rice", the same manager's 2020 name.
-#
-# 2019 and 2022-24 are from memory; those postseason results exist nowhere.
-# 2025 onwards derives itself from Sleeper's losers bracket and needs no row.
-#
-# Leave `franchise` blank for a season nobody can confirm; blank rows are simply
-# not rendered. `franchise` must match a name in data/franchises.csv.
-#
-# source: recalled | derived-winless
+# source:
+#   derived-confirmed  worked out from the game log, then checked by the league
+#   recalled           from memory; no surviving data could have supplied it
 year,franchise,second_last,source
-2012,,,
-2013,,,
-2014,,,
-2015,,,
-2016,,,
-2017,,,
-2018,,,
+2012,Mikkels Manatees,,derived-confirmed
+2013,London Tanqs,,derived-confirmed
+2014,Bearnaise Dynamics,,derived-confirmed
+2015,The Dirty Birds,,derived-confirmed
+2016,Kurlewless,,derived-confirmed
+2017,AT Football Team,,derived-confirmed
+2018,Mikkels Manatees,,derived-confirmed
 2019,Mooreccan chicken with rice,,recalled
-2020,,,
+2020,Mikkels Manatees,,derived-confirmed
 2021,,,
 2022,The Beer Barons,,recalled
 2023,The Dirty Birds,,recalled
