@@ -62,6 +62,7 @@
       "2025"
     ],
     "shitbowlSeasons": [
+      "2019",
       "2022",
       "2023",
       "2024",
@@ -389,9 +390,9 @@
         "champion": "Bearnaise Dynamics",
         "runnerUp": "Not Enough Cooks",
         "third": "The Aligators",
-        "shitbowl": null,
+        "shitbowl": "Mooreccan chicken with rice",
         "shitbowlSecondLast": null,
-        "shitbowlSource": null
+        "shitbowlSource": "recalled"
       },
       {
         "year": "2020",
@@ -6928,7 +6929,7 @@
         "finalsWon": 1,
         "finalsLost": 0,
         "finalsReached": 1,
-        "shitbowls": 0
+        "shitbowls": 1
       },
       "seasons": [
         {
@@ -7098,7 +7099,7 @@
             "avgPointsFor": 75.38,
             "avgPointsAgainst": 89.44
           },
-          "shitbowl": false,
+          "shitbowl": true,
           "finalStanding": 6
         },
         {

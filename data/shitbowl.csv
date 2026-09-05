@@ -16,8 +16,16 @@
 # those brackets are irregular enough (byes in odd rounds, two teams finishing
 # 2-0) that it cannot be picked out reliably. Fill them in by hand.
 #
-# 2022-24 are from memory; those postseason results exist nowhere. 2025 onwards
-# derives itself from Sleeper's losers bracket and needs no row here.
+# It does not even track bracket type: 2019 went to a team seeded 4th in the
+# CHAMPIONSHIP bracket, while 2024 went to one in the consolation bracket. So
+# there is no rule to derive against, only the record below.
+#
+# Names must match data/franchises.csv, which uses each franchise's most recent
+# team name - 2019's "Chicken Karama with rice" is filed under "Mooreccan
+# chicken with rice", the same manager's 2020 name.
+#
+# 2019 and 2022-24 are from memory; those postseason results exist nowhere.
+# 2025 onwards derives itself from Sleeper's losers bracket and needs no row.
 #
 # Leave `franchise` blank for a season nobody can confirm; blank rows are simply
 # not rendered. `franchise` must match a name in data/franchises.csv.
@@ -31,7 +39,7 @@ year,franchise,second_last,source
 2016,,,
 2017,,,
 2018,,,
-2019,,,
+2019,Mooreccan chicken with rice,,recalled
 2020,,,
 2021,,,
 2022,The Beer Barons,,recalled
