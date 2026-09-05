@@ -542,7 +542,7 @@ function select(name) {
   $('#h2h').parentElement.style.display = h2h.length ? '' : 'none';
   $('#h2hempty').style.display = h2h.length ? 'none' : '';
   $('#h2hempty').textContent = PLAYOFF()
-    ? `${name} has no playoff games in the surviving logs.`
+    ? `${name} never reached the playoffs.`
     : `No head-to-head games logged for ${name}.`;
   sortable($('#h2h'), h2h, (o) => {
     const tr = document.createElement('tr');
@@ -550,8 +550,10 @@ function select(name) {
       cell(badge(DATA.franchises[o.opponent]) + `<span class="nm">${o.opponent}</span>`),
       cell(diverging(o.winPercentage)), cell(o.record),
       cell(o.gamesPlayed),
-      cell(`${o.margin >= 0 ? '+' : ''}${o.margin.toFixed(1)}`, o.margin >= 0 ? 'pos' : 'neg'),
-      cell(o.avgPointsFor.toFixed(1)), cell(o.avgPointsAgainst.toFixed(1)),
+      cell(o.pointsFor ? `${o.margin >= 0 ? '+' : ''}${o.margin.toFixed(1)}` : '—',
+           o.pointsFor ? (o.margin >= 0 ? 'pos' : 'neg') : ''),
+      cell(o.pointsFor ? o.avgPointsFor.toFixed(1) : '—'),
+      cell(o.pointsFor ? o.avgPointsAgainst.toFixed(1) : '—'),
     );
     tr.onclick = () => select(o.opponent);
     return tr;
@@ -645,7 +647,11 @@ async function init() {
     .sort((a, b) => a.franchise.localeCompare(b.franchise))
     .map((t) => new Option(`${t.emoji || '·'}  ${t.franchise}`, t.franchise)));
   $('#picker').onchange = (e) => select(e.target.value);
-  $('#h2hnote').textContent = `Matchups survive only for ${DATA.meta.matchupSeasons.join(', ')}`;
+  const noScores = m.bracketSeasons.filter((y) => !m.bracketScored.includes(y));
+  $('#h2hnote').innerHTML =
+    `Regular season: ${m.matchupSeasons.join(', ')} — 2022 wk10 to 2024 was never captured. ` +
+    `Playoffs: every season, but ${noScores.join(', ')} are reconstructed from seeds and placings, ` +
+    `so they carry a result and no score.`;
   $('#footnote').innerHTML = m.note + '<br><br>' +
     m.sources.map((s) => `<code>${s}</code>`).join('<br>') +
     '<br><br>Rebuilt by <code>build.py</code>; raw API responses archived in <code>data/</code>.';

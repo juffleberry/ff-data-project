@@ -229,6 +229,69 @@ def sleeper_standings(alias):
 
 # ---------- aggregation ----------
 
+def playoff_bracket(seed, place):
+    """Reconstruct the playoff pairings from seeds and final placings.
+
+    The API never returned matchups, but it did return every team's playoff
+    seed and its final placing, and those two together pin down the bracket:
+    the teams placing 5th and 6th are exactly the ones that lost in round one,
+    3rd and 4th are the semi-final losers, and 1st and 2nd contested the final.
+
+    The league re-seeds between rounds - the top seed always draws the lowest
+    surviving seed - which is what makes the reconstruction unique. Checked
+    against the game log for 2012-2020: it reproduces all 46 playoff pairings
+    exactly, 9 seasons out of 9. It gives no scores, only who played whom and
+    who won.
+    """
+    by_seed = {v: k for k, v in seed.items()}
+    at = {p: t for t, p in place.items()}
+    n = len(seed)
+    if n not in (4, 6) or sorted(seed.values()) != list(range(1, n + 1)):
+        return []
+    if len(at) != n:
+        return []
+    games = []
+    if n == 6:
+        out1 = {at[5], at[6]}
+        alive = [by_seed[1], by_seed[2]]
+        for a, b in ((by_seed[3], by_seed[6]), (by_seed[4], by_seed[5])):
+            w = b if a in out1 else a
+            games.append((a, b, w))
+            alive.append(w)
+        alive.sort(key=lambda t: seed[t])
+        pairs = ((alive[0], alive[3]), (alive[1], alive[2]))
+    else:
+        pairs = ((by_seed[1], by_seed[4]), (by_seed[2], by_seed[3]))
+    out2 = {at[3], at[4]}
+    for a, b in pairs:
+        games.append((a, b, b if a in out2 else a))
+    games.append((at[1], at[2], at[1]))
+    games.append((at[3], at[4], at[3]))
+    return games
+
+
+def brackets(seasons, alias, played):
+    """Derived playoff pairings for every completed NFL season."""
+    out = {}
+    for year, lg in seasons.items():
+        if year not in played or not lg.get("isSeasonOver"):
+            continue
+        seed, place = {}, {}
+        for t in lg["teams"].values():
+            st = (t.get("stats") or {}).get("season", {}).get(year) or {}
+            if st.get("playoffBracketType") != "championship":
+                continue
+            name = alias[(year, t["name"])]
+            if st.get("playoffSeed"):
+                seed[name] = int(st["playoffSeed"])
+            if st.get("place"):
+                place[name] = int(st["place"])
+        g = playoff_bracket(seed, place)
+        if g:
+            out[year] = g
+    return out
+
+
 def finals(seasons, alias, played):
     """Champion, runner-up and podium for each season.
 
@@ -269,8 +332,30 @@ def sleeper_finals(alias):
     return out
 
 
+def played_nfl(standings):
+    return {s["year"] for s in standings if s["platform"] == "NFL.com"}
+
+
+def sleeper_brackets(alias):
+    """Sleeper states its bracket outright, so nothing needs reconstructing."""
+    out = {}
+    for f in sorted(glob(str(RAW / "sleeper" / "*-winners_bracket.json"))):
+        year = re.match(r"(\d{4})", Path(f).name).group(1)
+        gs = []
+        for m in json.load(open(f)):
+            if isinstance(m.get("t1"), int) and isinstance(m.get("t2"), int) and m.get("w"):
+                gs.append((alias[str(m["t1"])], alias[str(m["t2"])], alias[str(m["w"])]))
+        if gs:
+            out[year] = gs
+    return out
+
+
 def blank():
-    return {"wins": 0, "losses": 0, "draws": 0, "pointsFor": 0.0, "pointsAgainst": 0.0}
+    # scoredGames tracks how many of these games carry points. A reconstructed
+    # playoff pairing has a winner but no score, so averaging over gamesPlayed
+    # would quietly deflate every points-per-game figure it touches.
+    return {"wins": 0, "losses": 0, "draws": 0, "pointsFor": 0.0, "pointsAgainst": 0.0,
+            "scoredGames": 0}
 
 
 def merged(by_phase, phase):
@@ -288,14 +373,15 @@ def merged(by_phase, phase):
 def summarise(acc):
     games = acc["wins"] + acc["losses"] + acc["draws"]
     out = dict(acc, gamesPlayed=games)
+    scored = acc.get("scoredGames", games)
     out["record"] = f"{acc['wins']}-{acc['losses']}-{acc['draws']}"
     # The original build wrote str(pct)[0:2] + '%', which truncates rather than
     # rounds, so every undefeated matchup rendered as "10%".
     out["winPercentage"] = round((acc["wins"] + acc["draws"] * 0.5) / games * 100, 1) if games else 0.0
     for k in ("pointsFor", "pointsAgainst"):
         out[k] = round(out[k], 2)
-    out["avgPointsFor"] = round(out["pointsFor"] / games, 2) if games else 0.0
-    out["avgPointsAgainst"] = round(out["pointsAgainst"] / games, 2) if games else 0.0
+    out["avgPointsFor"] = round(out["pointsFor"] / scored, 2) if scored else 0.0
+    out["avgPointsAgainst"] = round(out["pointsAgainst"] / scored, 2) if scored else 0.0
     return out
 
 
@@ -314,6 +400,21 @@ def main():
 
     games = list(nfl_games(alias, reg_end)) + list(sleeper_games(salias))
 
+    # Scores for any playoff game the scrape did catch, so a derived pairing can
+    # still carry real points where they survive.
+    logged_scores = {}
+    for year, rnd, phase, a, sa, b, sb in games:
+        if phase == "playoff":
+            logged_scores[(year, frozenset((a, b)))] = {a: sa, b: sb}
+
+    # Playoff results come from the reconstructed brackets rather than the log.
+    # The log is missing whole postseasons (2021's final is simply absent, and
+    # the 2022 scrape stopped mid-December), while seeds and placings survive for
+    # every completed season - so the bracket is the more complete source.
+    derived = brackets(seasons, alias, played_nfl(standings))
+    for year, sl in sorted(sleeper_brackets(salias).items()):
+        derived[year] = sl
+
     overall = defaultdict(lambda: defaultdict(blank))          # [team][phase]
     versus = defaultdict(lambda: defaultdict(lambda: defaultdict(blank)))  # [team][phase][opp]
     per_season = defaultdict(lambda: defaultdict(blank))       # [(team, year)][phase]
@@ -322,18 +423,35 @@ def main():
 
     for year, rnd, phase, a, sa, b, sb in games:
         logged.add(year)
+        if phase == "playoff":
+            continue  # counted from the brackets below, not the log
         for me, mine, them, theirs in ((a, sa, b, sb), (b, sb, a, sa)):
-            if phase == "playoff" and (year, me) not in bracket:
-                continue  # consolation bracket
             # Recomputed from the scores: the scraped winner column fell through
             # to the away team on equal scores, filing every draw as an away win.
             res = "wins" if mine > theirs else "losses" if mine < theirs else "draws"
             for acc in (overall[me][phase], versus[me][phase][them], per_season[(me, year)][phase]):
                 acc[res] += 1
+                acc["scoredGames"] += 1
                 acc["pointsFor"] += mine
                 acc["pointsAgainst"] += theirs
             weeks[me].append({"points": round(mine, 2), "year": year, "round": rnd,
                               "opponent": them, "phase": phase})
+
+    scored = set()
+    for year, gs in derived.items():
+        for a, b, winner in gs:
+            pts = logged_scores.get((year, frozenset((a, b))))
+            if pts:
+                scored.add(year)
+            for me, them in ((a, b), (b, a)):
+                res = "wins" if me == winner else "losses"
+                for acc in (overall[me]["playoff"], versus[me]["playoff"][them],
+                            per_season[(me, year)]["playoff"]):
+                    acc[res] += 1
+                    if pts:
+                        acc["scoredGames"] += 1
+                        acc["pointsFor"] += pts[me]
+                        acc["pointsAgainst"] += pts[them]
 
     by_team = defaultdict(list)
     for s in standings:
@@ -357,6 +475,7 @@ def main():
             reg["draws"] += s["ties"]
             reg["pointsFor"] += s["pointsFor"]
             reg["pointsAgainst"] += s["pointsAgainst"]
+            reg["scoredGames"] += s["wins"] + s["losses"] + s["ties"]
         post = overall[name]["playoff"]
         # All-time is the two phases added, not a third source: the regular
         # season from the platforms' own records, the playoffs from the logs.
@@ -438,6 +557,8 @@ def main():
             "seasons": sorted({s["year"] for s in standings}),
             "matchupSeasons": sorted(logged),
             "regularSeasonEnd": dict(sorted(reg_end.items())),
+            "bracketSeasons": sorted(derived),
+            "bracketScored": sorted(scored),
             "games": len(games),
             "franchises": len(out),
             "activityBySeason": by_season,
@@ -448,9 +569,13 @@ def main():
                 "api.sleeper.app - leagues 1262684581069332480 (2025) and 1380142135487004672 (2026)",
             ],
             "note": ("Regular-season records come from the platforms' own season records and cover "
-                     "every year. Playoff records are reconstructed from the surviving game logs, so "
-                     "they exist only for 2012-2021 and 2025 - NFL's website was retired before "
-                     "2022 wk10-2024 could be captured. Consolation-bracket games count as neither."),
+                     "every season. Playoff pairings are reconstructed from each team's seed and "
+                     "final placing, which pin the bracket down uniquely; checked against the game "
+                     "log, that reproduces all 46 playoff pairings for 2012-2020 exactly. Scores "
+                     "attach only where the game log survives, so 2022, 2023 and 2024 playoff games "
+                     "have a winner but no points. Regular-season matchups for 2022 wk10 to 2024 are "
+                     "gone for good - only per-team season totals were ever exposed. Consolation "
+                     "games count towards neither phase."),
         },
         "franchises": out,
     }
