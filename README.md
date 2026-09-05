@@ -94,6 +94,7 @@ The original 2022 transform produced records that were wrong in three ways:
 
 ## History
 
-Built in November 2022 by Shahar Merom (scraper, transform) and Alistair Taylor
+Built in November 2022 by [@shaharmeromconsulting](https://github.com/shaharmeromconsulting)
+(scraper and transform) and [@alistairwilliamtaylor](https://github.com/alistairwilliamtaylor)
 (the original React front end, still on the `creating-react-app` branch).
 Rebuilt and extended in 2026.

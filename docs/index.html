@@ -53,7 +53,38 @@ h2{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute
 .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);overflow:hidden}
 .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
 
-/* ---------- champions ---------- */
+/* ---------- records ---------- */
+.recs{display:grid;grid-template-columns:repeat(auto-fill,minmax(186px,1fr));gap:1px;background:var(--line)}
+.rec{background:var(--panel);padding:15px 16px;cursor:pointer;transition:background .12s}
+.rec:hover{background:var(--sunk)}
+.rec dt{font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.rec .v{font-size:23px;font-weight:600;letter-spacing:-.025em;font-variant-numeric:tabular-nums;line-height:1.1}
+.rec .who{font-size:13px;color:var(--dim);margin-top:3px}
+.rec .ctx{font-size:11.5px;color:var(--muted);margin-top:1px}
+
+/* ---------- tables ---------- */
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+tbody tr:last-child td{border-bottom:0}
+thead th{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600;
+  cursor:pointer;user-select:none;position:sticky;top:0;background:var(--panel);
+  border-bottom:1px solid var(--line);z-index:1}
+thead th:hover{color:var(--ink)}
+thead th[aria-sort]{color:var(--ink)}
+thead th[aria-sort]::after{content:"\2193";margin-left:4px;font-size:10px;color:var(--accent)}
+thead th[aria-sort=ascending]::after{content:"\2191"}
+tbody tr{cursor:pointer}
+tbody tr:hover{background:var(--sunk)}
+tbody tr[aria-selected=true]{background:var(--accent-soft);box-shadow:inset 3px 0 0 var(--accent)}
+.rk{color:var(--muted);font-size:12px;display:inline-block;min-width:1.7em;font-variant-numeric:tabular-nums}
+.nm{font-weight:500}
+.pctv{font-weight:600;font-size:13.5px}
+.meter{display:block;width:66px;height:3px;margin-top:5px;margin-left:auto;background:var(--line);border-radius:2px;overflow:hidden}
+.meter>i{display:block;height:100%;background:var(--accent);border-radius:2px}
+.dv{display:flex;align-items:center;justify-content:flex-end;gap:8px}
+.dvbar{position:relative;width:74px;height:6px;background:var(--line);border-radius:3px;flex:0 0 auto}
+.dvbar>i{position:absolute;top:0;height:100%;border-radius:3px}
+.dvbar::after{content:"";position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:var(--muted);opacity:.45}
+.star{color:var(--gold);letter-spacing:-1px}
 .tag{font-size:10px;letter-spacing:.06em;color:var(--muted);border:1px solid var(--line);
   border-radius:99px;padding:1px 6px;vertical-align:1px}
 .pos{color:var(--accent)} .neg{color:var(--loss)}
@@ -202,6 +233,7 @@ footer code{font-size:11px;background:var(--sunk);padding:1px 5px;border-radius:
           <th data-k="poWins">Playoffs</th>
           <th data-k="pointsFor">PF</th>
           <th data-k="pointsAgainst">PA</th>
+          <th data-k="adds">Adds</th>
           <th data-k="trades">Trades</th>
         </tr></thead>
         <tbody></tbody>
@@ -491,7 +523,7 @@ function select(name) {
            : s.finalStanding ? `${ord(s.finalStanding)} of 16` : '—'),
       cell(s.playoff.gamesPlayed ? s.playoff.record : '—'),
       cell(s.pointsFor.toFixed(1)), cell(s.pointsAgainst.toFixed(1)),
-      cell(s.trades || '—'),
+      cell(s.adds || '—'), cell(s.trades || '—'),
     );
     return tr;
   }, 'year', 1);
