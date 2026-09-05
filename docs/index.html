@@ -294,6 +294,9 @@ async function init() {
     rec('Lowest week', worst(weeks, (w) => w.points, (w) => `${w.points} — ${w.year} wk${w.round}`)),
     rec('Most one-sided', best(rivalries, (r) => r.winPercentage, (r) => `${r.record} vs ${r.opponent}`)),
     rec('Most active', best(LIST, (t) => t.adds, (t) => `${t.adds.toLocaleString()} adds`)),
+    rec('Most trades', best(LIST, (t) => t.trades, (t) => `${t.trades} trades`)),
+    rec('Never trades', worst(LIST.filter((t) => t.seasons >= 5), (t) => t.trades,
+                             (t) => `${t.trades} in ${t.seasons} seasons`)),
   ].join('');
 
   sortable($('#standings'), LIST, standingsRow, 'winPercentage');
