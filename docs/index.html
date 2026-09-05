@@ -194,6 +194,39 @@ footer code{font-size:11px;background:var(--sunk);padding:1px 5px;border-radius:
     </div>
   </section>
 
+  <section id="activity">
+    <div class="head"><h2>Trades &amp; transactions</h2>
+      <p class="hint">Whole league, every season · counts come from both platforms, trade detail only from Sleeper</p></div>
+    <div class="card">
+      <dl class="stats" id="actTotals"></dl>
+      <div class="sparks">
+        <div class="spark"><h4>Waiver adds per season</h4><p id="addsNote"></p><div id="addsChart"></div></div>
+        <div class="spark"><h4>Trades per season</h4><p id="tradesNote"></p><div id="tradesChart"></div></div>
+      </div>
+    </div>
+
+    <div class="head" style="margin-top:26px"><h2>Activity by franchise</h2></div>
+    <div class="card scroll">
+      <table id="actTable">
+        <thead><tr>
+          <th data-k="franchise">Franchise</th>
+          <th data-k="adds">Adds</th>
+          <th data-k="addsPer">Adds/season</th>
+          <th data-k="trades" aria-sort="descending">Trades</th>
+          <th data-k="tradesPer">Trades/season</th>
+          <th data-k="peakAdds">Busiest season</th>
+          <th data-k="seasons">Seasons</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="head" style="margin-top:26px"><h2>Trade log</h2><p class="hint" id="tlNote"></p></div>
+    <div class="card scroll"><table id="tradeLog">
+      <thead><tr><th>When</th><th>Between</th><th>Moved</th></tr></thead><tbody></tbody>
+    </table></div>
+  </section>
+
   <section id="profile">
     <div class="head"><h2>Franchise</h2></div>
     <div class="card">
@@ -515,6 +548,71 @@ function select(name) {
   }, 'winPercentage');
 }
 
+/* ---------- league-wide activity ---------- */
+function barChart(rows, pick, label) {
+  const hi = Math.max(...rows.map(pick), 1);
+  const n = rows.length, gap = 1.6, w = (VB.w - gap * (n - 1)) / n;
+  return `<svg viewBox="0 0 ${VB.w} ${VB.h}" preserveAspectRatio="none" role="img" style="height:64px">` +
+    rows.map((r, i) => {
+      const v = pick(r), h = v / hi * VB.h, x = i * (w + gap);
+      return `<rect x="${x.toFixed(2)}" y="${(VB.h - h).toFixed(2)}" width="${w.toFixed(2)}"
+        height="${Math.max(h, v ? .6 : 0).toFixed(2)}" rx=".5"
+        fill="${r.platform === 'Sleeper' ? 'var(--gold)' : 'var(--accent)'}"
+        ><title>${r.year}: ${label(r)}</title></rect>`;
+    }).join('') + '</svg>' +
+    `<div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted);margin-top:5px">
+       <span>${rows[0].year}</span><span>${rows.at(-1).year}</span></div>`;
+}
+
+function renderActivity() {
+  const m = DATA.meta, A = m.activityBySeason;
+  const adds = A.reduce((s, r) => s + r.adds, 0), trades = A.reduce((s, r) => s + r.trades, 0);
+  const busiest = A.reduce((a, b) => (b.adds > a.adds ? b : a));
+  const tradiest = A.reduce((a, b) => (b.trades > a.trades ? b : a));
+  const stat = (l, v, n) => `<div><dt>${l}</dt><dd>${v}<small>${n}</small></dd></div>`;
+  $('#actTotals').innerHTML = [
+    stat('Total adds', num(adds), `across ${A.length} seasons`),
+    stat('Total trades', trades, `${(trades / A.length).toFixed(1)} a season`),
+    stat('Busiest season', busiest.year, `${num(busiest.adds)} adds`),
+    stat('Most trades', tradiest.year, `${tradiest.trades} trades`),
+    stat('Quietest', A.reduce((a, b) => (b.trades < a.trades ? b : a)).year, 'for trades'),
+  ].join('');
+  $('#addsNote').textContent = `${num(adds)} all-time · gold bar is the Sleeper era`;
+  $('#tradesNote').textContent = `${trades} all-time · counted once per trade, not per team`;
+  $('#addsChart').innerHTML = barChart(A, (r) => r.adds, (r) => `${r.adds} adds`);
+  $('#tradesChart').innerHTML = barChart(A, (r) => r.trades, (r) => `${r.trades} trades`);
+
+  const rows = Object.values(DATA.franchises).map((t) => {
+    const a = t.allTime, peak = t.seasons.reduce((x, y) => ((y.adds || 0) > (x.adds || 0) ? y : x));
+    return { franchise: t.franchise, emoji: t.emoji, adds: a.adds, trades: a.trades, seasons: a.seasons,
+             addsPer: +(a.adds / a.seasons).toFixed(1), tradesPer: +(a.trades / a.seasons).toFixed(2),
+             peakAdds: peak.adds || 0, peakYear: peak.year };
+  });
+  sortable($('#actTable'), rows, (r) => {
+    const tr = document.createElement('tr');
+    tr.append(
+      cell(badge(r) + `<span class="nm">${r.franchise}</span>`),
+      cell(num(r.adds)), cell(r.addsPer.toFixed(1)), cell(r.trades), cell(r.tradesPer.toFixed(2)),
+      cell(`${r.peakAdds} <span class="tag">${r.peakYear}</span>`), cell(r.seasons),
+    );
+    tr.onclick = () => { select(r.franchise); $('#profile').scrollIntoView({ block: 'start' }); };
+    return tr;
+  }, 'trades');
+
+  const log = [...m.tradeLog].reverse();
+  $('#tlNote').textContent = `${log.length} trades with detail — Sleeper only; NFL's API gives counts but never said who or what`;
+  $('#tradeLog').tBodies[0].replaceChildren(...log.map((t) => {
+    const tr = document.createElement('tr');
+    const who = t.franchises.map((f) => badge(DATA.franchises[f]) + f).join(' ↔ ');
+    const what = t.players.length
+      ? t.players.map((p) => `<span class="nm">${p.player}</span>${p.pos ? ` <span class="tag">${p.pos}</span>` : ''} → ${p.to}`).join('<br>')
+      : `<span style="color:var(--muted)">${t.picks} draft pick${t.picks === 1 ? '' : 's'}</span>`;
+    tr.append(cell(`${t.year} <span class="tag">wk ${t.week}</span>`), cell(who), cell(what));
+    tr.style.cursor = 'default';
+    return tr;
+  }));
+}
+
 /* ---------- boot ---------- */
 async function init() {
   DATA = await (await fetch('data/league_records.json')).json();
@@ -572,6 +670,8 @@ async function init() {
     // Keep the open franchise selected even if the filter just hid its row.
     select($('#picker').value);
   };
+
+  renderActivity();
 
   const initial = decodeURIComponent(location.hash.slice(1));
   select(F[initial] ? initial : 'The Puffins');

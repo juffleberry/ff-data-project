@@ -229,6 +229,37 @@ def sleeper_standings(alias):
 
 # ---------- aggregation ----------
 
+def trade_log(alias):
+    """Completed Sleeper trades, with players resolved to names.
+
+    Only Sleeper years have this. NFL's API gives per-team trade counts but no
+    detail, so who traded with whom before 2025 is not recoverable.
+    """
+    players = json.load(open(RAW / "sleeper" / "players.json"))
+    out = []
+    for f in sorted(glob(str(RAW / "sleeper" / "*-transactions-*.json"))):
+        year, week = re.search(r"(\d{4})-transactions-(\d+)", Path(f).name).groups()
+        for t in json.load(open(f)):
+            if t.get("type") != "trade" or t.get("status") != "complete":
+                continue
+            moved = []
+            for pid, to in (t.get("adds") or {}).items():
+                who = players.get(pid, {})
+                moved.append({
+                    "player": who.get("name", f"player {pid}"),
+                    "pos": who.get("pos"),
+                    "to": alias[str(to)],
+                    "from": alias[str((t.get("drops") or {}).get(pid))] if (t.get("drops") or {}).get(pid) else None,
+                })
+            out.append({
+                "year": year, "week": int(week),
+                "franchises": sorted(alias[str(r)] for r in t.get("roster_ids") or []),
+                "players": moved,
+                "picks": len(t.get("draft_picks") or []),
+            })
+    return sorted(out, key=lambda t: (t["year"], t["week"]))
+
+
 def blank():
     return {"wins": 0, "losses": 0, "draws": 0, "pointsFor": 0.0, "pointsAgainst": 0.0}
 
@@ -364,6 +395,17 @@ def main():
         w.writerow(["year", "team_name", "franchise"])
         w.writerows(sorted((y, n, fr) for (y, n), fr in alias.items()))
 
+    # League-wide activity, so the dashboard doesn't have to re-derive it.
+    activity = defaultdict(lambda: {"adds": 0, "trades": 0, "teams": 0, "platform": ""})
+    for st in standings:
+        a = activity[st["year"]]
+        a["adds"] += st.get("adds", 0)
+        a["trades"] += st.get("trades", 0)
+        a["teams"] += 1
+        a["platform"] = st["platform"]
+    # A trade is counted once per team involved, so halve it for a league total.
+    by_season = [dict(v, year=y, trades=v["trades"] // 2) for y, v in sorted(activity.items())]
+
     payload = {
         "meta": {
             "seasons": sorted({s["year"] for s in standings}),
@@ -371,6 +413,8 @@ def main():
             "regularSeasonEnd": dict(sorted(reg_end.items())),
             "games": len(games),
             "franchises": len(out),
+            "activityBySeason": by_season,
+            "tradeLog": trade_log(salias),
             "sources": [
                 "NFL.com fantasy league 1078038 - game log scraped 13 Nov 2022",
                 "api.fantasy.nfl.com - season standings, 2012-2024",

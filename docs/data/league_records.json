@@ -45,6 +45,347 @@
     },
     "games": 1293,
     "franchises": 20,
+    "activityBySeason": [
+      {
+        "adds": 273,
+        "trades": 23,
+        "teams": 10,
+        "platform": "NFL.com",
+        "year": "2012"
+      },
+      {
+        "adds": 351,
+        "trades": 10,
+        "teams": 12,
+        "platform": "NFL.com",
+        "year": "2013"
+      },
+      {
+        "adds": 355,
+        "trades": 26,
+        "teams": 12,
+        "platform": "NFL.com",
+        "year": "2014"
+      },
+      {
+        "adds": 447,
+        "trades": 11,
+        "teams": 16,
+        "platform": "NFL.com",
+        "year": "2015"
+      },
+      {
+        "adds": 359,
+        "trades": 13,
+        "teams": 16,
+        "platform": "NFL.com",
+        "year": "2016"
+      },
+      {
+        "adds": 440,
+        "trades": 6,
+        "teams": 16,
+        "platform": "NFL.com",
+        "year": "2017"
+      },
+      {
+        "adds": 324,
+        "trades": 2,
+        "teams": 16,
+        "platform": "NFL.com",
+        "year": "2018"
+      },
+      {
+        "adds": 382,
+        "trades": 3,
+        "teams": 16,
+        "platform": "NFL.com",
+        "year": "2019"
+      },
+      {
+        "adds": 464,
+        "trades": 7,
+        "teams": 16,
+        "platform": "NFL.com",
+        "year": "2020"
+      },
+      {
+        "adds": 533,
+        "trades": 5,
+        "teams": 16,
+        "platform": "NFL.com",
+        "year": "2021"
+      },
+      {
+        "adds": 523,
+        "trades": 8,
+        "teams": 16,
+        "platform": "NFL.com",
+        "year": "2022"
+      },
+      {
+        "adds": 520,
+        "trades": 5,
+        "teams": 16,
+        "platform": "NFL.com",
+        "year": "2023"
+      },
+      {
+        "adds": 495,
+        "trades": 2,
+        "teams": 16,
+        "platform": "NFL.com",
+        "year": "2024"
+      },
+      {
+        "adds": 543,
+        "trades": 11,
+        "teams": 16,
+        "platform": "Sleeper",
+        "year": "2025"
+      }
+    ],
+    "tradeLog": [
+      {
+        "year": "2025",
+        "week": 1,
+        "franchises": [
+          "Standard Deviations",
+          "The Puffins"
+        ],
+        "players": [],
+        "picks": 0
+      },
+      {
+        "year": "2025",
+        "week": 1,
+        "franchises": [
+          "Bearnaise Dynamics",
+          "Standard Deviations"
+        ],
+        "players": [],
+        "picks": 6
+      },
+      {
+        "year": "2025",
+        "week": 1,
+        "franchises": [
+          "The Aligators",
+          "The Beer Barons"
+        ],
+        "players": [],
+        "picks": 4
+      },
+      {
+        "year": "2025",
+        "week": 1,
+        "franchises": [
+          "The Fishies",
+          "Yorkshire Puddings"
+        ],
+        "players": [],
+        "picks": 8
+      },
+      {
+        "year": "2025",
+        "week": 1,
+        "franchises": [
+          "AT Football Team",
+          "The Aligators"
+        ],
+        "players": [],
+        "picks": 4
+      },
+      {
+        "year": "2025",
+        "week": 1,
+        "franchises": [
+          "Bearnaise Dynamics",
+          "The Beer Barons"
+        ],
+        "players": [],
+        "picks": 8
+      },
+      {
+        "year": "2025",
+        "week": 1,
+        "franchises": [
+          "Bearnaise Dynamics",
+          "The Puffins"
+        ],
+        "players": [],
+        "picks": 20
+      },
+      {
+        "year": "2025",
+        "week": 3,
+        "franchises": [
+          "Seamen",
+          "Yorkshire Puddings"
+        ],
+        "players": [
+          {
+            "player": "Dalton Kincaid",
+            "pos": "TE",
+            "to": "Yorkshire Puddings",
+            "from": "Seamen"
+          },
+          {
+            "player": "Michael Pittman",
+            "pos": "WR",
+            "to": "Seamen",
+            "from": "Yorkshire Puddings"
+          }
+        ],
+        "picks": 0
+      },
+      {
+        "year": "2025",
+        "week": 6,
+        "franchises": [
+          "The Puffins",
+          "Yorkshire Puddings"
+        ],
+        "players": [
+          {
+            "player": "George Kittle",
+            "pos": "TE",
+            "to": "The Puffins",
+            "from": "Yorkshire Puddings"
+          },
+          {
+            "player": "D'Andre Swift",
+            "pos": "RB",
+            "to": "Yorkshire Puddings",
+            "from": "The Puffins"
+          },
+          {
+            "player": "Breece Hall",
+            "pos": "RB",
+            "to": "The Puffins",
+            "from": "Yorkshire Puddings"
+          },
+          {
+            "player": "Quentin Johnston",
+            "pos": "WR",
+            "to": "Yorkshire Puddings",
+            "from": "The Puffins"
+          }
+        ],
+        "picks": 0
+      },
+      {
+        "year": "2025",
+        "week": 8,
+        "franchises": [
+          "The Beer Barons",
+          "The Puffins"
+        ],
+        "players": [
+          {
+            "player": "Isaiah Davis",
+            "pos": "RB",
+            "to": "The Beer Barons",
+            "from": "The Puffins"
+          },
+          {
+            "player": "Jameson Williams",
+            "pos": "WR",
+            "to": "The Puffins",
+            "from": "The Beer Barons"
+          }
+        ],
+        "picks": 0
+      },
+      {
+        "year": "2025",
+        "week": 10,
+        "franchises": [
+          "The Aligators",
+          "The Fishies"
+        ],
+        "players": [
+          {
+            "player": "Blake Corum",
+            "pos": "RB",
+            "to": "The Aligators",
+            "from": "The Fishies"
+          },
+          {
+            "player": "Parker Washington",
+            "pos": "WR",
+            "to": "The Fishies",
+            "from": "The Aligators"
+          }
+        ],
+        "picks": 0
+      },
+      {
+        "year": "2026",
+        "week": 1,
+        "franchises": [
+          "The Aligators",
+          "The Beer Barons"
+        ],
+        "players": [
+          {
+            "player": "Drake Maye",
+            "pos": "QB",
+            "to": "The Beer Barons",
+            "from": "The Aligators"
+          },
+          {
+            "player": "Harold Fannin",
+            "pos": "TE",
+            "to": "The Beer Barons",
+            "from": "The Aligators"
+          },
+          {
+            "player": "Justin Herbert",
+            "pos": "QB",
+            "to": "The Aligators",
+            "from": "The Beer Barons"
+          },
+          {
+            "player": "Parker Washington",
+            "pos": "WR",
+            "to": "The Aligators",
+            "from": "The Beer Barons"
+          }
+        ],
+        "picks": 0
+      },
+      {
+        "year": "2026",
+        "week": 1,
+        "franchises": [
+          "Standard Deviations",
+          "The Piggies"
+        ],
+        "players": [],
+        "picks": 4
+      },
+      {
+        "year": "2026",
+        "week": 1,
+        "franchises": [
+          "Standard Deviations",
+          "The Puffins"
+        ],
+        "players": [],
+        "picks": 2
+      },
+      {
+        "year": "2026",
+        "week": 1,
+        "franchises": [
+          "Standard Deviations",
+          "The Puffins"
+        ],
+        "players": [],
+        "picks": 2
+      }
+    ],
     "sources": [
       "NFL.com fantasy league 1078038 - game log scraped 13 Nov 2022",
       "api.fantasy.nfl.com - season standings, 2012-2024",
