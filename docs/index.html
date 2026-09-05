@@ -442,7 +442,9 @@ function renderRecords() {
   add('Most wins', best(pool, (t) => t.wins), (t) => [t.wins, t.record], `${best(pool, (t) => t.wins).seasons} seasons`);
   add('Most losses', best(pool, (t) => t.losses), (t) => [t.losses, t.record], 'someone has to');
   add('Most titles', best(pool, (t) => t.titles), (t) => [t.titles, stars(t.titles)], '');
-  if (!PLAYOFF() && best(pool, (t) => t.shitbowls).shitbowls)
+  // Only worth a card once someone has more than one; four franchises tied on a
+  // single shitbowl is not a record, it is a list.
+  if (!PLAYOFF() && best(pool, (t) => t.shitbowls).shitbowls > 1)
     add('Most shitbowls', best(pool, (t) => t.shitbowls), (t) => [`💩 ${t.shitbowls}`, 'crowned worst'], '');
   add('Most playoffs', best(pool, (t) => t.playoffAppearances),
       (t) => [t.playoffAppearances, `of ${t.seasons} seasons`], '');

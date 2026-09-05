@@ -6,28 +6,34 @@
 # seed that went 0-3 was placed 8th. So there is nothing to compute against, and
 # for 2022-24 the postseason game results are gone entirely.
 #
-# The shitbowl is won, not lost: whoever comes out of the consolation bracket
-# bottom is crowned worst. 2012-21 are derived from the game log as the
-# consolation team that lost every postseason game; 2021 had two such teams and
-# is broken on points scored. 2022-24 are from memory, because those postseason
-# results no longer exist anywhere. 2025 onwards derives itself from Sleeper's
-# losers bracket and needs no row here.
+# The shitbowl is WON, not lost - whoever comes out of the consolation bracket
+# on top is crowned worst. 2025 confirms it: Yorkshire Puddings won the
+# losers-bracket final and took the spoon.
+#
+# 2012-21 were briefly filled in from the game log with the opposite reading -
+# the team that lost every consolation game - which is wrong, so they are blank
+# again. Deriving the right answer needs the consolation FINAL identified, and
+# those brackets are irregular enough (byes in odd rounds, two teams finishing
+# 2-0) that it cannot be picked out reliably. Fill them in by hand.
+#
+# 2022-24 are from memory; those postseason results exist nowhere. 2025 onwards
+# derives itself from Sleeper's losers bracket and needs no row here.
 #
 # Leave `franchise` blank for a season nobody can confirm; blank rows are simply
 # not rendered. `franchise` must match a name in data/franchises.csv.
 #
 # source: recalled | derived-winless
 year,franchise,second_last,source
-2012,Mikkels Manatees,,derived-winless
-2013,London Tanqs,,derived-winless
-2014,Bearnaise Dynamics,,derived-winless
-2015,The Dirty Birds,,derived-winless
-2016,Kurlewless,,derived-winless
-2017,AT Football Team,,derived-winless
-2018,Mikkels Manatees,,derived-winless
-2019,Kurlewless,,derived-winless
-2020,Mikkels Manatees,,derived-winless
-2021,London Tanqs,,derived-winless
+2012,,,
+2013,,,
+2014,,,
+2015,,,
+2016,,,
+2017,,,
+2018,,,
+2019,,,
+2020,,,
+2021,,,
 2022,The Beer Barons,,recalled
 2023,The Dirty Birds,,recalled
 2024,SERPION,,recalled
