@@ -1,0 +1,694 @@
+{
+ "games": {
+  "102016": {
+   "gameId": "102016",
+   "type": "core",
+   "code": "core",
+   "season": "2016",
+   "previousSeason": "2015",
+   "leagues": {
+    "1078038": {
+     "leagueId": "1078038",
+     "name": "TheGentlemen'sLeague",
+     "ownerUserId": "5677217",
+     "leagueType": "private",
+     "draftStatus": "postdraft",
+     "draftType": "offline",
+     "numTeams": 16,
+     "maxTeams": "16",
+     "leagueManagerUserIds": [
+      "30421",
+      "5677217"
+     ],
+     "isExperience": false,
+     "logoImageUrl": null,
+     "mainHexColor": null,
+     "draftDateTime": "2016-09-04T02:55:40-07:00",
+     "divisions": {
+      "1": {
+       "divisionId": "1",
+       "name": "North",
+       "teamIds": [
+        "12",
+        "16",
+        "9",
+        "11"
+       ]
+      },
+      "2": {
+       "divisionId": "2",
+       "name": "South",
+       "teamIds": [
+        "8",
+        "7",
+        "4",
+        "5"
+       ]
+      },
+      "3": {
+       "divisionId": "3",
+       "name": "East",
+       "teamIds": [
+        "6",
+        "15",
+        "13",
+        "1"
+       ]
+      },
+      "4": {
+       "divisionId": "4",
+       "name": "West",
+       "teamIds": [
+        "3",
+        "10",
+        "14",
+        "2"
+       ]
+      }
+     },
+     "divisionIds": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "teams": {
+      "3": {
+       "teamId": "3",
+       "name": "Teifert Fever",
+       "ownerUserId": "9158426",
+       "coManagerUserId": "3926444",
+       "imageUrl": "https://fantasy.nfl.com/image/8255e748a927e6b25169c19e719cdcfb.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/8255e748a927e6b25169c19e719cdcfb.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "5",
+       "imageId": "DEF",
+       "divisionId": "4",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2016": {
+          "rank": "5",
+          "rankChange": "3",
+          "divisionRank": "1",
+          "record": "8-5-0",
+          "wins": "8",
+          "losses": "5",
+          "ties": "0",
+          "streak": "W6",
+          "waiverPriority": "13",
+          "pts": "1217.06",
+          "ptsAgainst": "1115.30",
+          "playoffSeed": "4",
+          "playoffBracketType": "championship",
+          "place": "4",
+          "transactionAddCount": 69,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "6": {
+       "teamId": "6",
+       "name": "The Aligators",
+       "ownerUserId": "3927197",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/2579c225259a6139ca7e0e4759ffe631.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/2579c225259a6139ca7e0e4759ffe631.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "3",
+       "imageId": "DEF",
+       "divisionId": "3",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2016": {
+          "rank": "3",
+          "rankChange": "1",
+          "divisionRank": "1",
+          "record": "9-4-0",
+          "wins": "9",
+          "losses": "4",
+          "ties": "0",
+          "streak": "W2",
+          "waiverPriority": "15",
+          "pts": "1267.36",
+          "ptsAgainst": "1126.76",
+          "playoffSeed": "3",
+          "playoffBracketType": "championship",
+          "place": "6",
+          "transactionAddCount": 41,
+          "transactionTradeCount": 3,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "8": {
+       "teamId": "8",
+       "name": "SERPION",
+       "ownerUserId": "3976774",
+       "coManagerUserId": "4549785",
+       "imageUrl": "https://fantasy.nfl.com/image/100b4523b38150f2c6591b37717451b5.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/100b4523b38150f2c6591b37717451b5.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "1",
+       "imageId": "DEF",
+       "divisionId": "2",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2016": {
+          "rank": "1",
+          "rankChange": "0",
+          "divisionRank": "1",
+          "record": "11-2-0",
+          "wins": "11",
+          "losses": "2",
+          "ties": "0",
+          "streak": "W8",
+          "waiverPriority": "16",
+          "pts": "1343.40",
+          "ptsAgainst": "1169.54",
+          "playoffSeed": "1",
+          "playoffBracketType": "championship",
+          "place": "2",
+          "transactionAddCount": 15,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "12": {
+       "teamId": "12",
+       "name": "Can we Fitz it- yes we Charcan",
+       "ownerUserId": "5677217",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/2d5a3730e66b3fc33a909011418bf947.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/2d5a3730e66b3fc33a909011418bf947.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "2",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2016": {
+          "rank": "2",
+          "rankChange": "0",
+          "divisionRank": "1",
+          "record": "10-3-0",
+          "wins": "10",
+          "losses": "3",
+          "ties": "0",
+          "streak": "W4",
+          "waiverPriority": "10",
+          "pts": "1530.80",
+          "ptsAgainst": "1257.64",
+          "playoffSeed": "2",
+          "playoffBracketType": "championship",
+          "place": "1",
+          "transactionAddCount": 48,
+          "transactionTradeCount": 5,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "7": {
+       "teamId": "7",
+       "name": "Donte Go Breaking My Heart",
+       "ownerUserId": "3929551",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/c5ca6b8ce22759c0ace5ee23daeaa774.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/c5ca6b8ce22759c0ace5ee23daeaa774.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "6",
+       "imageId": "DEF",
+       "divisionId": "2",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2016": {
+          "rank": "6",
+          "rankChange": "0",
+          "divisionRank": "2",
+          "record": "8-5-0",
+          "wins": "8",
+          "losses": "5",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "14",
+          "pts": "1171.04",
+          "ptsAgainst": "1081.48",
+          "playoffSeed": "6",
+          "playoffBracketType": "championship",
+          "place": "3",
+          "transactionAddCount": 19,
+          "transactionTradeCount": 2,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "10": {
+       "teamId": "10",
+       "name": "Gordon Ramseys Cooking Wares",
+       "ownerUserId": "4044260",
+       "coManagerUserId": null,
+       "imageUrl": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/DEF.png",
+       "imageUrlLarge": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/DEF.png",
+       "isActive": false,
+       "rank": "10",
+       "imageId": "DEF",
+       "divisionId": "4",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2016": {
+          "rank": "10",
+          "rankChange": "4",
+          "divisionRank": "2",
+          "record": "5-8-0",
+          "wins": "5",
+          "losses": "8",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "12",
+          "pts": "1356.40",
+          "ptsAgainst": "1416.58",
+          "playoffSeed": "6",
+          "playoffBracketType": "consolation",
+          "place": "9",
+          "transactionAddCount": 21,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "15": {
+       "teamId": "15",
+       "name": "Leeannacondas",
+       "ownerUserId": "10721011",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/fd3e836fce791ad3e9401348331102fa.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/fd3e836fce791ad3e9401348331102fa.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "4",
+       "imageId": "DEF",
+       "divisionId": "3",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2016": {
+          "rank": "4",
+          "rankChange": "-1",
+          "divisionRank": "2",
+          "record": "9-4-0",
+          "wins": "9",
+          "losses": "4",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "1",
+          "pts": "1496.58",
+          "ptsAgainst": "1355.54",
+          "playoffSeed": "5",
+          "playoffBracketType": "championship",
+          "place": "5",
+          "transactionAddCount": 13,
+          "transactionTradeCount": 2,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "16": {
+       "teamId": "16",
+       "name": "All you Snead is love",
+       "ownerUserId": "10891935",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/b81ff21d7d27c12f5e338c4ee18d6281.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/b81ff21d7d27c12f5e338c4ee18d6281.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "7",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2016": {
+          "rank": "7",
+          "rankChange": "-2",
+          "divisionRank": "2",
+          "record": "8-5-0",
+          "wins": "8",
+          "losses": "5",
+          "ties": "0",
+          "streak": "L2",
+          "waiverPriority": "8",
+          "pts": "1257.34",
+          "ptsAgainst": "1149.08",
+          "playoffSeed": null,
+          "playoffBracketType": null,
+          "place": "13",
+          "transactionAddCount": 9,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "4": {
+       "teamId": "4",
+       "name": "The Adams Family",
+       "ownerUserId": "3919156",
+       "coManagerUserId": "4177306",
+       "imageUrl": "https://fantasy.nfl.com/image/d768a21eb9a1587865724fcb2a71faf9.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/d768a21eb9a1587865724fcb2a71faf9.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "14",
+       "imageId": "DEF",
+       "divisionId": "2",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2016": {
+          "rank": "14",
+          "rankChange": "-2",
+          "divisionRank": "3",
+          "record": "5-8-0",
+          "wins": "5",
+          "losses": "8",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "6",
+          "pts": "1188.62",
+          "ptsAgainst": "1331.58",
+          "playoffSeed": "5",
+          "playoffBracketType": "consolation",
+          "place": "11",
+          "transactionAddCount": 21,
+          "transactionTradeCount": 3,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "9": {
+       "teamId": "9",
+       "name": "Fire Up the Coleman Grill",
+       "ownerUserId": "3993957",
+       "coManagerUserId": null,
+       "imageUrl": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/ATL_1.png",
+       "imageUrlLarge": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/ATL_1.png",
+       "isActive": false,
+       "rank": "8",
+       "imageId": "ATL_1",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2016": {
+          "rank": "8",
+          "rankChange": "-1",
+          "divisionRank": "3",
+          "record": "7-6-0",
+          "wins": "7",
+          "losses": "6",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "3",
+          "pts": "1249.18",
+          "ptsAgainst": "1148.40",
+          "playoffSeed": null,
+          "playoffBracketType": null,
+          "place": "14",
+          "transactionAddCount": 4,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "13": {
+       "teamId": "13",
+       "name": "Gotta catch Jamaal",
+       "ownerUserId": "8553062",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/776c4987b5b1e15af840989060079338.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/776c4987b5b1e15af840989060079338.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "11",
+       "imageId": "DEF",
+       "divisionId": "3",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2016": {
+          "rank": "11",
+          "rankChange": "-1",
+          "divisionRank": "3",
+          "record": "5-8-0",
+          "wins": "5",
+          "losses": "8",
+          "ties": "0",
+          "streak": "L2",
+          "waiverPriority": "4",
+          "pts": "1244.52",
+          "ptsAgainst": "1324.74",
+          "playoffSeed": null,
+          "playoffBracketType": null,
+          "place": "15",
+          "transactionAddCount": 20,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "14": {
+       "teamId": "14",
+       "name": "Forte Year Old Virgin",
+       "ownerUserId": "1557732",
+       "coManagerUserId": null,
+       "imageUrl": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/DET_1.png",
+       "imageUrlLarge": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/DET_1.png",
+       "isActive": false,
+       "rank": "13",
+       "imageId": "DET_1",
+       "divisionId": "4",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2016": {
+          "rank": "13",
+          "rankChange": "0",
+          "divisionRank": "3",
+          "record": "5-8-0",
+          "wins": "5",
+          "losses": "8",
+          "ties": "0",
+          "streak": "L3",
+          "waiverPriority": "5",
+          "pts": "1287.28",
+          "ptsAgainst": "1297.00",
+          "playoffSeed": null,
+          "playoffBracketType": null,
+          "place": "16",
+          "transactionAddCount": 9,
+          "transactionTradeCount": 3,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "1": {
+       "teamId": "1",
+       "name": "Meet the Winstons",
+       "ownerUserId": "30421",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/bb640bc4b4a1c0801550a76d92236e33.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/bb640bc4b4a1c0801550a76d92236e33.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "12",
+       "imageId": "DEF",
+       "divisionId": "3",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2016": {
+          "rank": "12",
+          "rankChange": "-1",
+          "divisionRank": "4",
+          "record": "5-8-0",
+          "wins": "5",
+          "losses": "8",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "7",
+          "pts": "1192.46",
+          "ptsAgainst": "1239.86",
+          "playoffSeed": "3",
+          "playoffBracketType": "consolation",
+          "place": "12",
+          "transactionAddCount": 19,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "2": {
+       "teamId": "2",
+       "name": "Daisy Duke Johnsons on Top",
+       "ownerUserId": "13638506",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/9917e5503c7c27da0ae38155496b4d33.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/9917e5503c7c27da0ae38155496b4d33.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "15",
+       "imageId": "DEF",
+       "divisionId": "4",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2016": {
+          "rank": "15",
+          "rankChange": "0",
+          "divisionRank": "4",
+          "record": "3-10-0",
+          "wins": "3",
+          "losses": "10",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "9",
+          "pts": "1091.36",
+          "ptsAgainst": "1249.44",
+          "playoffSeed": "2",
+          "playoffBracketType": "consolation",
+          "place": "10",
+          "transactionAddCount": 18,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "5": {
+       "teamId": "5",
+       "name": "Ah Maclin you've done it again",
+       "ownerUserId": "10705345",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/c09d6154288bdad2943c624057fe96df.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/c09d6154288bdad2943c624057fe96df.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "16",
+       "imageId": "DEF",
+       "divisionId": "2",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2016": {
+          "rank": "16",
+          "rankChange": "0",
+          "divisionRank": "4",
+          "record": "0-13-0",
+          "wins": "0",
+          "losses": "13",
+          "ties": "0",
+          "streak": "L13",
+          "waiverPriority": "2",
+          "pts": "993.78",
+          "ptsAgainst": "1462.00",
+          "playoffSeed": "1",
+          "playoffBracketType": "consolation",
+          "place": "7",
+          "transactionAddCount": 0,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "11": {
+       "teamId": "11",
+       "name": "Thomas the Tank Engine",
+       "ownerUserId": "5714714",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/93384b3a77615412bbc58aa2f1d97de5.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/93384b3a77615412bbc58aa2f1d97de5.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "9",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2016": {
+          "rank": "9",
+          "rankChange": "0",
+          "divisionRank": "4",
+          "record": "6-7-0",
+          "wins": "6",
+          "losses": "7",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "11",
+          "pts": "1174.52",
+          "ptsAgainst": "1336.76",
+          "playoffSeed": "4",
+          "playoffBracketType": "consolation",
+          "place": "8",
+          "transactionAddCount": 33,
+          "transactionTradeCount": 2,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      }
+     },
+     "teamIds": [
+      "3",
+      "6",
+      "8",
+      "12",
+      "7",
+      "10",
+      "15",
+      "16",
+      "4",
+      "9",
+      "13",
+      "14",
+      "1",
+      "2",
+      "5",
+      "11"
+     ],
+     "isSeasonOver": true,
+     "finalStandingsTeamIds": [
+      "12",
+      "8",
+      "7",
+      "3",
+      "15",
+      "6",
+      "5",
+      "11",
+      "10",
+      "2",
+      "4",
+      "1",
+      "16",
+      "9",
+      "13",
+      "14"
+     ]
+    }
+   }
+  }
+ }
+}

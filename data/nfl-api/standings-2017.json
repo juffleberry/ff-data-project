@@ -1,0 +1,694 @@
+{
+ "games": {
+  "102017": {
+   "gameId": "102017",
+   "type": "core",
+   "code": "core",
+   "season": "2017",
+   "previousSeason": "2016",
+   "leagues": {
+    "1078038": {
+     "leagueId": "1078038",
+     "name": "TheGentlemen'sLeague",
+     "ownerUserId": "5677217",
+     "leagueType": "private",
+     "draftStatus": "postdraft",
+     "draftType": "offline",
+     "numTeams": 16,
+     "maxTeams": "16",
+     "leagueManagerUserIds": [
+      "30421",
+      "5677217"
+     ],
+     "isExperience": false,
+     "logoImageUrl": null,
+     "mainHexColor": null,
+     "draftDateTime": "2017-08-27T01:35:36-07:00",
+     "divisions": {
+      "1": {
+       "divisionId": "1",
+       "name": "North",
+       "teamIds": [
+        "10",
+        "2",
+        "11",
+        "3"
+       ]
+      },
+      "2": {
+       "divisionId": "2",
+       "name": "South",
+       "teamIds": [
+        "15",
+        "8",
+        "5",
+        "13"
+       ]
+      },
+      "3": {
+       "divisionId": "3",
+       "name": "East",
+       "teamIds": [
+        "1",
+        "6",
+        "14",
+        "9"
+       ]
+      },
+      "4": {
+       "divisionId": "4",
+       "name": "West",
+       "teamIds": [
+        "4",
+        "12",
+        "16",
+        "7"
+       ]
+      }
+     },
+     "divisionIds": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "teams": {
+      "1": {
+       "teamId": "1",
+       "name": "Meet the Winstons",
+       "ownerUserId": "30421",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/bb640bc4b4a1c0801550a76d92236e33.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/bb640bc4b4a1c0801550a76d92236e33.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "6",
+       "imageId": "DEF",
+       "divisionId": "3",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2017": {
+          "rank": "6",
+          "rankChange": "-1",
+          "divisionRank": "1",
+          "record": "8-5-0",
+          "wins": "8",
+          "losses": "5",
+          "ties": "0",
+          "streak": "L2",
+          "waiverPriority": "5",
+          "pts": "1180.58",
+          "ptsAgainst": "1115.94",
+          "playoffSeed": "4",
+          "playoffBracketType": "championship",
+          "place": "3",
+          "transactionAddCount": 24,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "4": {
+       "teamId": "4",
+       "name": "The Adams Family",
+       "ownerUserId": "3919156",
+       "coManagerUserId": "4177306",
+       "imageUrl": "https://fantasy.nfl.com/image/d768a21eb9a1587865724fcb2a71faf9.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/d768a21eb9a1587865724fcb2a71faf9.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "2",
+       "imageId": "DEF",
+       "divisionId": "4",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2017": {
+          "rank": "2",
+          "rankChange": "-1",
+          "divisionRank": "1",
+          "record": "10-3-0",
+          "wins": "10",
+          "losses": "3",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "12",
+          "pts": "1384.98",
+          "ptsAgainst": "1134.18",
+          "playoffSeed": "2",
+          "playoffBracketType": "championship",
+          "place": "1",
+          "transactionAddCount": 29,
+          "transactionTradeCount": 2,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "10": {
+       "teamId": "10",
+       "name": "Ring my Bell",
+       "ownerUserId": "4044260",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/daaeaed9dad9cd054b77635ec643e2a0.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/daaeaed9dad9cd054b77635ec643e2a0.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "1",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2017": {
+          "rank": "1",
+          "rankChange": "1",
+          "divisionRank": "1",
+          "record": "11-2-0",
+          "wins": "11",
+          "losses": "2",
+          "ties": "0",
+          "streak": "W8",
+          "waiverPriority": "14",
+          "pts": "1418.52",
+          "ptsAgainst": "1144.56",
+          "playoffSeed": "1",
+          "playoffBracketType": "championship",
+          "place": "2",
+          "transactionAddCount": 27,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "15": {
+       "teamId": "15",
+       "name": "Leeannacondas",
+       "ownerUserId": "10721011",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/fd3e836fce791ad3e9401348331102fa.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/fd3e836fce791ad3e9401348331102fa.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "3",
+       "imageId": "DEF",
+       "divisionId": "2",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2017": {
+          "rank": "3",
+          "rankChange": "0",
+          "divisionRank": "1",
+          "record": "10-3-0",
+          "wins": "10",
+          "losses": "3",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "6",
+          "pts": "1371.52",
+          "ptsAgainst": "1111.44",
+          "playoffSeed": "3",
+          "playoffBracketType": "championship",
+          "place": "5",
+          "transactionAddCount": 17,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "2": {
+       "teamId": "2",
+       "name": "Daisy Duke Johnsons on Top",
+       "ownerUserId": "13638506",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/9917e5503c7c27da0ae38155496b4d33.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/9917e5503c7c27da0ae38155496b4d33.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "4",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2017": {
+          "rank": "4",
+          "rankChange": "0",
+          "divisionRank": "2",
+          "record": "9-4-0",
+          "wins": "9",
+          "losses": "4",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "8",
+          "pts": "1231.60",
+          "ptsAgainst": "1197.70",
+          "playoffSeed": "5",
+          "playoffBracketType": "championship",
+          "place": "6",
+          "transactionAddCount": 20,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "6": {
+       "teamId": "6",
+       "name": "The Aligators",
+       "ownerUserId": "3927197",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/2579c225259a6139ca7e0e4759ffe631.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/2579c225259a6139ca7e0e4759ffe631.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "8",
+       "imageId": "DEF",
+       "divisionId": "3",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2017": {
+          "rank": "8",
+          "rankChange": "0",
+          "divisionRank": "2",
+          "record": "7-6-0",
+          "wins": "7",
+          "losses": "6",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "9",
+          "pts": "1183.90",
+          "ptsAgainst": "1178.18",
+          "playoffSeed": null,
+          "playoffBracketType": null,
+          "place": "14",
+          "transactionAddCount": 38,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "8": {
+       "teamId": "8",
+       "name": "SERPION",
+       "ownerUserId": "3976774",
+       "coManagerUserId": "4549785",
+       "imageUrl": "https://fantasy.nfl.com/image/100b4523b38150f2c6591b37717451b5.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/100b4523b38150f2c6591b37717451b5.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "7",
+       "imageId": "DEF",
+       "divisionId": "2",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2017": {
+          "rank": "7",
+          "rankChange": "-1",
+          "divisionRank": "2",
+          "record": "7-6-0",
+          "wins": "7",
+          "losses": "6",
+          "ties": "0",
+          "streak": "L3",
+          "waiverPriority": "11",
+          "pts": "1234.86",
+          "ptsAgainst": "1175.44",
+          "playoffSeed": null,
+          "playoffBracketType": null,
+          "place": "13",
+          "transactionAddCount": 17,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "12": {
+       "teamId": "12",
+       "name": "lynching jordies",
+       "ownerUserId": "5677217",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/2d5a3730e66b3fc33a909011418bf947.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/2d5a3730e66b3fc33a909011418bf947.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "5",
+       "imageId": "DEF",
+       "divisionId": "4",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2017": {
+          "rank": "5",
+          "rankChange": "2",
+          "divisionRank": "2",
+          "record": "8-5-0",
+          "wins": "8",
+          "losses": "5",
+          "ties": "0",
+          "streak": "W4",
+          "waiverPriority": "13",
+          "pts": "1238.18",
+          "ptsAgainst": "1179.70",
+          "playoffSeed": "6",
+          "playoffBracketType": "championship",
+          "place": "4",
+          "transactionAddCount": 59,
+          "transactionTradeCount": 2,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "5": {
+       "teamId": "5",
+       "name": "Chicken Karama with rice",
+       "ownerUserId": "10705345",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/c09d6154288bdad2943c624057fe96df.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/c09d6154288bdad2943c624057fe96df.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "14",
+       "imageId": "DEF",
+       "divisionId": "2",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2017": {
+          "rank": "14",
+          "rankChange": "1",
+          "divisionRank": "3",
+          "record": "4-9-0",
+          "wins": "4",
+          "losses": "9",
+          "ties": "0",
+          "streak": "W3",
+          "waiverPriority": "2",
+          "pts": "1078.88",
+          "ptsAgainst": "1235.18",
+          "playoffSeed": "4",
+          "playoffBracketType": "consolation",
+          "place": "11",
+          "transactionAddCount": 10,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "11": {
+       "teamId": "11",
+       "name": "Unleash the DemoGordon",
+       "ownerUserId": "5714714",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/93384b3a77615412bbc58aa2f1d97de5.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/93384b3a77615412bbc58aa2f1d97de5.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "9",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2017": {
+          "rank": "9",
+          "rankChange": "0",
+          "divisionRank": "3",
+          "record": "6-7-0",
+          "wins": "6",
+          "losses": "7",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "10",
+          "pts": "1175.70",
+          "ptsAgainst": "1182.74",
+          "playoffSeed": null,
+          "playoffBracketType": null,
+          "place": "15",
+          "transactionAddCount": 24,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "14": {
+       "teamId": "14",
+       "name": "Kandys Konservatives",
+       "ownerUserId": "1557732",
+       "coManagerUserId": null,
+       "imageUrl": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/DET_1.png",
+       "imageUrlLarge": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/DET_1.png",
+       "isActive": false,
+       "rank": "11",
+       "imageId": "DET_1",
+       "divisionId": "3",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2017": {
+          "rank": "11",
+          "rankChange": "2",
+          "divisionRank": "3",
+          "record": "5-8-0",
+          "wins": "5",
+          "losses": "8",
+          "ties": "0",
+          "streak": "W2",
+          "waiverPriority": "16",
+          "pts": "1102.06",
+          "ptsAgainst": "1127.84",
+          "playoffSeed": "3",
+          "playoffBracketType": "consolation",
+          "place": "10",
+          "transactionAddCount": 22,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "16": {
+       "teamId": "16",
+       "name": "All you Snead is love",
+       "ownerUserId": "10891935",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/b81ff21d7d27c12f5e338c4ee18d6281.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/b81ff21d7d27c12f5e338c4ee18d6281.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "10",
+       "imageId": "DEF",
+       "divisionId": "4",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2017": {
+          "rank": "10",
+          "rankChange": "0",
+          "divisionRank": "3",
+          "record": "5-8-0",
+          "wins": "5",
+          "losses": "8",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "4",
+          "pts": "1111.64",
+          "ptsAgainst": "1271.12",
+          "playoffSeed": null,
+          "playoffBracketType": null,
+          "place": "16",
+          "transactionAddCount": 11,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "3": {
+       "teamId": "3",
+       "name": "DIGGS IS HOW WE DO IT",
+       "ownerUserId": "9158426",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/8255e748a927e6b25169c19e719cdcfb.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/8255e748a927e6b25169c19e719cdcfb.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "13",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2017": {
+          "rank": "13",
+          "rankChange": "-1",
+          "divisionRank": "4",
+          "record": "4-9-0",
+          "wins": "4",
+          "losses": "9",
+          "ties": "0",
+          "streak": "L5",
+          "waiverPriority": "7",
+          "pts": "1295.34",
+          "ptsAgainst": "1387.10",
+          "playoffSeed": "5",
+          "playoffBracketType": "consolation",
+          "place": "7",
+          "transactionAddCount": 77,
+          "transactionTradeCount": 3,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "7": {
+       "teamId": "7",
+       "name": "Murray'd with Children",
+       "ownerUserId": "3929551",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/c5ca6b8ce22759c0ace5ee23daeaa774.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/c5ca6b8ce22759c0ace5ee23daeaa774.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "15",
+       "imageId": "DEF",
+       "divisionId": "4",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2017": {
+          "rank": "15",
+          "rankChange": "-1",
+          "divisionRank": "4",
+          "record": "3-10-0",
+          "wins": "3",
+          "losses": "10",
+          "ties": "0",
+          "streak": "L4",
+          "waiverPriority": "15",
+          "pts": "1054.24",
+          "ptsAgainst": "1198.76",
+          "playoffSeed": "2",
+          "playoffBracketType": "consolation",
+          "place": "9",
+          "transactionAddCount": 40,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "9": {
+       "teamId": "9",
+       "name": "Wake up Mr Freeman",
+       "ownerUserId": "3993957",
+       "coManagerUserId": null,
+       "imageUrl": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/ATL_1.png",
+       "imageUrlLarge": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/ATL_1.png",
+       "isActive": false,
+       "rank": "12",
+       "imageId": "ATL_1",
+       "divisionId": "3",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2017": {
+          "rank": "12",
+          "rankChange": "-1",
+          "divisionRank": "4",
+          "record": "4-9-0",
+          "wins": "4",
+          "losses": "9",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "3",
+          "pts": "982.14",
+          "ptsAgainst": "1202.28",
+          "playoffSeed": "6",
+          "playoffBracketType": "consolation",
+          "place": "12",
+          "transactionAddCount": 10,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "13": {
+       "teamId": "13",
+       "name": "Look Morty I'm Charcand-Rick",
+       "ownerUserId": "8553062",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/776c4987b5b1e15af840989060079338.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/776c4987b5b1e15af840989060079338.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "16",
+       "imageId": "DEF",
+       "divisionId": "2",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2017": {
+          "rank": "16",
+          "rankChange": "0",
+          "divisionRank": "4",
+          "record": "3-10-0",
+          "wins": "3",
+          "losses": "10",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "1",
+          "pts": "1122.16",
+          "ptsAgainst": "1324.14",
+          "playoffSeed": "1",
+          "playoffBracketType": "consolation",
+          "place": "8",
+          "transactionAddCount": 15,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      }
+     },
+     "teamIds": [
+      "1",
+      "4",
+      "10",
+      "15",
+      "2",
+      "6",
+      "8",
+      "12",
+      "5",
+      "11",
+      "14",
+      "16",
+      "3",
+      "7",
+      "9",
+      "13"
+     ],
+     "isSeasonOver": true,
+     "finalStandingsTeamIds": [
+      "4",
+      "10",
+      "1",
+      "12",
+      "15",
+      "2",
+      "3",
+      "13",
+      "7",
+      "14",
+      "5",
+      "9",
+      "8",
+      "6",
+      "11",
+      "16"
+     ]
+    }
+   }
+  }
+ }
+}

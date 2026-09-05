@@ -1,0 +1,694 @@
+{
+ "games": {
+  "102019": {
+   "gameId": "102019",
+   "type": "core",
+   "code": "core",
+   "season": "2019",
+   "previousSeason": "2018",
+   "leagues": {
+    "1078038": {
+     "leagueId": "1078038",
+     "name": "TheGentlemen'sLeague",
+     "ownerUserId": "5677217",
+     "leagueType": "private",
+     "draftStatus": "postdraft",
+     "draftType": "offline",
+     "numTeams": 16,
+     "maxTeams": "16",
+     "leagueManagerUserIds": [
+      "30421",
+      "5677217"
+     ],
+     "isExperience": false,
+     "logoImageUrl": null,
+     "mainHexColor": null,
+     "draftDateTime": "2019-08-31T22:37:29-07:00",
+     "divisions": {
+      "1": {
+       "divisionId": "1",
+       "name": "North",
+       "teamIds": [
+        "6",
+        "4",
+        "1",
+        "14"
+       ]
+      },
+      "2": {
+       "divisionId": "2",
+       "name": "South",
+       "teamIds": [
+        "16",
+        "15",
+        "7",
+        "13"
+       ]
+      },
+      "3": {
+       "divisionId": "3",
+       "name": "East",
+       "teamIds": [
+        "10",
+        "8",
+        "9",
+        "11"
+       ]
+      },
+      "4": {
+       "divisionId": "4",
+       "name": "West",
+       "teamIds": [
+        "5",
+        "3",
+        "12",
+        "2"
+       ]
+      }
+     },
+     "divisionIds": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "teams": {
+      "5": {
+       "teamId": "5",
+       "name": "Chicken Karama with rice",
+       "ownerUserId": "10705345",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/c09d6154288bdad2943c624057fe96df.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/c09d6154288bdad2943c624057fe96df.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "5",
+       "imageId": "DEF",
+       "divisionId": "4",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2019": {
+          "rank": "5",
+          "rankChange": "0",
+          "divisionRank": "1",
+          "record": "8-5-0",
+          "wins": "8",
+          "losses": "5",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "8",
+          "pts": "1136.60",
+          "ptsAgainst": "1211.14",
+          "playoffSeed": "4",
+          "playoffBracketType": "championship",
+          "place": "6",
+          "transactionAddCount": 8,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "6": {
+       "teamId": "6",
+       "name": "The Aligators",
+       "ownerUserId": "3927197",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/2579c225259a6139ca7e0e4759ffe631.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/2579c225259a6139ca7e0e4759ffe631.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "3",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2019": {
+          "rank": "3",
+          "rankChange": "0",
+          "divisionRank": "1",
+          "record": "10-3-0",
+          "wins": "10",
+          "losses": "3",
+          "ties": "0",
+          "streak": "W3",
+          "waiverPriority": "15",
+          "pts": "1360.74",
+          "ptsAgainst": "1120.38",
+          "playoffSeed": "3",
+          "playoffBracketType": "championship",
+          "place": "3",
+          "transactionAddCount": 28,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "10": {
+       "teamId": "10",
+       "name": "[name redacted]",
+       "ownerUserId": "4044260",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/619158f94d443442466b79e1db7dedbe.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/619158f94d443442466b79e1db7dedbe.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "1",
+       "imageId": "DEF",
+       "divisionId": "3",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2019": {
+          "rank": "1",
+          "rankChange": "0",
+          "divisionRank": "1",
+          "record": "11-2-0",
+          "wins": "11",
+          "losses": "2",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "10",
+          "pts": "1518.82",
+          "ptsAgainst": "1240.20",
+          "playoffSeed": "1",
+          "playoffBracketType": "championship",
+          "place": "1",
+          "transactionAddCount": 30,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "16": {
+       "teamId": "16",
+       "name": "Peaches and Kareem",
+       "ownerUserId": "10891935",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/b81ff21d7d27c12f5e338c4ee18d6281.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/b81ff21d7d27c12f5e338c4ee18d6281.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "2",
+       "imageId": "DEF",
+       "divisionId": "2",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2019": {
+          "rank": "2",
+          "rankChange": "0",
+          "divisionRank": "1",
+          "record": "10-3-0",
+          "wins": "10",
+          "losses": "3",
+          "ties": "0",
+          "streak": "W3",
+          "waiverPriority": "9",
+          "pts": "1477.86",
+          "ptsAgainst": "1211.58",
+          "playoffSeed": "2",
+          "playoffBracketType": "championship",
+          "place": "2",
+          "transactionAddCount": 8,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "3": {
+       "teamId": "3",
+       "name": "Rolling with Mahomies",
+       "ownerUserId": "9158426",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/8ae4283f3509d7ee7a6b5bfa26ed19a6.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/8ae4283f3509d7ee7a6b5bfa26ed19a6.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "7",
+       "imageId": "DEF",
+       "divisionId": "4",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2019": {
+          "rank": "7",
+          "rankChange": "0",
+          "divisionRank": "2",
+          "record": "7-6-0",
+          "wins": "7",
+          "losses": "6",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "16",
+          "pts": "1293.44",
+          "ptsAgainst": "1224.32",
+          "playoffSeed": null,
+          "playoffBracketType": null,
+          "place": "13",
+          "transactionAddCount": 67,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "4": {
+       "teamId": "4",
+       "name": "Fuller breida butter",
+       "ownerUserId": "3919156",
+       "coManagerUserId": "4177306",
+       "imageUrl": "https://fantasy.nfl.com/image/d768a21eb9a1587865724fcb2a71faf9.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/d768a21eb9a1587865724fcb2a71faf9.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "12",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2019": {
+          "rank": "12",
+          "rankChange": "-1",
+          "divisionRank": "2",
+          "record": "6-7-0",
+          "wins": "6",
+          "losses": "7",
+          "ties": "0",
+          "streak": "W2",
+          "waiverPriority": "3",
+          "pts": "1277.24",
+          "ptsAgainst": "1241.22",
+          "playoffSeed": null,
+          "playoffBracketType": null,
+          "place": "16",
+          "transactionAddCount": 14,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "8": {
+       "teamId": "8",
+       "name": "SERPION",
+       "ownerUserId": "3976774",
+       "coManagerUserId": "4549785",
+       "imageUrl": "https://fantasy.nfl.com/image/100b4523b38150f2c6591b37717451b5.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/100b4523b38150f2c6591b37717451b5.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "4",
+       "imageId": "DEF",
+       "divisionId": "3",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2019": {
+          "rank": "4",
+          "rankChange": "0",
+          "divisionRank": "2",
+          "record": "8-5-0",
+          "wins": "8",
+          "losses": "5",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "14",
+          "pts": "1330.72",
+          "ptsAgainst": "1112.40",
+          "playoffSeed": "5",
+          "playoffBracketType": "championship",
+          "place": "4",
+          "transactionAddCount": 22,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "15": {
+       "teamId": "15",
+       "name": "Leeannacondas",
+       "ownerUserId": "10721011",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/fd3e836fce791ad3e9401348331102fa.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/fd3e836fce791ad3e9401348331102fa.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "11",
+       "imageId": "DEF",
+       "divisionId": "2",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2019": {
+          "rank": "11",
+          "rankChange": "1",
+          "divisionRank": "2",
+          "record": "6-7-0",
+          "wins": "6",
+          "losses": "7",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "4",
+          "pts": "1202.74",
+          "ptsAgainst": "1359.64",
+          "playoffSeed": "6",
+          "playoffBracketType": "consolation",
+          "place": "12",
+          "transactionAddCount": 1,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "1": {
+       "teamId": "1",
+       "name": "We're in Evan",
+       "ownerUserId": "30421",
+       "coManagerUserId": null,
+       "imageUrl": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/TEN_1.png",
+       "imageUrlLarge": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/TEN_1.png",
+       "isActive": false,
+       "rank": "14",
+       "imageId": "TEN_1",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2019": {
+          "rank": "14",
+          "rankChange": "0",
+          "divisionRank": "3",
+          "record": "3-10-0",
+          "wins": "3",
+          "losses": "10",
+          "ties": "0",
+          "streak": "L2",
+          "waiverPriority": "11",
+          "pts": "1062.42",
+          "ptsAgainst": "1411.70",
+          "playoffSeed": "5",
+          "playoffBracketType": "consolation",
+          "place": "11",
+          "transactionAddCount": 31,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "7": {
+       "teamId": "7",
+       "name": "The Action Jackson Show",
+       "ownerUserId": "3929551",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/84a79bba5a9abf02728ce6a90dfb1f25.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/84a79bba5a9abf02728ce6a90dfb1f25.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "9",
+       "imageId": "DEF",
+       "divisionId": "2",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2019": {
+          "rank": "9",
+          "rankChange": "0",
+          "divisionRank": "3",
+          "record": "6-7-0",
+          "wins": "6",
+          "losses": "7",
+          "ties": "0",
+          "streak": "L3",
+          "waiverPriority": "6",
+          "pts": "1300.78",
+          "ptsAgainst": "1326.42",
+          "playoffSeed": null,
+          "playoffBracketType": null,
+          "place": "15",
+          "transactionAddCount": 23,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "9": {
+       "teamId": "9",
+       "name": "Wake up Mr Freeman",
+       "ownerUserId": "3993957",
+       "coManagerUserId": null,
+       "imageUrl": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/ATL_1.png",
+       "imageUrlLarge": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/ATL_1.png",
+       "isActive": false,
+       "rank": "6",
+       "imageId": "ATL_1",
+       "divisionId": "3",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2019": {
+          "rank": "6",
+          "rankChange": "0",
+          "divisionRank": "3",
+          "record": "7-6-0",
+          "wins": "7",
+          "losses": "6",
+          "ties": "0",
+          "streak": "L4",
+          "waiverPriority": "7",
+          "pts": "1150.32",
+          "ptsAgainst": "1201.54",
+          "playoffSeed": "6",
+          "playoffBracketType": "championship",
+          "place": "5",
+          "transactionAddCount": 3,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "12": {
+       "teamId": "12",
+       "name": "The Hatters",
+       "ownerUserId": "5677217",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/890fe00ec4fee652bcf85e8b199c9142.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/890fe00ec4fee652bcf85e8b199c9142.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "8",
+       "imageId": "DEF",
+       "divisionId": "4",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2019": {
+          "rank": "8",
+          "rankChange": "0",
+          "divisionRank": "3",
+          "record": "7-6-0",
+          "wins": "7",
+          "losses": "6",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "12",
+          "pts": "1212.34",
+          "ptsAgainst": "1280.02",
+          "playoffSeed": null,
+          "playoffBracketType": null,
+          "place": "14",
+          "transactionAddCount": 42,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "2": {
+       "teamId": "2",
+       "name": "Standard Deviations",
+       "ownerUserId": "13638506",
+       "coManagerUserId": "3926444",
+       "imageUrl": "https://fantasy.nfl.com/image/9917e5503c7c27da0ae38155496b4d33.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/9917e5503c7c27da0ae38155496b4d33.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "16",
+       "imageId": "DEF",
+       "divisionId": "4",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2019": {
+          "rank": "16",
+          "rankChange": "0",
+          "divisionRank": "4",
+          "record": "2-11-0",
+          "wins": "2",
+          "losses": "11",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "1",
+          "pts": "1074.52",
+          "ptsAgainst": "1306.74",
+          "playoffSeed": "1",
+          "playoffBracketType": "consolation",
+          "place": "10",
+          "transactionAddCount": 34,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "11": {
+       "teamId": "11",
+       "name": "Jumping the Chark",
+       "ownerUserId": "5714714",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/93384b3a77615412bbc58aa2f1d97de5.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/93384b3a77615412bbc58aa2f1d97de5.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "10",
+       "imageId": "DEF",
+       "divisionId": "3",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2019": {
+          "rank": "10",
+          "rankChange": "0",
+          "divisionRank": "4",
+          "record": "6-7-0",
+          "wins": "6",
+          "losses": "7",
+          "ties": "0",
+          "streak": "W3",
+          "waiverPriority": "5",
+          "pts": "1287.10",
+          "ptsAgainst": "1235.92",
+          "playoffSeed": "4",
+          "playoffBracketType": "consolation",
+          "place": "8",
+          "transactionAddCount": 22,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "13": {
+       "teamId": "13",
+       "name": "Hit em where it Ertz",
+       "ownerUserId": "8553062",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/9c10db122b57f5eba201fe93f5031ca6.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/9c10db122b57f5eba201fe93f5031ca6.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "13",
+       "imageId": "DEF",
+       "divisionId": "2",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2019": {
+          "rank": "13",
+          "rankChange": "0",
+          "divisionRank": "4",
+          "record": "4-9-0",
+          "wins": "4",
+          "losses": "9",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "2",
+          "pts": "1187.74",
+          "ptsAgainst": "1312.92",
+          "playoffSeed": "3",
+          "playoffBracketType": "consolation",
+          "place": "7",
+          "transactionAddCount": 10,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "14": {
+       "teamId": "14",
+       "name": "Kandys Konservative Koalition",
+       "ownerUserId": "1557732",
+       "coManagerUserId": null,
+       "imageUrl": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/DET_1.png",
+       "imageUrlLarge": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/DET_1.png",
+       "isActive": false,
+       "rank": "15",
+       "imageId": "DET_1",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2019": {
+          "rank": "15",
+          "rankChange": "0",
+          "divisionRank": "4",
+          "record": "3-10-0",
+          "wins": "3",
+          "losses": "10",
+          "ties": "0",
+          "streak": "L3",
+          "waiverPriority": "13",
+          "pts": "1106.50",
+          "ptsAgainst": "1183.74",
+          "playoffSeed": "2",
+          "playoffBracketType": "consolation",
+          "place": "9",
+          "transactionAddCount": 39,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      }
+     },
+     "teamIds": [
+      "5",
+      "6",
+      "10",
+      "16",
+      "3",
+      "4",
+      "8",
+      "15",
+      "1",
+      "7",
+      "9",
+      "12",
+      "2",
+      "11",
+      "13",
+      "14"
+     ],
+     "isSeasonOver": true,
+     "finalStandingsTeamIds": [
+      "10",
+      "16",
+      "6",
+      "8",
+      "9",
+      "5",
+      "13",
+      "11",
+      "14",
+      "2",
+      "1",
+      "15",
+      "3",
+      "12",
+      "7",
+      "4"
+     ]
+    }
+   }
+  }
+ }
+}

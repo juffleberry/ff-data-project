@@ -1,0 +1,516 @@
+{
+ "games": {
+  "102014": {
+   "gameId": "102014",
+   "type": "core",
+   "code": "core",
+   "season": "2014",
+   "previousSeason": "2013",
+   "leagues": {
+    "1078038": {
+     "leagueId": "1078038",
+     "name": "TheGentlemen'sLeague",
+     "ownerUserId": "30421",
+     "leagueType": "private",
+     "draftStatus": "postdraft",
+     "draftType": "offline",
+     "numTeams": 12,
+     "maxTeams": "12",
+     "leagueManagerUserIds": [
+      "30421"
+     ],
+     "isExperience": false,
+     "logoImageUrl": null,
+     "mainHexColor": null,
+     "draftDateTime": "2014-08-31T01:19:03-07:00",
+     "divisions": {
+      "1": {
+       "divisionId": "1",
+       "name": "Division 1",
+       "teamIds": [
+        "13",
+        "7",
+        "8",
+        "3",
+        "9",
+        "1",
+        "6",
+        "4",
+        "12",
+        "2",
+        "11",
+        "10"
+       ]
+      }
+     },
+     "divisionIds": [
+      "1"
+     ],
+     "teams": {
+      "13": {
+       "teamId": "13",
+       "name": "Rivers of Babylon",
+       "ownerUserId": "8553062",
+       "coManagerUserId": null,
+       "imageUrl": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/SEA_1.png",
+       "imageUrlLarge": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/SEA_1.png",
+       "isActive": false,
+       "rank": "1",
+       "imageId": "SEA_1",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2014": {
+          "rank": "1",
+          "rankChange": "0",
+          "divisionRank": "1",
+          "record": "10-4-0",
+          "wins": "10",
+          "losses": "4",
+          "ties": "0",
+          "streak": "L2",
+          "waiverPriority": "9",
+          "pts": "1671.82",
+          "ptsAgainst": "1557.86",
+          "playoffSeed": "1",
+          "playoffBracketType": "championship",
+          "place": "3",
+          "transactionAddCount": 25,
+          "transactionTradeCount": 6,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "7": {
+       "teamId": "7",
+       "name": "Jordy 'Shaw",
+       "ownerUserId": "3929551",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/f178c4749e15d3e37af8ea1e493358e3.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/f178c4749e15d3e37af8ea1e493358e3.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "2",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2014": {
+          "rank": "2",
+          "rankChange": "0",
+          "divisionRank": "2",
+          "record": "10-4-0",
+          "wins": "10",
+          "losses": "4",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "8",
+          "pts": "1605.34",
+          "ptsAgainst": "1388.40",
+          "playoffSeed": "2",
+          "playoffBracketType": "championship",
+          "place": "4",
+          "transactionAddCount": 19,
+          "transactionTradeCount": 4,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "8": {
+       "teamId": "8",
+       "name": "SERPION",
+       "ownerUserId": "3976774",
+       "coManagerUserId": "4549785",
+       "imageUrl": "https://fantasy.nfl.com/image/100b4523b38150f2c6591b37717451b5.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/100b4523b38150f2c6591b37717451b5.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "3",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2014": {
+          "rank": "3",
+          "rankChange": "0",
+          "divisionRank": "3",
+          "record": "9-5-0",
+          "wins": "9",
+          "losses": "5",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "7",
+          "pts": "1546.38",
+          "ptsAgainst": "1417.04",
+          "playoffSeed": "3",
+          "playoffBracketType": "championship",
+          "place": "1",
+          "transactionAddCount": 14,
+          "transactionTradeCount": 2,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "3": {
+       "teamId": "3",
+       "name": "IT'S ON LIKE NDAMUKONG",
+       "ownerUserId": "3926444",
+       "coManagerUserId": "9158426",
+       "imageUrl": "https://fantasy.nfl.com/image/8146434b27f601a38b029ae9462e9a54.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/8146434b27f601a38b029ae9462e9a54.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "4",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2014": {
+          "rank": "4",
+          "rankChange": "2",
+          "divisionRank": "4",
+          "record": "8-6-0",
+          "wins": "8",
+          "losses": "6",
+          "ties": "0",
+          "streak": "W2",
+          "waiverPriority": "12",
+          "pts": "1545.46",
+          "ptsAgainst": "1528.70",
+          "playoffSeed": "4",
+          "playoffBracketType": "championship",
+          "place": "2",
+          "transactionAddCount": 75,
+          "transactionTradeCount": 9,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "9": {
+       "teamId": "9",
+       "name": "Players of Fortetude",
+       "ownerUserId": "3993957",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/d445290e11e67e21586a09aa084d49a9.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/d445290e11e67e21586a09aa084d49a9.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "5",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2014": {
+          "rank": "5",
+          "rankChange": "-1",
+          "divisionRank": "5",
+          "record": "8-6-0",
+          "wins": "8",
+          "losses": "6",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "6",
+          "pts": "1441.36",
+          "ptsAgainst": "1450.74",
+          "playoffSeed": null,
+          "playoffBracketType": null,
+          "place": "9",
+          "transactionAddCount": 14,
+          "transactionTradeCount": 5,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "1": {
+       "teamId": "1",
+       "name": "In The Aeroplane Over Vereen",
+       "ownerUserId": "30421",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/fcb8cd33e844fbdedb6b414de9081ed4.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/fcb8cd33e844fbdedb6b414de9081ed4.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "6",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2014": {
+          "rank": "6",
+          "rankChange": "2",
+          "divisionRank": "6",
+          "record": "7-7-0",
+          "wins": "7",
+          "losses": "7",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "5",
+          "pts": "1432.78",
+          "ptsAgainst": "1343.14",
+          "playoffSeed": null,
+          "playoffBracketType": null,
+          "place": "10",
+          "transactionAddCount": 19,
+          "transactionTradeCount": 3,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "6": {
+       "teamId": "6",
+       "name": "The Alligators",
+       "ownerUserId": "3927197",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/2579c225259a6139ca7e0e4759ffe631.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/2579c225259a6139ca7e0e4759ffe631.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "7",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2014": {
+          "rank": "7",
+          "rankChange": "-2",
+          "divisionRank": "7",
+          "record": "7-7-0",
+          "wins": "7",
+          "losses": "7",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "4",
+          "pts": "1453.44",
+          "ptsAgainst": "1445.76",
+          "playoffSeed": null,
+          "playoffBracketType": null,
+          "place": "11",
+          "transactionAddCount": 16,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "4": {
+       "teamId": "4",
+       "name": "Sanu Improved and Peytonted",
+       "ownerUserId": "3919156",
+       "coManagerUserId": "4177306",
+       "imageUrl": "https://fantasy.nfl.com/image/d768a21eb9a1587865724fcb2a71faf9.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/d768a21eb9a1587865724fcb2a71faf9.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "8",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2014": {
+          "rank": "8",
+          "rankChange": "-1",
+          "divisionRank": "8",
+          "record": "6-8-0",
+          "wins": "6",
+          "losses": "8",
+          "ties": "0",
+          "streak": "L2",
+          "waiverPriority": "3",
+          "pts": "1478.36",
+          "ptsAgainst": "1516.70",
+          "playoffSeed": null,
+          "playoffBracketType": null,
+          "place": "12",
+          "transactionAddCount": 36,
+          "transactionTradeCount": 3,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "12": {
+       "teamId": "12",
+       "name": "Settlers of Catanzaro",
+       "ownerUserId": "5677217",
+       "coManagerUserId": null,
+       "imageUrl": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/MISC11.png",
+       "imageUrlLarge": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/MISC11.png",
+       "isActive": false,
+       "rank": "9",
+       "imageId": "MISC11",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2014": {
+          "rank": "9",
+          "rankChange": "1",
+          "divisionRank": "9",
+          "record": "5-9-0",
+          "wins": "5",
+          "losses": "9",
+          "ties": "0",
+          "streak": "W2",
+          "waiverPriority": "10",
+          "pts": "1510.40",
+          "ptsAgainst": "1604.06",
+          "playoffSeed": "1",
+          "playoffBracketType": "consolation",
+          "place": "6",
+          "transactionAddCount": 41,
+          "transactionTradeCount": 8,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "2": {
+       "teamId": "2",
+       "name": "JOSH GORDON'S GANJA ARMY",
+       "ownerUserId": "3926061",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/fcec9be90911e0bde38766962ba7c312.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/fcec9be90911e0bde38766962ba7c312.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "10",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2014": {
+          "rank": "10",
+          "rankChange": "-1",
+          "divisionRank": "10",
+          "record": "5-9-0",
+          "wins": "5",
+          "losses": "9",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "2",
+          "pts": "1423.02",
+          "ptsAgainst": "1473.56",
+          "playoffSeed": "2",
+          "playoffBracketType": "consolation",
+          "place": "7",
+          "transactionAddCount": 23,
+          "transactionTradeCount": 4,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "11": {
+       "teamId": "11",
+       "name": "Kung Fu Russel",
+       "ownerUserId": "5714714",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/4cb4cc6216e032fc7c8648e40de8858f.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/4cb4cc6216e032fc7c8648e40de8858f.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "11",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2014": {
+          "rank": "11",
+          "rankChange": "0",
+          "divisionRank": "11",
+          "record": "5-9-0",
+          "wins": "5",
+          "losses": "9",
+          "ties": "0",
+          "streak": "W2",
+          "waiverPriority": "11",
+          "pts": "1232.90",
+          "ptsAgainst": "1465.90",
+          "playoffSeed": "3",
+          "playoffBracketType": "consolation",
+          "place": "5",
+          "transactionAddCount": 52,
+          "transactionTradeCount": 3,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "10": {
+       "teamId": "10",
+       "name": "Doug and the Staff Infections",
+       "ownerUserId": "4044260",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/9d2e3d4e7ea002868339d81e62aeabde.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/9d2e3d4e7ea002868339d81e62aeabde.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "12",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2014": {
+          "rank": "12",
+          "rankChange": "0",
+          "divisionRank": "12",
+          "record": "4-10-0",
+          "wins": "4",
+          "losses": "10",
+          "ties": "0",
+          "streak": "L4",
+          "waiverPriority": "1",
+          "pts": "1201.94",
+          "ptsAgainst": "1351.34",
+          "playoffSeed": "4",
+          "playoffBracketType": "consolation",
+          "place": "8",
+          "transactionAddCount": 21,
+          "transactionTradeCount": 4,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      }
+     },
+     "teamIds": [
+      "13",
+      "7",
+      "8",
+      "3",
+      "9",
+      "1",
+      "6",
+      "4",
+      "12",
+      "2",
+      "11",
+      "10"
+     ],
+     "isSeasonOver": true,
+     "finalStandingsTeamIds": [
+      "8",
+      "3",
+      "13",
+      "7",
+      "11",
+      "12",
+      "2",
+      "10",
+      "9",
+      "1",
+      "6",
+      "4"
+     ]
+    }
+   }
+  }
+ }
+}

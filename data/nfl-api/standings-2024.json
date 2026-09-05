@@ -1,0 +1,710 @@
+{
+ "games": {
+  "102024": {
+   "gameId": "102024",
+   "type": "core",
+   "code": "core",
+   "season": "2024",
+   "previousSeason": "2023",
+   "leagues": {
+    "1078038": {
+     "leagueId": "1078038",
+     "name": "TheGentlemen'sLeague",
+     "ownerUserId": "5677217",
+     "leagueType": "private",
+     "draftStatus": "postdraft",
+     "draftType": "offline",
+     "numTeams": 16,
+     "maxTeams": "16",
+     "leagueManagerUserIds": [
+      "30421",
+      "5677217"
+     ],
+     "isExperience": false,
+     "logoImageUrl": null,
+     "mainHexColor": null,
+     "draftDateTime": "2024-08-31T22:06:39-07:00",
+     "divisions": {
+      "1": {
+       "divisionId": "1",
+       "name": "International",
+       "teamIds": [
+        "2",
+        "14",
+        "10",
+        "1"
+       ]
+      },
+      "2": {
+       "divisionId": "2",
+       "name": "East",
+       "teamIds": [
+        "6",
+        "4",
+        "8",
+        "9"
+       ]
+      },
+      "3": {
+       "divisionId": "3",
+       "name": "Inner West",
+       "teamIds": [
+        "12",
+        "16",
+        "5",
+        "7"
+       ]
+      },
+      "4": {
+       "divisionId": "4",
+       "name": "Central",
+       "teamIds": [
+        "3",
+        "11",
+        "13",
+        "15"
+       ]
+      }
+     },
+     "divisionIds": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "teams": {
+      "2": {
+       "teamId": "2",
+       "name": "Standard Deviations",
+       "ownerUserId": "13638506",
+       "coManagerUserId": "3926444",
+       "imageUrl": "https://fantasy.nfl.com/image/9917e5503c7c27da0ae38155496b4d33.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/9917e5503c7c27da0ae38155496b4d33.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "4",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2024": {
+          "rank": "4",
+          "rankChange": "-1",
+          "divisionRank": "1",
+          "record": "9-5-0",
+          "wins": "9",
+          "losses": "5",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "15",
+          "pts": "1553.98",
+          "ptsAgainst": "1318.16",
+          "playoffSeed": "3",
+          "playoffBracketType": "championship",
+          "place": "5",
+          "transactionAddCount": 29,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null,
+          "waiverBudgetRemaining": "40"
+         }
+        }
+       }
+      },
+      "3": {
+       "teamId": "3",
+       "name": "The Puffins",
+       "ownerUserId": "9158426",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/f1eb18750aa0ada5068ffe18ef20d3b6.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/f1eb18750aa0ada5068ffe18ef20d3b6.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "3",
+       "imageId": "DEF",
+       "divisionId": "4",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2024": {
+          "rank": "3",
+          "rankChange": "1",
+          "divisionRank": "1",
+          "record": "10-4-0",
+          "wins": "10",
+          "losses": "4",
+          "ties": "0",
+          "streak": "W2",
+          "waiverPriority": "16",
+          "pts": "1494.82",
+          "ptsAgainst": "1265.36",
+          "playoffSeed": "2",
+          "playoffBracketType": "championship",
+          "place": "2",
+          "transactionAddCount": 126,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null,
+          "waiverBudgetRemaining": "0"
+         }
+        }
+       }
+      },
+      "6": {
+       "teamId": "6",
+       "name": "The Aligators",
+       "ownerUserId": "3927197",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/2579c225259a6139ca7e0e4759ffe631.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/2579c225259a6139ca7e0e4759ffe631.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "7",
+       "imageId": "DEF",
+       "divisionId": "2",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2024": {
+          "rank": "7",
+          "rankChange": "-1",
+          "divisionRank": "1",
+          "record": "8-6-0",
+          "wins": "8",
+          "losses": "6",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "12",
+          "pts": "1395.76",
+          "ptsAgainst": "1352.22",
+          "playoffSeed": "4",
+          "playoffBracketType": "championship",
+          "place": "6",
+          "transactionAddCount": 33,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null,
+          "waiverBudgetRemaining": "23"
+         }
+        }
+       }
+      },
+      "12": {
+       "teamId": "12",
+       "name": "The Hatters",
+       "ownerUserId": "5677217",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/890fe00ec4fee652bcf85e8b199c9142.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/890fe00ec4fee652bcf85e8b199c9142.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "1",
+       "imageId": "DEF",
+       "divisionId": "3",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2024": {
+          "rank": "1",
+          "rankChange": "0",
+          "divisionRank": "1",
+          "record": "11-3-0",
+          "wins": "11",
+          "losses": "3",
+          "ties": "0",
+          "streak": "L2",
+          "waiverPriority": "13",
+          "pts": "1610.22",
+          "ptsAgainst": "1272.54",
+          "playoffSeed": "5",
+          "playoffBracketType": "championship",
+          "place": "3",
+          "transactionAddCount": 62,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null,
+          "waiverBudgetRemaining": "18"
+         }
+        }
+       }
+      },
+      "4": {
+       "teamId": "4",
+       "name": "Yorkshire Puddings",
+       "ownerUserId": "34035214",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/4fd9574c0b69a53d70f0d12a7344fdbb.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/4fd9574c0b69a53d70f0d12a7344fdbb.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "9",
+       "imageId": "DEF",
+       "divisionId": "2",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2024": {
+          "rank": "9",
+          "rankChange": "0",
+          "divisionRank": "2",
+          "record": "7-7-0",
+          "wins": "7",
+          "losses": "7",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "7",
+          "pts": "1329.70",
+          "ptsAgainst": "1339.92",
+          "playoffSeed": null,
+          "playoffBracketType": null,
+          "place": "15",
+          "transactionAddCount": 18,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null,
+          "waiverBudgetRemaining": "58"
+         }
+        }
+       }
+      },
+      "11": {
+       "teamId": "11",
+       "name": "Kurlewless",
+       "ownerUserId": "5714714",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/57833902757e9f1504f9f4134788d7f5.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/57833902757e9f1504f9f4134788d7f5.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "5",
+       "imageId": "DEF",
+       "divisionId": "4",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2024": {
+          "rank": "5",
+          "rankChange": "0",
+          "divisionRank": "2",
+          "record": "9-5-0",
+          "wins": "9",
+          "losses": "5",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "10",
+          "pts": "1449.96",
+          "ptsAgainst": "1422.86",
+          "playoffSeed": "6",
+          "playoffBracketType": "championship",
+          "place": "1",
+          "transactionAddCount": 21,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null,
+          "waiverBudgetRemaining": "49"
+         }
+        }
+       }
+      },
+      "14": {
+       "teamId": "14",
+       "name": "AT Football Team",
+       "ownerUserId": "1557732",
+       "coManagerUserId": "35635810",
+       "imageUrl": "https://fantasy.nfl.com/image/8ee365a5cb21d8ed47a2db987b1ba72f.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/8ee365a5cb21d8ed47a2db987b1ba72f.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "8",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2024": {
+          "rank": "8",
+          "rankChange": "0",
+          "divisionRank": "2",
+          "record": "8-6-0",
+          "wins": "8",
+          "losses": "6",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "8",
+          "pts": "1261.92",
+          "ptsAgainst": "1260.86",
+          "playoffSeed": null,
+          "playoffBracketType": null,
+          "place": "14",
+          "transactionAddCount": 17,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null,
+          "waiverBudgetRemaining": "40"
+         }
+        }
+       }
+      },
+      "16": {
+       "teamId": "16",
+       "name": "Not Enough Cooks",
+       "ownerUserId": "10891935",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/a5af60f5b0345be8af7df88c0159333a.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/a5af60f5b0345be8af7df88c0159333a.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "2",
+       "imageId": "DEF",
+       "divisionId": "3",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2024": {
+          "rank": "2",
+          "rankChange": "0",
+          "divisionRank": "2",
+          "record": "11-3-0",
+          "wins": "11",
+          "losses": "3",
+          "ties": "0",
+          "streak": "W2",
+          "waiverPriority": "11",
+          "pts": "1465.36",
+          "ptsAgainst": "1310.02",
+          "playoffSeed": "1",
+          "playoffBracketType": "championship",
+          "place": "4",
+          "transactionAddCount": 22,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null,
+          "waiverBudgetRemaining": "36"
+         }
+        }
+       }
+      },
+      "5": {
+       "teamId": "5",
+       "name": "The Fishies",
+       "ownerUserId": "29855540",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/aa5e9f7923f376cd581e39243606dc95.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/aa5e9f7923f376cd581e39243606dc95.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "6",
+       "imageId": "DEF",
+       "divisionId": "3",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2024": {
+          "rank": "6",
+          "rankChange": "1",
+          "divisionRank": "3",
+          "record": "8-6-0",
+          "wins": "8",
+          "losses": "6",
+          "ties": "0",
+          "streak": "W4",
+          "waiverPriority": "9",
+          "pts": "1458.50",
+          "ptsAgainst": "1323.86",
+          "playoffSeed": null,
+          "playoffBracketType": null,
+          "place": "13",
+          "transactionAddCount": 40,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null,
+          "waiverBudgetRemaining": "0"
+         }
+        }
+       }
+      },
+      "8": {
+       "teamId": "8",
+       "name": "SERPION",
+       "ownerUserId": "3976774",
+       "coManagerUserId": "4549785",
+       "imageUrl": "https://fantasy.nfl.com/image/5f5288f20e64dd1cbac5e461f86aac91.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/5f5288f20e64dd1cbac5e461f86aac91.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "13",
+       "imageId": "DEF",
+       "divisionId": "2",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2024": {
+          "rank": "13",
+          "rankChange": "-2",
+          "divisionRank": "3",
+          "record": "5-9-0",
+          "wins": "5",
+          "losses": "9",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "14",
+          "pts": "1165.86",
+          "ptsAgainst": "1392.10",
+          "playoffSeed": "5",
+          "playoffBracketType": "consolation",
+          "place": "8",
+          "transactionAddCount": 24,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null,
+          "waiverBudgetRemaining": "0"
+         }
+        }
+       }
+      },
+      "10": {
+       "teamId": "10",
+       "name": "Bearnaise Dynamics",
+       "ownerUserId": "4044260",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/bab63a750ad7f5243eb388f8d1caece4.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/bab63a750ad7f5243eb388f8d1caece4.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "11",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2024": {
+          "rank": "11",
+          "rankChange": "-1",
+          "divisionRank": "3",
+          "record": "5-9-0",
+          "wins": "5",
+          "losses": "9",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "5",
+          "pts": "1250.26",
+          "ptsAgainst": "1359.22",
+          "playoffSeed": "4",
+          "playoffBracketType": "consolation",
+          "place": "11",
+          "transactionAddCount": 37,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null,
+          "waiverBudgetRemaining": "51"
+         }
+        }
+       }
+      },
+      "13": {
+       "teamId": "13",
+       "name": "The Piggies",
+       "ownerUserId": "8553062",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/09acf349b577c0d45f9532ba4c8bdd64.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/09acf349b577c0d45f9532ba4c8bdd64.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "10",
+       "imageId": "DEF",
+       "divisionId": "4",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2024": {
+          "rank": "10",
+          "rankChange": "2",
+          "divisionRank": "3",
+          "record": "5-9-0",
+          "wins": "5",
+          "losses": "9",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "6",
+          "pts": "1312.62",
+          "ptsAgainst": "1393.92",
+          "playoffSeed": null,
+          "playoffBracketType": null,
+          "place": "16",
+          "transactionAddCount": 13,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null,
+          "waiverBudgetRemaining": "2"
+         }
+        }
+       }
+      },
+      "1": {
+       "teamId": "1",
+       "name": "The Beer Barons",
+       "ownerUserId": "30421",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/884b4bc0ad8c88fc8066432d59e79b1a.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/884b4bc0ad8c88fc8066432d59e79b1a.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "12",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2024": {
+          "rank": "12",
+          "rankChange": "1",
+          "divisionRank": "4",
+          "record": "5-9-0",
+          "wins": "5",
+          "losses": "9",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "4",
+          "pts": "1246.58",
+          "ptsAgainst": "1380.56",
+          "playoffSeed": "6",
+          "playoffBracketType": "consolation",
+          "place": "7",
+          "transactionAddCount": 15,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null,
+          "waiverBudgetRemaining": "71"
+         }
+        }
+       }
+      },
+      "7": {
+       "teamId": "7",
+       "name": "The Dirty Birds",
+       "ownerUserId": "3929551",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/0d04a8f97adeaf40fdafaaa4a3a459db.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/0d04a8f97adeaf40fdafaaa4a3a459db.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "14",
+       "imageId": "DEF",
+       "divisionId": "3",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2024": {
+          "rank": "14",
+          "rankChange": "0",
+          "divisionRank": "4",
+          "record": "4-10-0",
+          "wins": "4",
+          "losses": "10",
+          "ties": "0",
+          "streak": "L6",
+          "waiverPriority": "3",
+          "pts": "1209.46",
+          "ptsAgainst": "1515.80",
+          "playoffSeed": "3",
+          "playoffBracketType": "consolation",
+          "place": "12",
+          "transactionAddCount": 19,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null,
+          "waiverBudgetRemaining": "42"
+         }
+        }
+       }
+      },
+      "9": {
+       "teamId": "9",
+       "name": "Mikkels Manatees",
+       "ownerUserId": "3993957",
+       "coManagerUserId": null,
+       "imageUrl": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/DEF.png",
+       "imageUrlLarge": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/DEF.png",
+       "isActive": false,
+       "rank": "15",
+       "imageId": "DEF",
+       "divisionId": "2",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2024": {
+          "rank": "15",
+          "rankChange": "1",
+          "divisionRank": "4",
+          "record": "4-10-0",
+          "wins": "4",
+          "losses": "10",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "2",
+          "pts": "1206.38",
+          "ptsAgainst": "1368.90",
+          "playoffSeed": "2",
+          "playoffBracketType": "consolation",
+          "place": "10",
+          "transactionAddCount": 0,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null,
+          "waiverBudgetRemaining": "100"
+         }
+        }
+       }
+      },
+      "15": {
+       "teamId": "15",
+       "name": "Leeannacondas",
+       "ownerUserId": "10721011",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/8284d87591acc2214b127414982f138a.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/8284d87591acc2214b127414982f138a.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "16",
+       "imageId": "DEF",
+       "divisionId": "4",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2024": {
+          "rank": "16",
+          "rankChange": "-1",
+          "divisionRank": "4",
+          "record": "3-11-0",
+          "wins": "3",
+          "losses": "11",
+          "ties": "0",
+          "streak": "L3",
+          "waiverPriority": "1",
+          "pts": "1268.86",
+          "ptsAgainst": "1403.94",
+          "playoffSeed": "1",
+          "playoffBracketType": "consolation",
+          "place": "9",
+          "transactionAddCount": 19,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null,
+          "waiverBudgetRemaining": "77"
+         }
+        }
+       }
+      }
+     },
+     "teamIds": [
+      "2",
+      "3",
+      "6",
+      "12",
+      "4",
+      "11",
+      "14",
+      "16",
+      "5",
+      "8",
+      "10",
+      "13",
+      "1",
+      "7",
+      "9",
+      "15"
+     ],
+     "isSeasonOver": true,
+     "finalStandingsTeamIds": [
+      "11",
+      "3",
+      "12",
+      "16",
+      "2",
+      "6",
+      "1",
+      "8",
+      "15",
+      "9",
+      "10",
+      "7",
+      "5",
+      "14",
+      "4",
+      "13"
+     ]
+    }
+   }
+  }
+ }
+}

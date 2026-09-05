@@ -1,0 +1,694 @@
+{
+ "games": {
+  "102020": {
+   "gameId": "102020",
+   "type": "core",
+   "code": "core",
+   "season": "2020",
+   "previousSeason": "2019",
+   "leagues": {
+    "1078038": {
+     "leagueId": "1078038",
+     "name": "TheGentlemen'sLeague",
+     "ownerUserId": "5677217",
+     "leagueType": "private",
+     "draftStatus": "postdraft",
+     "draftType": "offline",
+     "numTeams": 16,
+     "maxTeams": "16",
+     "leagueManagerUserIds": [
+      "30421",
+      "5677217"
+     ],
+     "isExperience": false,
+     "logoImageUrl": null,
+     "mainHexColor": null,
+     "draftDateTime": "2020-09-05T17:50:31-07:00",
+     "divisions": {
+      "1": {
+       "divisionId": "1",
+       "name": "International",
+       "teamIds": [
+        "14",
+        "2",
+        "4",
+        "9"
+       ]
+      },
+      "2": {
+       "divisionId": "2",
+       "name": "East",
+       "teamIds": [
+        "8",
+        "1",
+        "6",
+        "5"
+       ]
+      },
+      "3": {
+       "divisionId": "3",
+       "name": "Metro",
+       "teamIds": [
+        "16",
+        "3",
+        "12",
+        "7"
+       ]
+      },
+      "4": {
+       "divisionId": "4",
+       "name": "Regional",
+       "teamIds": [
+        "10",
+        "11",
+        "15",
+        "13"
+       ]
+      }
+     },
+     "divisionIds": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "teams": {
+      "8": {
+       "teamId": "8",
+       "name": "SERPION",
+       "ownerUserId": "3976774",
+       "coManagerUserId": "4549785",
+       "imageUrl": "https://fantasy.nfl.com/image/100b4523b38150f2c6591b37717451b5.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/100b4523b38150f2c6591b37717451b5.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "4",
+       "imageId": "DEF",
+       "divisionId": "2",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2020": {
+          "rank": "4",
+          "rankChange": "0",
+          "divisionRank": "1",
+          "record": "7-6-0",
+          "wins": "7",
+          "losses": "6",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "16",
+          "pts": "1392.82",
+          "ptsAgainst": "1304.44",
+          "playoffSeed": "3",
+          "playoffBracketType": "championship",
+          "place": "2",
+          "transactionAddCount": 30,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "10": {
+       "teamId": "10",
+       "name": "Burnmore Dynamics",
+       "ownerUserId": "4044260",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/bab63a750ad7f5243eb388f8d1caece4.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/bab63a750ad7f5243eb388f8d1caece4.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "1",
+       "imageId": "DEF",
+       "divisionId": "4",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2020": {
+          "rank": "1",
+          "rankChange": "0",
+          "divisionRank": "1",
+          "record": "10-3-0",
+          "wins": "10",
+          "losses": "3",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "15",
+          "pts": "1403.26",
+          "ptsAgainst": "1152.90",
+          "playoffSeed": "1",
+          "playoffBracketType": "championship",
+          "place": "1",
+          "transactionAddCount": 44,
+          "transactionTradeCount": 3,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "14": {
+       "teamId": "14",
+       "name": "Kandys Konservative Koalition",
+       "ownerUserId": "1557732",
+       "coManagerUserId": null,
+       "imageUrl": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/DET_1.png",
+       "imageUrlLarge": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/DET_1.png",
+       "isActive": false,
+       "rank": "9",
+       "imageId": "DET_1",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2020": {
+          "rank": "9",
+          "rankChange": "1",
+          "divisionRank": "1",
+          "record": "7-6-0",
+          "wins": "7",
+          "losses": "6",
+          "ties": "0",
+          "streak": "W2",
+          "waiverPriority": "6",
+          "pts": "1307.30",
+          "ptsAgainst": "1244.68",
+          "playoffSeed": "4",
+          "playoffBracketType": "championship",
+          "place": "5",
+          "transactionAddCount": 40,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "16": {
+       "teamId": "16",
+       "name": "Too Many Cooks",
+       "ownerUserId": "10891935",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/b81ff21d7d27c12f5e338c4ee18d6281.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/b81ff21d7d27c12f5e338c4ee18d6281.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "2",
+       "imageId": "DEF",
+       "divisionId": "3",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2020": {
+          "rank": "2",
+          "rankChange": "1",
+          "divisionRank": "1",
+          "record": "8-5-0",
+          "wins": "8",
+          "losses": "5",
+          "ties": "0",
+          "streak": "W2",
+          "waiverPriority": "11",
+          "pts": "1385.12",
+          "ptsAgainst": "1216.34",
+          "playoffSeed": "2",
+          "playoffBracketType": "championship",
+          "place": "3",
+          "transactionAddCount": 12,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "1": {
+       "teamId": "1",
+       "name": "The Beer Barons",
+       "ownerUserId": "30421",
+       "coManagerUserId": null,
+       "imageUrl": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/TEN_1.png",
+       "imageUrlLarge": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/TEN_1.png",
+       "isActive": false,
+       "rank": "8",
+       "imageId": "TEN_1",
+       "divisionId": "2",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2020": {
+          "rank": "8",
+          "rankChange": "1",
+          "divisionRank": "2",
+          "record": "7-6-0",
+          "wins": "7",
+          "losses": "6",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "8",
+          "pts": "1360.68",
+          "ptsAgainst": "1373.88",
+          "playoffSeed": null,
+          "playoffBracketType": null,
+          "place": "15",
+          "transactionAddCount": 36,
+          "transactionTradeCount": 2,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "2": {
+       "teamId": "2",
+       "name": "Standard Deviations",
+       "ownerUserId": "13638506",
+       "coManagerUserId": "3926444",
+       "imageUrl": "https://fantasy.nfl.com/image/9917e5503c7c27da0ae38155496b4d33.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/9917e5503c7c27da0ae38155496b4d33.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "6",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2020": {
+          "rank": "6",
+          "rankChange": "0",
+          "divisionRank": "2",
+          "record": "7-6-0",
+          "wins": "7",
+          "losses": "6",
+          "ties": "0",
+          "streak": "L2",
+          "waiverPriority": "7",
+          "pts": "1370.82",
+          "ptsAgainst": "1334.92",
+          "playoffSeed": null,
+          "playoffBracketType": null,
+          "place": "13",
+          "transactionAddCount": 27,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "3": {
+       "teamId": "3",
+       "name": "The Puffins",
+       "ownerUserId": "9158426",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/8ae4283f3509d7ee7a6b5bfa26ed19a6.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/8ae4283f3509d7ee7a6b5bfa26ed19a6.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "7",
+       "imageId": "DEF",
+       "divisionId": "3",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2020": {
+          "rank": "7",
+          "rankChange": "-2",
+          "divisionRank": "2",
+          "record": "7-6-0",
+          "wins": "7",
+          "losses": "6",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "12",
+          "pts": "1352.22",
+          "ptsAgainst": "1236.28",
+          "playoffSeed": null,
+          "playoffBracketType": null,
+          "place": "14",
+          "transactionAddCount": 90,
+          "transactionTradeCount": 2,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "11": {
+       "teamId": "11",
+       "name": "The Kurt Locker",
+       "ownerUserId": "5714714",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/93384b3a77615412bbc58aa2f1d97de5.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/93384b3a77615412bbc58aa2f1d97de5.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "3",
+       "imageId": "DEF",
+       "divisionId": "4",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2020": {
+          "rank": "3",
+          "rankChange": "-1",
+          "divisionRank": "2",
+          "record": "8-5-0",
+          "wins": "8",
+          "losses": "5",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "14",
+          "pts": "1323.20",
+          "ptsAgainst": "1232.76",
+          "playoffSeed": "5",
+          "playoffBracketType": "championship",
+          "place": "4",
+          "transactionAddCount": 31,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "4": {
+       "teamId": "4",
+       "name": "Sanders' Herbs and Spices",
+       "ownerUserId": "3919156",
+       "coManagerUserId": "4177306",
+       "imageUrl": "https://fantasy.nfl.com/image/d768a21eb9a1587865724fcb2a71faf9.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/d768a21eb9a1587865724fcb2a71faf9.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "13",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2020": {
+          "rank": "13",
+          "rankChange": "1",
+          "divisionRank": "3",
+          "record": "5-8-0",
+          "wins": "5",
+          "losses": "8",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "3",
+          "pts": "1111.52",
+          "ptsAgainst": "1192.32",
+          "playoffSeed": "5",
+          "playoffBracketType": "consolation",
+          "place": "7",
+          "transactionAddCount": 12,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "6": {
+       "teamId": "6",
+       "name": "The Aligators",
+       "ownerUserId": "3927197",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/2579c225259a6139ca7e0e4759ffe631.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/2579c225259a6139ca7e0e4759ffe631.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "10",
+       "imageId": "DEF",
+       "divisionId": "2",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2020": {
+          "rank": "10",
+          "rankChange": "-2",
+          "divisionRank": "3",
+          "record": "6-7-0",
+          "wins": "6",
+          "losses": "7",
+          "ties": "0",
+          "streak": "L1",
+          "waiverPriority": "4",
+          "pts": "1238.52",
+          "ptsAgainst": "1324.04",
+          "playoffSeed": "6",
+          "playoffBracketType": "consolation",
+          "place": "12",
+          "transactionAddCount": 28,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "12": {
+       "teamId": "12",
+       "name": "The Hatters",
+       "ownerUserId": "5677217",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/890fe00ec4fee652bcf85e8b199c9142.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/890fe00ec4fee652bcf85e8b199c9142.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "11",
+       "imageId": "DEF",
+       "divisionId": "3",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2020": {
+          "rank": "11",
+          "rankChange": "0",
+          "divisionRank": "3",
+          "record": "6-7-0",
+          "wins": "6",
+          "losses": "7",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "5",
+          "pts": "1225.56",
+          "ptsAgainst": "1259.90",
+          "playoffSeed": null,
+          "playoffBracketType": null,
+          "place": "16",
+          "transactionAddCount": 38,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "15": {
+       "teamId": "15",
+       "name": "Leeannacondas",
+       "ownerUserId": "10721011",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/fd3e836fce791ad3e9401348331102fa.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/fd3e836fce791ad3e9401348331102fa.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "5",
+       "imageId": "DEF",
+       "divisionId": "4",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2020": {
+          "rank": "5",
+          "rankChange": "2",
+          "divisionRank": "3",
+          "record": "7-6-0",
+          "wins": "7",
+          "losses": "6",
+          "ties": "0",
+          "streak": "W2",
+          "waiverPriority": "9",
+          "pts": "1240.54",
+          "ptsAgainst": "1250.06",
+          "playoffSeed": "6",
+          "playoffBracketType": "championship",
+          "place": "6",
+          "transactionAddCount": 9,
+          "transactionTradeCount": 1,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "5": {
+       "teamId": "5",
+       "name": "Mooreccan chicken with rice",
+       "ownerUserId": "10705345",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/c09d6154288bdad2943c624057fe96df.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/c09d6154288bdad2943c624057fe96df.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "12",
+       "imageId": "DEF",
+       "divisionId": "2",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2020": {
+          "rank": "12",
+          "rankChange": "0",
+          "divisionRank": "4",
+          "record": "6-7-0",
+          "wins": "6",
+          "losses": "7",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "10",
+          "pts": "1213.84",
+          "ptsAgainst": "1254.90",
+          "playoffSeed": "4",
+          "playoffBracketType": "consolation",
+          "place": "11",
+          "transactionAddCount": 9,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "7": {
+       "teamId": "7",
+       "name": "The Dirty Birds",
+       "ownerUserId": "3929551",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/44a26c8e8ff11257cd31c9f5158ad5c9.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/44a26c8e8ff11257cd31c9f5158ad5c9.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "15",
+       "imageId": "DEF",
+       "divisionId": "3",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2020": {
+          "rank": "15",
+          "rankChange": "-2",
+          "divisionRank": "4",
+          "record": "5-8-0",
+          "wins": "5",
+          "losses": "8",
+          "ties": "0",
+          "streak": "L5",
+          "waiverPriority": "1",
+          "pts": "1039.90",
+          "ptsAgainst": "1295.76",
+          "playoffSeed": "2",
+          "playoffBracketType": "consolation",
+          "place": "8",
+          "transactionAddCount": 26,
+          "transactionTradeCount": 4,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "9": {
+       "teamId": "9",
+       "name": "Mikkels Manatees",
+       "ownerUserId": "3993957",
+       "coManagerUserId": null,
+       "imageUrl": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/DEF.png",
+       "imageUrlLarge": "https://static.www.nfl.com/league/apps/fantasy/logos/avatar/240x240/DEF.png",
+       "isActive": false,
+       "rank": "14",
+       "imageId": "DEF",
+       "divisionId": "1",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2020": {
+          "rank": "14",
+          "rankChange": "1",
+          "divisionRank": "4",
+          "record": "5-8-0",
+          "wins": "5",
+          "losses": "8",
+          "ties": "0",
+          "streak": "W1",
+          "waiverPriority": "2",
+          "pts": "1206.78",
+          "ptsAgainst": "1310.54",
+          "playoffSeed": "3",
+          "playoffBracketType": "consolation",
+          "place": "10",
+          "transactionAddCount": 10,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      },
+      "13": {
+       "teamId": "13",
+       "name": "Piggy's Mixon match lolly bar",
+       "ownerUserId": "8553062",
+       "coManagerUserId": null,
+       "imageUrl": "https://fantasy.nfl.com/image/9af96f29475529abd7445a60487778d2.jpg?&x=50&y=50",
+       "imageUrlLarge": "https://fantasy.nfl.com/image/9af96f29475529abd7445a60487778d2.jpg?&x=120&y=120",
+       "isActive": false,
+       "rank": "16",
+       "imageId": "DEF",
+       "divisionId": "4",
+       "hasFantasyPlus": false,
+       "stats": {
+        "season": {
+         "2020": {
+          "rank": "16",
+          "rankChange": "0",
+          "divisionRank": "4",
+          "record": "3-10-0",
+          "wins": "3",
+          "losses": "10",
+          "ties": "0",
+          "streak": "L2",
+          "waiverPriority": "13",
+          "pts": "967.22",
+          "ptsAgainst": "1155.58",
+          "playoffSeed": "1",
+          "playoffBracketType": "consolation",
+          "place": "9",
+          "transactionAddCount": 22,
+          "transactionTradeCount": 0,
+          "trophyImageUrl": null
+         }
+        }
+       }
+      }
+     },
+     "teamIds": [
+      "8",
+      "10",
+      "14",
+      "16",
+      "1",
+      "2",
+      "3",
+      "11",
+      "4",
+      "6",
+      "12",
+      "15",
+      "5",
+      "7",
+      "9",
+      "13"
+     ],
+     "isSeasonOver": true,
+     "finalStandingsTeamIds": [
+      "10",
+      "8",
+      "16",
+      "11",
+      "14",
+      "15",
+      "4",
+      "7",
+      "13",
+      "9",
+      "5",
+      "6",
+      "2",
+      "3",
+      "1",
+      "12"
+     ]
+    }
+   }
+  }
+ }
+}
