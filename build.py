@@ -233,6 +233,18 @@ def blank():
     return {"wins": 0, "losses": 0, "draws": 0, "pointsFor": 0.0, "pointsAgainst": 0.0}
 
 
+def merged(by_phase, phase):
+    """Opponent accumulators for one phase, or both phases added for 'combined'."""
+    if phase != "combined":
+        return by_phase[phase]
+    out = defaultdict(blank)
+    for p in ("regular", "playoff"):
+        for opp, acc in by_phase[p].items():
+            for k in out[opp]:
+                out[opp][k] += acc[k]
+    return out
+
+
 def summarise(acc):
     games = acc["wins"] + acc["losses"] + acc["draws"]
     out = dict(acc, gamesPlayed=games)
@@ -306,6 +318,12 @@ def main():
             reg["pointsFor"] += s["pointsFor"]
             reg["pointsAgainst"] += s["pointsAgainst"]
         post = overall[name]["playoff"]
+        # All-time is the two phases added, not a third source: the regular
+        # season from the platforms' own records, the playoffs from the logs.
+        both = blank()
+        for src in (reg, post):
+            for k in both:
+                both[k] += src[k]
 
         for s in yrs:
             ps = per_season[(name, s["year"])]["playoff"]
@@ -319,6 +337,7 @@ def main():
             "allTime": {
                 "regular": summarise(reg),
                 "playoff": summarise(post),
+                "combined": summarise(both),
                 "seasons": len(yrs),
                 "firstSeason": yrs[0]["year"],
                 "lastSeason": yrs[-1]["year"],
@@ -332,10 +351,10 @@ def main():
             "seasons": yrs,
             "opponentHistory": {
                 phase: sorted(
-                    (dict(summarise(versus[name][phase][o]), opponent=o) for o in versus[name][phase]),
+                    (dict(summarise(acc), opponent=o) for o, acc in merged(versus[name], phase).items()),
                     key=lambda r: (-r["winPercentage"], -r["gamesPlayed"], r["opponent"]),
                 )
-                for phase in ("regular", "playoff")
+                for phase in ("regular", "playoff", "combined")
             },
         }
 

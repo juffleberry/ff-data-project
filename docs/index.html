@@ -169,6 +169,7 @@ footer code{font-size:11px;background:var(--sunk);padding:1px 5px;border-radius:
         <div class="seg" id="phase" role="tablist">
           <button role="tab" data-p="regular" aria-selected="true">Regular season</button>
           <button role="tab" data-p="playoff" aria-selected="false">Playoffs</button>
+          <button role="tab" data-p="combined" aria-selected="false">All-time</button>
         </div>
         <label class="sw"><input type="checkbox" id="activeOnly" checked><span>Active only</span></label>
       </div>
@@ -423,9 +424,11 @@ function renderRecords() {
       <div class="who">${badge(DATA.franchises[row.franchise])}${row.franchise}</div>
       <div class="ctx">${[who, ctx].filter(Boolean).join(' · ')}</div></div>`;
   }).join('');
-  $('#recnote').textContent = PLAYOFF()
-    ? 'Playoffs only — reconstructed from the surviving game logs'
-    : 'Regular season only · click any record to open that franchise';
+  $('#recnote').textContent = {
+    regular: 'Regular season only · click any record to open that franchise',
+    playoff: 'Playoffs only — reconstructed from the surviving game logs',
+    combined: 'Regular season plus playoffs · playoff games are missing for 2022–24',
+  }[PHASE];
 }
 
 function renderStandings() {
@@ -447,11 +450,12 @@ function select(name) {
     `${a.regular.gamesPlayed} regular-season games` +
     (t.active ? '' : ' · <span class="tag">no longer in the league</span>');
 
-  const R = a.regular, P = a.playoff;
+  const R = a.regular, P = a.playoff, C = a.combined;
   const stat = (l, v, n = '') => `<div><dt>${l}</dt><dd>${v}${n ? `<small>${n}</small>` : ''}</dd></div>`;
   $('#summary').innerHTML = [
     stat('Regular season', R.record, pct(R.winPercentage)),
     stat('Playoffs', P.gamesPlayed ? P.record : '—', P.gamesPlayed ? pct(P.winPercentage) : 'no games logged'),
+    stat('All-time', C.record, `${pct(C.winPercentage)} · reg + playoffs`),
     stat('Titles', a.titles || '—', a.titles ? stars(a.titles) : 'never won it'),
     stat('Made playoffs', a.playoffAppearances, `of ${a.seasons} seasons`),
     stat('Points for', num(R.pointsFor), `${R.avgPointsFor.toFixed(1)} per game`),
