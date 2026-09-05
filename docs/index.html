@@ -393,6 +393,7 @@ function rowsFor(phase) {
     .map((t) => ({ ...t.allTime[phase], ...{
       franchise: t.franchise, emoji: t.emoji, active: t.active, titles: t.allTime.titles,
       playoffAppearances: t.allTime.playoffAppearances, trades: t.allTime.trades,
+      shitbowls: t.allTime.shitbowls,
       adds: t.allTime.adds, seasons: t.allTime.seasons,
       firstSeason: t.allTime.firstSeason, lastSeason: t.allTime.lastSeason,
     } }));
@@ -430,6 +431,8 @@ function renderRecords() {
   add('Most wins', best(pool, (t) => t.wins), (t) => [t.wins, t.record], `${best(pool, (t) => t.wins).seasons} seasons`);
   add('Most losses', best(pool, (t) => t.losses), (t) => [t.losses, t.record], 'someone has to');
   add('Most titles', best(pool, (t) => t.titles), (t) => [t.titles, stars(t.titles)], '');
+  if (!PLAYOFF() && best(pool, (t) => t.shitbowls).shitbowls)
+    add('Most shitbowls', best(pool, (t) => t.shitbowls), (t) => [`💩 ${t.shitbowls}`, 'crowned worst'], '');
   add('Most playoffs', best(pool, (t) => t.playoffAppearances),
       (t) => [t.playoffAppearances, `of ${t.seasons} seasons`], '');
   add('Most points', best(pool, (t) => t.pointsFor), (t) => [num(t.pointsFor), `${t.avgPointsFor.toFixed(1)}/g`], '');
@@ -617,11 +620,9 @@ async function init() {
     `Regular season: ${m.matchupSeasons.join(', ')} — 2022 wk10 to 2024 was never captured. ` +
     `Playoffs: every season, but ${noScores.join(', ')} are reconstructed from seeds and placings, ` +
     `so they carry a result and no score.`;
-  const sbKnown = m.shitbowlSeasons.length;
   $('#finalsnote').innerHTML =
-    `Both ends of every season. 💩 is last in the consolation bracket — a hand-kept record ` +
-    `(${sbKnown} of ${m.seasons.length} seasons), because NFL's API carries no consolation detail ` +
-    `and its placings don't follow consolation results.`;
+    'Both ends of every season. 💩 is the shitbowl — won, not lost. ' +
+    'Hover it for where each one came from.';
   $('#footnote').innerHTML = m.note + '<br><br>' +
     m.sources.map((s) => `<code>${s}</code>`).join('<br>') +
     '<br><br>Rebuilt by <code>build.py</code>; raw API responses archived in <code>data/</code>.';
@@ -666,8 +667,12 @@ async function init() {
               cell(`${stars(1)} ${who(f.champion)}`),
               cell(named && named !== f.champion ? `<span style="color:var(--muted)">${named}</span>` : '—'),
               cell(who(f.runnerUp)), cell(who(f.third)),
-              cell(f.shitbowl ? `💩 ${who(f.shitbowl)}`
-                   : '<span style="color:var(--muted)" title="Not recoverable from the data">unknown</span>'));
+              cell(f.shitbowl
+                   ? `<span title="${{'derived-winless': 'Derived: lost every consolation game',
+                        'recalled': 'From memory — the postseason results for this season are gone',
+                        'sleeper-bracket': "Sleeper's losers bracket states it"}[f.shitbowlSource] || ''}">` +
+                     `💩 ${who(f.shitbowl)}</span>`
+                   : '<span style="color:var(--muted)">unknown</span>'));
     tr.onclick = () => { select(f.champion); $('#profile').scrollIntoView({ block: 'start' }); };
     return tr;
   }));

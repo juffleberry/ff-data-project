@@ -578,6 +578,17 @@ def main():
     played = {s["year"] for s in standings if s["platform"] == "NFL.com"}
     podiums = finals(seasons, alias, played) + sleeper_finals(salias)
     spoons = shitbowl()
+    # Sleeper states it outright: the winner of the losers bracket's placement
+    # final is the one crowned worst. Only counted once that game has been played,
+    # so an in-progress season doesn't award the spoon early.
+    for f in sorted(glob(str(RAW / "sleeper" / "*-losers_bracket.json"))):
+        year = re.match(r"(\d{4})", Path(f).name).group(1)
+        if year in spoons:
+            continue
+        for m in json.load(open(f)):
+            if m.get("p") == 1 and m.get("w"):
+                spoons[year] = {"franchise": salias[str(m["w"])], "secondLast": None,
+                                "source": "sleeper-bracket"}
     check_shitbowl(spoons, alias)
     for f_ in podiums:
         sb = spoons.get(f_["year"])

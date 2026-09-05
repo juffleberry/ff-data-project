@@ -60,9 +60,20 @@
       "2025"
     ],
     "shitbowlSeasons": [
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
       "2022",
       "2023",
-      "2024"
+      "2024",
+      "2025"
     ],
     "bracketScored": [
       "2012",
@@ -198,9 +209,9 @@
         "champion": "The Beer Barons",
         "runnerUp": "The Claireville Cougars",
         "third": "Standard Deviations",
-        "shitbowl": null,
+        "shitbowl": "Mikkels Manatees",
         "shitbowlSecondLast": null,
-        "shitbowlSource": null
+        "shitbowlSource": "derived-winless"
       },
       {
         "year": "2013",
@@ -222,9 +233,9 @@
         "champion": "The Puffins",
         "runnerUp": "The Aligators",
         "third": "The Hatters",
-        "shitbowl": null,
+        "shitbowl": "London Tanqs",
         "shitbowlSecondLast": null,
-        "shitbowlSource": null
+        "shitbowlSource": "derived-winless"
       },
       {
         "year": "2014",
@@ -246,9 +257,9 @@
         "champion": "SERPION",
         "runnerUp": "The Puffins",
         "third": "The Piggies",
-        "shitbowl": null,
+        "shitbowl": "Bearnaise Dynamics",
         "shitbowlSecondLast": null,
-        "shitbowlSource": null
+        "shitbowlSource": "derived-winless"
       },
       {
         "year": "2015",
@@ -274,9 +285,9 @@
         "champion": "Mooreccan chicken with rice",
         "runnerUp": "The Hatters",
         "third": "Bearnaise Dynamics",
-        "shitbowl": null,
+        "shitbowl": "The Dirty Birds",
         "shitbowlSecondLast": null,
-        "shitbowlSource": null
+        "shitbowlSource": "derived-winless"
       },
       {
         "year": "2016",
@@ -302,9 +313,9 @@
         "champion": "The Hatters",
         "runnerUp": "SERPION",
         "third": "The Dirty Birds",
-        "shitbowl": null,
+        "shitbowl": "Kurlewless",
         "shitbowlSecondLast": null,
-        "shitbowlSource": null
+        "shitbowlSource": "derived-winless"
       },
       {
         "year": "2017",
@@ -330,9 +341,9 @@
         "champion": "London Tanqs",
         "runnerUp": "Bearnaise Dynamics",
         "third": "The Beer Barons",
-        "shitbowl": null,
+        "shitbowl": "AT Football Team",
         "shitbowlSecondLast": null,
-        "shitbowlSource": null
+        "shitbowlSource": "derived-winless"
       },
       {
         "year": "2018",
@@ -358,9 +369,9 @@
         "champion": "The Puffins",
         "runnerUp": "The Hatters",
         "third": "The Aligators",
-        "shitbowl": null,
+        "shitbowl": "Mikkels Manatees",
         "shitbowlSecondLast": null,
-        "shitbowlSource": null
+        "shitbowlSource": "derived-winless"
       },
       {
         "year": "2019",
@@ -386,9 +397,9 @@
         "champion": "Bearnaise Dynamics",
         "runnerUp": "Not Enough Cooks",
         "third": "The Aligators",
-        "shitbowl": null,
+        "shitbowl": "Kurlewless",
         "shitbowlSecondLast": null,
-        "shitbowlSource": null
+        "shitbowlSource": "derived-winless"
       },
       {
         "year": "2020",
@@ -414,9 +425,9 @@
         "champion": "Bearnaise Dynamics",
         "runnerUp": "SERPION",
         "third": "Not Enough Cooks",
-        "shitbowl": null,
+        "shitbowl": "Mikkels Manatees",
         "shitbowlSecondLast": null,
-        "shitbowlSource": null
+        "shitbowlSource": "derived-winless"
       },
       {
         "year": "2021",
@@ -442,9 +453,9 @@
         "champion": "Leeannacondas",
         "runnerUp": "The Hatters",
         "third": "Bearnaise Dynamics",
-        "shitbowl": null,
+        "shitbowl": "London Tanqs",
         "shitbowlSecondLast": null,
-        "shitbowlSource": null
+        "shitbowlSource": "derived-winless"
       },
       {
         "year": "2022",
@@ -544,9 +555,9 @@
         "champion": "Seamen",
         "runnerUp": "The Puffins",
         "third": "The Dirty Birds",
-        "shitbowl": null,
+        "shitbowl": "Yorkshire Puddings",
         "shitbowlSecondLast": null,
-        "shitbowlSource": null
+        "shitbowlSource": "sleeper-bracket"
       }
     ],
     "sources": [
@@ -625,7 +636,7 @@
         "finalsWon": 1,
         "finalsLost": 0,
         "finalsReached": 1,
-        "shitbowls": 0
+        "shitbowls": 1
       },
       "seasons": [
         {
@@ -727,7 +738,7 @@
             "avgPointsFor": 0.0,
             "avgPointsAgainst": 0.0
           },
-          "shitbowl": false,
+          "shitbowl": true,
           "finalStanding": 10
         },
         {
@@ -1584,7 +1595,7 @@
         "finalsWon": 2,
         "finalsLost": 1,
         "finalsReached": 3,
-        "shitbowls": 0
+        "shitbowls": 1
       },
       "seasons": [
         {
@@ -1686,7 +1697,7 @@
             "avgPointsFor": 0.0,
             "avgPointsAgainst": 0.0
           },
-          "shitbowl": false,
+          "shitbowl": true,
           "finalStanding": 8
         },
         {
@@ -2813,7 +2824,7 @@
         "finalsWon": 1,
         "finalsLost": 1,
         "finalsReached": 2,
-        "shitbowls": 0
+        "shitbowls": 2
       },
       "seasons": [
         {
@@ -2949,7 +2960,7 @@
             "avgPointsFor": 0.0,
             "avgPointsAgainst": 0.0
           },
-          "shitbowl": false,
+          "shitbowl": true,
           "finalStanding": 8
         },
         {
@@ -3051,7 +3062,7 @@
             "avgPointsFor": 0.0,
             "avgPointsAgainst": 0.0
           },
-          "shitbowl": false,
+          "shitbowl": true,
           "finalStanding": 8
         },
         {
@@ -4953,7 +4964,7 @@
         "finalsWon": 1,
         "finalsLost": 0,
         "finalsReached": 1,
-        "shitbowls": 0
+        "shitbowls": 2
       },
       "seasons": [
         {
@@ -5021,7 +5032,7 @@
             "avgPointsFor": 0.0,
             "avgPointsAgainst": 0.0
           },
-          "shitbowl": false,
+          "shitbowl": true,
           "finalStanding": 8
         },
         {
@@ -5293,7 +5304,7 @@
             "avgPointsFor": 0.0,
             "avgPointsAgainst": 0.0
           },
-          "shitbowl": false,
+          "shitbowl": true,
           "finalStanding": 7
         },
         {
@@ -5912,7 +5923,7 @@
         "finalsWon": 0,
         "finalsLost": 0,
         "finalsReached": 0,
-        "shitbowls": 0
+        "shitbowls": 3
       },
       "seasons": [
         {
@@ -5946,7 +5957,7 @@
             "avgPointsFor": 0.0,
             "avgPointsAgainst": 0.0
           },
-          "shitbowl": false,
+          "shitbowl": true,
           "finalStanding": 8
         },
         {
@@ -6150,7 +6161,7 @@
             "avgPointsFor": 0.0,
             "avgPointsAgainst": 0.0
           },
-          "shitbowl": false,
+          "shitbowl": true,
           "finalStanding": 8
         },
         {
@@ -6218,7 +6229,7 @@
             "avgPointsFor": 0.0,
             "avgPointsAgainst": 0.0
           },
-          "shitbowl": false,
+          "shitbowl": true,
           "finalStanding": 10
         },
         {
@@ -14587,7 +14598,7 @@
         "finalsWon": 0,
         "finalsLost": 0,
         "finalsReached": 0,
-        "shitbowls": 1
+        "shitbowls": 2
       },
       "seasons": [
         {
@@ -14723,7 +14734,7 @@
             "avgPointsFor": 0.0,
             "avgPointsAgainst": 0.0
           },
-          "shitbowl": false,
+          "shitbowl": true,
           "finalStanding": 10
         },
         {
@@ -19842,7 +19853,7 @@
         "finalsWon": 0,
         "finalsLost": 0,
         "finalsReached": 0,
-        "shitbowls": 0
+        "shitbowls": 1
       },
       "seasons": [
         {
@@ -19944,7 +19955,7 @@
             "avgPointsFor": 0.0,
             "avgPointsAgainst": 0.0
           },
-          "shitbowl": false,
+          "shitbowl": true,
           "finalStanding": null
         }
       ],
