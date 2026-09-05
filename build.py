@@ -292,6 +292,27 @@ def brackets(seasons, alias, played):
     return out
 
 
+def shitbowl():
+    """Who came last in the consolation bracket, read from data/shitbowl.csv.
+
+    Hand-maintained on purpose. NFL's API carries no consolation bracket detail,
+    and its `place` field does not follow consolation results - in 2019 the seed
+    that went 2-0 was placed 9th while the seed that went 0-3 was placed 8th, so
+    there is nothing to solve against. For 2022-24 the postseason results are
+    gone outright. Blank rows are left blank rather than guessed.
+    """
+    out = {}
+    with open(RAW / "shitbowl.csv", newline="") as f:
+        for row in csv.DictReader(r for r in f if not r.startswith("#")):
+            if row.get("franchise"):
+                out[row["year"]] = {
+                    "franchise": row["franchise"],
+                    "secondLast": row.get("second_last") or None,
+                    "source": row.get("source") or None,
+                }
+    return out
+
+
 def finals(seasons, alias, played):
     """Champion, runner-up and podium for each season.
 
@@ -539,6 +560,12 @@ def main():
     # finishing order over an all-zero season; exclude it.
     played = {s["year"] for s in standings if s["platform"] == "NFL.com"}
     podiums = finals(seasons, alias, played) + sleeper_finals(salias)
+    spoons = shitbowl()
+    for f_ in podiums:
+        sb = spoons.get(f_["year"])
+        f_["shitbowl"] = sb["franchise"] if sb else None
+        f_["shitbowlSecondLast"] = sb["secondLast"] if sb else None
+        f_["shitbowlSource"] = sb["source"] if sb else None
     podium_by = defaultdict(dict)
     for f_ in podiums:
         for pos, who in enumerate(f_["order"], 1):
@@ -549,6 +576,10 @@ def main():
         t["allTime"]["finalsWon"] = won
         t["allTime"]["finalsLost"] = lost
         t["allTime"]["finalsReached"] = won + lost
+        t["allTime"]["shitbowls"] = sum(1 for v in spoons.values() if v["franchise"] == name)
+        for srow in t["seasons"]:
+            sb = spoons.get(srow["year"])
+            srow["shitbowl"] = bool(sb and sb["franchise"] == name)
         for srow in t["seasons"]:
             srow["finalStanding"] = podium_by[name].get(srow["year"])
 
@@ -558,6 +589,7 @@ def main():
             "matchupSeasons": sorted(logged),
             "regularSeasonEnd": dict(sorted(reg_end.items())),
             "bracketSeasons": sorted(derived),
+            "shitbowlSeasons": sorted(spoons),
             "bracketScored": sorted(scored),
             "games": len(games),
             "franchises": len(out),

@@ -1,0 +1,27 @@
+# Who came last in the consolation bracket, by season.
+#
+# This is a hand-maintained record, not a derivation. NFL's API exposes no
+# consolation bracket detail, and its `place` field demonstrably does not follow
+# consolation results - in 2019 the seed that went 2-0 was placed 9th and the
+# seed that went 0-3 was placed 8th. So there is nothing to compute against, and
+# for 2022-24 the postseason game results are gone entirely.
+#
+# Leave `franchise` blank for a season nobody can confirm; blank rows are simply
+# not rendered. `franchise` must match a name in data/franchises.csv.
+#
+# source: recalled | sleeper-bracket
+year,franchise,second_last,source
+2012,,,
+2013,,,
+2014,,,
+2015,,,
+2016,,,
+2017,,,
+2018,,,
+2019,,,
+2020,,,
+2021,,,
+2022,,,
+2023,,,
+2024,SERPION,,recalled
+2025,,,

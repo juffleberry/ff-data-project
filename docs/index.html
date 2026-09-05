@@ -151,10 +151,11 @@ footer code{font-size:11px;background:var(--sunk);padding:1px 5px;border-radius:
   </header>
 
   <section>
-    <div class="head"><h2>Finals</h2>
-      <p class="hint">Every title game · from the final standings NFL kept for all 14 seasons</p></div>
+    <div class="head"><h2>Finals &amp; shitbowl</h2>
+      <p class="hint" id="finalsnote"></p></div>
     <div class="card scroll"><table id="finals">
-      <thead><tr><th>Season</th><th>Champion</th><th>Won as</th><th>Runner-up</th><th>Third</th></tr></thead>
+      <thead><tr><th>Season</th><th>Champion</th><th>Won as</th><th>Runner-up</th>
+        <th>Third</th><th>💩 Shitbowl</th></tr></thead>
       <tbody></tbody></table></div>
   </section>
 
@@ -489,6 +490,7 @@ function select(name) {
     stat('Titles', a.titles || '—', a.titles ? stars(a.titles) : 'never won it'),
     stat('Finals', `${a.finalsWon}–${a.finalsLost}`,
          a.finalsReached ? `reached ${a.finalsReached}` : 'never reached one'),
+    a.shitbowls ? stat('Shitbowls', `💩 ${a.shitbowls}`, 'came last in it') : '',
     stat('Made playoffs', a.playoffAppearances, `of ${a.seasons} seasons`),
     stat('Points for', num(R.pointsFor), `${R.avgPointsFor.toFixed(1)} per game`),
     stat('Points against', num(R.pointsAgainst), `${R.avgPointsAgainst.toFixed(1)} per game`),
@@ -518,7 +520,8 @@ function select(name) {
       cell(`${s.year} <span class="tag">${s.platform === 'Sleeper' ? 'SLPR' : 'NFL'}</span>`),
       cell(`<span class="nm">${s.teamName}</span>`), cell(meter(s.winPct)), cell(s.record),
       cell(s.finish === 1 ? `${stars(1)} 1st` : s.finish ? ord(s.finish) : (s.madePlayoffs ? '<span class="tag">playoffs</span>' : '—')),
-      cell(s.finalStanding === 1 ? `${stars(1)} champion`
+      cell(s.shitbowl ? '<span class="neg">💩 shitbowl</span>'
+           : s.finalStanding === 1 ? `${stars(1)} champion`
            : s.finalStanding === 2 ? '<span class="neg">lost final</span>'
            : s.finalStanding ? `${ord(s.finalStanding)} of 16` : '—'),
       cell(s.playoff.gamesPlayed ? s.playoff.record : '—'),
@@ -614,6 +617,11 @@ async function init() {
     `Regular season: ${m.matchupSeasons.join(', ')} — 2022 wk10 to 2024 was never captured. ` +
     `Playoffs: every season, but ${noScores.join(', ')} are reconstructed from seeds and placings, ` +
     `so they carry a result and no score.`;
+  const sbKnown = m.shitbowlSeasons.length;
+  $('#finalsnote').innerHTML =
+    `Both ends of every season. 💩 is last in the consolation bracket — a hand-kept record ` +
+    `(${sbKnown} of ${m.seasons.length} seasons), because NFL's API carries no consolation detail ` +
+    `and its placings don't follow consolation results.`;
   $('#footnote').innerHTML = m.note + '<br><br>' +
     m.sources.map((s) => `<code>${s}</code>`).join('<br>') +
     '<br><br>Rebuilt by <code>build.py</code>; raw API responses archived in <code>data/</code>.';
@@ -657,7 +665,9 @@ async function init() {
     tr.append(cell(`${f.year} <span class="tag">${f.platform === 'Sleeper' ? 'SLPR' : 'NFL'}</span>`),
               cell(`${stars(1)} ${who(f.champion)}`),
               cell(named && named !== f.champion ? `<span style="color:var(--muted)">${named}</span>` : '—'),
-              cell(who(f.runnerUp)), cell(who(f.third)));
+              cell(who(f.runnerUp)), cell(who(f.third)),
+              cell(f.shitbowl ? `💩 ${who(f.shitbowl)}`
+                   : '<span style="color:var(--muted)" title="Not recoverable from the data">unknown</span>'));
     tr.onclick = () => { select(f.champion); $('#profile').scrollIntoView({ block: 'start' }); };
     return tr;
   }));
