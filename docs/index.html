@@ -229,10 +229,6 @@ footer code{font-size:11px;background:var(--sunk);padding:1px 5px;border-radius:
       </table>
     </div>
 
-    <div class="head" style="margin-top:26px"><h2>Trade log</h2><p class="hint" id="tlNote"></p></div>
-    <div class="card scroll"><table id="tradeLog">
-      <thead><tr><th>When</th><th>Between</th><th>Moved</th></tr></thead><tbody></tbody>
-    </table></div>
   </section>
 
   <section id="profile">
@@ -613,18 +609,6 @@ function renderActivity() {
     return tr;
   }, 'trades');
 
-  const log = [...m.tradeLog].reverse();
-  $('#tlNote').textContent = `${log.length} trades with detail — Sleeper only; NFL's API gives counts but never said who or what`;
-  $('#tradeLog').tBodies[0].replaceChildren(...log.map((t) => {
-    const tr = document.createElement('tr');
-    const who = t.franchises.map((f) => badge(DATA.franchises[f]) + f).join(' ↔ ');
-    const what = t.players.length
-      ? t.players.map((p) => `<span class="nm">${p.player}</span>${p.pos ? ` <span class="tag">${p.pos}</span>` : ''} → ${p.to}`).join('<br>')
-      : `<span style="color:var(--muted)">${t.picks} draft pick${t.picks === 1 ? '' : 's'}</span>`;
-    tr.append(cell(`${t.year} <span class="tag">wk ${t.week}</span>`), cell(who), cell(what));
-    tr.style.cursor = 'default';
-    return tr;
-  }));
 }
 
 /* ---------- boot ---------- */

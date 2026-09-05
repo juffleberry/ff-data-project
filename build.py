@@ -229,37 +229,6 @@ def sleeper_standings(alias):
 
 # ---------- aggregation ----------
 
-def trade_log(alias):
-    """Completed Sleeper trades, with players resolved to names.
-
-    Only Sleeper years have this. NFL's API gives per-team trade counts but no
-    detail, so who traded with whom before 2025 is not recoverable.
-    """
-    players = json.load(open(RAW / "sleeper" / "players.json"))
-    out = []
-    for f in sorted(glob(str(RAW / "sleeper" / "*-transactions-*.json"))):
-        year, week = re.search(r"(\d{4})-transactions-(\d+)", Path(f).name).groups()
-        for t in json.load(open(f)):
-            if t.get("type") != "trade" or t.get("status") != "complete":
-                continue
-            moved = []
-            for pid, to in (t.get("adds") or {}).items():
-                who = players.get(pid, {})
-                moved.append({
-                    "player": who.get("name", f"player {pid}"),
-                    "pos": who.get("pos"),
-                    "to": alias[str(to)],
-                    "from": alias[str((t.get("drops") or {}).get(pid))] if (t.get("drops") or {}).get(pid) else None,
-                })
-            out.append({
-                "year": year, "week": int(week),
-                "franchises": sorted(alias[str(r)] for r in t.get("roster_ids") or []),
-                "players": moved,
-                "picks": len(t.get("draft_picks") or []),
-            })
-    return sorted(out, key=lambda t: (t["year"], t["week"]))
-
-
 def finals(seasons, alias, played):
     """Champion, runner-up and podium for each season.
 
@@ -473,7 +442,6 @@ def main():
             "franchises": len(out),
             "activityBySeason": by_season,
             "finals": podiums,
-            "tradeLog": trade_log(salias),
             "sources": [
                 "NFL.com fantasy league 1078038 - game log scraped 13 Nov 2022",
                 "api.fantasy.nfl.com - season standings, 2012-2024",
