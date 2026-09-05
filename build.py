@@ -313,6 +313,23 @@ def shitbowl():
     return out
 
 
+def check_shitbowl(spoons, alias):
+    """Fail loudly on a franchise name that doesn't exist.
+
+    The file is typed by hand, so a stray "The Dirty Bird" would otherwise sail
+    through and quietly render nothing.
+    """
+    known = set(alias.values())
+    for year, v in spoons.items():
+        for field in ("franchise", "secondLast"):
+            name = v.get(field)
+            if name and name not in known:
+                raise SystemExit(
+                    f"data/shitbowl.csv: {year} {field} {name!r} is not a franchise. "
+                    f"Names must match data/franchises.csv."
+                )
+
+
 def finals(seasons, alias, played):
     """Champion, runner-up and podium for each season.
 
@@ -561,6 +578,7 @@ def main():
     played = {s["year"] for s in standings if s["platform"] == "NFL.com"}
     podiums = finals(seasons, alias, played) + sleeper_finals(salias)
     spoons = shitbowl()
+    check_shitbowl(spoons, alias)
     for f_ in podiums:
         sb = spoons.get(f_["year"])
         f_["shitbowl"] = sb["franchise"] if sb else None

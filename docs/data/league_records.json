@@ -60,6 +60,8 @@
       "2025"
     ],
     "shitbowlSeasons": [
+      "2022",
+      "2023",
       "2024"
     ],
     "bracketScored": [
@@ -468,9 +470,9 @@
         "champion": "SERPION",
         "runnerUp": "Kurlewless",
         "third": "Bearnaise Dynamics",
-        "shitbowl": null,
+        "shitbowl": "The Beer Barons",
         "shitbowlSecondLast": null,
-        "shitbowlSource": null
+        "shitbowlSource": "recalled"
       },
       {
         "year": "2023",
@@ -496,9 +498,9 @@
         "champion": "AT Football Team",
         "runnerUp": "The Fishies",
         "third": "The Aligators",
-        "shitbowl": null,
+        "shitbowl": "The Dirty Birds",
         "shitbowlSecondLast": null,
-        "shitbowlSource": null
+        "shitbowlSource": "recalled"
       },
       {
         "year": "2024",
@@ -12857,7 +12859,7 @@
         "finalsWon": 1,
         "finalsLost": 0,
         "finalsReached": 1,
-        "shitbowls": 0
+        "shitbowls": 1
       },
       "seasons": [
         {
@@ -13231,7 +13233,7 @@
             "avgPointsFor": 0.0,
             "avgPointsAgainst": 0.0
           },
-          "shitbowl": false,
+          "shitbowl": true,
           "finalStanding": 10
         },
         {
@@ -14585,7 +14587,7 @@
         "finalsWon": 0,
         "finalsLost": 0,
         "finalsReached": 0,
-        "shitbowls": 0
+        "shitbowls": 1
       },
       "seasons": [
         {
@@ -14993,7 +14995,7 @@
             "avgPointsFor": 0.0,
             "avgPointsAgainst": 0.0
           },
-          "shitbowl": false,
+          "shitbowl": true,
           "finalStanding": 8
         },
         {
