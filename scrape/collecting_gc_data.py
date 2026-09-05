@@ -1,3 +1,11 @@
+# ARCHIVED — this no longer runs, and there is nothing left for it to scrape.
+#
+# NFL shut its fantasy product down; fantasy.nfl.com/league/<id>/history/... now
+# redirects to a news page. Selenium also removed the `executable_path` argument
+# in 4.10, so the driver setup below is dead on its own terms.
+#
+# Kept because it documents where data/league_h2h.csv came from.
+
 #Load packages
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
