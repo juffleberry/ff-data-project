@@ -527,10 +527,10 @@ function select(name) {
     stat('Titles', a.titles || '—', a.titles ? stars(a.titles) : 'never won it'),
     stat('Finals', `${a.finalsWon}–${a.finalsLost}`,
          a.finalsReached ? `reached ${a.finalsReached}` : 'never reached one'),
-    (a.shitbowls || a.shitbowlsDisputed)
-      ? stat('Shitbowls', `💩 ${a.shitbowls}`,
-             a.shitbowlsDisputed ? `+${a.shitbowlsDisputed} disputed` : 'crowned worst')
-      : '',
+    stat('Shitbowls', a.shitbowls ? `💩 ${a.shitbowls}` : '0',
+         a.shitbowlsDisputed
+           ? `+${a.shitbowlsDisputed} disputed`
+           : a.shitbowls ? 'crowned worst' : 'never crowned worst'),
     stat('Made playoffs', a.playoffAppearances, `of ${a.seasons} seasons`),
     stat('Points for', num(R.pointsFor), `${R.avgPointsFor.toFixed(1)} per game`),
     stat('Points against', num(R.pointsAgainst), `${R.avgPointsAgainst.toFixed(1)} per game`),
