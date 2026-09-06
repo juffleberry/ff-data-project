@@ -71,6 +71,7 @@
       "2018",
       "2019",
       "2020",
+      "2021",
       "2022",
       "2023",
       "2024",
@@ -211,6 +212,10 @@
         "runnerUp": "The Claireville Cougars",
         "third": "Standard Deviations",
         "shitbowl": "Mikkels Manatees",
+        "shitbowlCandidates": [
+          "Mikkels Manatees"
+        ],
+        "shitbowlDisputed": false,
         "shitbowlSecondLast": null,
         "shitbowlSource": "derived-confirmed"
       },
@@ -235,6 +240,10 @@
         "runnerUp": "The Aligators",
         "third": "The Hatters",
         "shitbowl": "London Tanqs",
+        "shitbowlCandidates": [
+          "London Tanqs"
+        ],
+        "shitbowlDisputed": false,
         "shitbowlSecondLast": null,
         "shitbowlSource": "derived-confirmed"
       },
@@ -259,6 +268,10 @@
         "runnerUp": "The Puffins",
         "third": "The Piggies",
         "shitbowl": "Bearnaise Dynamics",
+        "shitbowlCandidates": [
+          "Bearnaise Dynamics"
+        ],
+        "shitbowlDisputed": false,
         "shitbowlSecondLast": null,
         "shitbowlSource": "derived-confirmed"
       },
@@ -287,6 +300,10 @@
         "runnerUp": "The Hatters",
         "third": "Bearnaise Dynamics",
         "shitbowl": "The Dirty Birds",
+        "shitbowlCandidates": [
+          "The Dirty Birds"
+        ],
+        "shitbowlDisputed": false,
         "shitbowlSecondLast": null,
         "shitbowlSource": "derived-confirmed"
       },
@@ -315,6 +332,10 @@
         "runnerUp": "SERPION",
         "third": "The Dirty Birds",
         "shitbowl": "Kurlewless",
+        "shitbowlCandidates": [
+          "Kurlewless"
+        ],
+        "shitbowlDisputed": false,
         "shitbowlSecondLast": null,
         "shitbowlSource": "derived-confirmed"
       },
@@ -343,6 +364,10 @@
         "runnerUp": "Bearnaise Dynamics",
         "third": "The Beer Barons",
         "shitbowl": "AT Football Team",
+        "shitbowlCandidates": [
+          "AT Football Team"
+        ],
+        "shitbowlDisputed": false,
         "shitbowlSecondLast": null,
         "shitbowlSource": "derived-confirmed"
       },
@@ -371,6 +396,10 @@
         "runnerUp": "The Hatters",
         "third": "The Aligators",
         "shitbowl": "Mikkels Manatees",
+        "shitbowlCandidates": [
+          "Mikkels Manatees"
+        ],
+        "shitbowlDisputed": false,
         "shitbowlSecondLast": null,
         "shitbowlSource": "derived-confirmed"
       },
@@ -399,6 +428,10 @@
         "runnerUp": "Not Enough Cooks",
         "third": "The Aligators",
         "shitbowl": "Mooreccan chicken with rice",
+        "shitbowlCandidates": [
+          "Mooreccan chicken with rice"
+        ],
+        "shitbowlDisputed": false,
         "shitbowlSecondLast": null,
         "shitbowlSource": "recalled"
       },
@@ -427,6 +460,10 @@
         "runnerUp": "SERPION",
         "third": "Not Enough Cooks",
         "shitbowl": "Mikkels Manatees",
+        "shitbowlCandidates": [
+          "Mikkels Manatees"
+        ],
+        "shitbowlDisputed": false,
         "shitbowlSecondLast": null,
         "shitbowlSource": "derived-confirmed"
       },
@@ -455,8 +492,13 @@
         "runnerUp": "The Hatters",
         "third": "Bearnaise Dynamics",
         "shitbowl": null,
+        "shitbowlCandidates": [
+          "London Tanqs",
+          "The Dirty Birds"
+        ],
+        "shitbowlDisputed": true,
         "shitbowlSecondLast": null,
-        "shitbowlSource": null
+        "shitbowlSource": "inconclusive"
       },
       {
         "year": "2022",
@@ -483,6 +525,10 @@
         "runnerUp": "Kurlewless",
         "third": "Bearnaise Dynamics",
         "shitbowl": "The Beer Barons",
+        "shitbowlCandidates": [
+          "The Beer Barons"
+        ],
+        "shitbowlDisputed": false,
         "shitbowlSecondLast": null,
         "shitbowlSource": "recalled"
       },
@@ -511,6 +557,10 @@
         "runnerUp": "The Fishies",
         "third": "The Aligators",
         "shitbowl": "The Dirty Birds",
+        "shitbowlCandidates": [
+          "The Dirty Birds"
+        ],
+        "shitbowlDisputed": false,
         "shitbowlSecondLast": null,
         "shitbowlSource": "recalled"
       },
@@ -539,6 +589,10 @@
         "runnerUp": "The Puffins",
         "third": "The Hatters",
         "shitbowl": "SERPION",
+        "shitbowlCandidates": [
+          "SERPION"
+        ],
+        "shitbowlDisputed": false,
         "shitbowlSecondLast": null,
         "shitbowlSource": "recalled"
       },
@@ -557,6 +611,10 @@
         "runnerUp": "The Puffins",
         "third": "The Dirty Birds",
         "shitbowl": "Yorkshire Puddings",
+        "shitbowlCandidates": [
+          "Yorkshire Puddings"
+        ],
+        "shitbowlDisputed": false,
         "shitbowlSecondLast": null,
         "shitbowlSource": "sleeper-bracket"
       }
@@ -637,7 +695,8 @@
         "finalsWon": 1,
         "finalsLost": 0,
         "finalsReached": 1,
-        "shitbowls": 1
+        "shitbowls": 1,
+        "shitbowlsDisputed": 0
       },
       "seasons": [
         {
@@ -672,6 +731,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 8
         },
         {
@@ -706,6 +766,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 16
         },
         {
@@ -740,6 +801,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": true,
+          "shitbowlDisputed": false,
           "finalStanding": 10
         },
         {
@@ -774,6 +836,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 12
         },
         {
@@ -808,6 +871,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 9
         },
         {
@@ -842,6 +906,7 @@
             "avgPointsAgainst": 113.3
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 5
         },
         {
@@ -876,6 +941,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 16
         },
         {
@@ -910,6 +976,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 13
         },
         {
@@ -944,6 +1011,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 1
         },
         {
@@ -978,6 +1046,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 14
         },
         {
@@ -1012,6 +1081,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": null
         }
       ],
@@ -1596,7 +1666,8 @@
         "finalsWon": 2,
         "finalsLost": 1,
         "finalsReached": 3,
-        "shitbowls": 1
+        "shitbowls": 1,
+        "shitbowlsDisputed": 0
       },
       "seasons": [
         {
@@ -1631,6 +1702,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 5
         },
         {
@@ -1665,6 +1737,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 9
         },
         {
@@ -1699,6 +1772,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": true,
+          "shitbowlDisputed": false,
           "finalStanding": 8
         },
         {
@@ -1733,6 +1807,7 @@
             "avgPointsAgainst": 84.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 3
         },
         {
@@ -1767,6 +1842,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 9
         },
         {
@@ -1801,6 +1877,7 @@
             "avgPointsAgainst": 112.22
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 2
         },
         {
@@ -1835,6 +1912,7 @@
             "avgPointsAgainst": 71.94
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 4
         },
         {
@@ -1869,6 +1947,7 @@
             "avgPointsAgainst": 86.02
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 1
         },
         {
@@ -1903,6 +1982,7 @@
             "avgPointsAgainst": 106.06
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 1
         },
         {
@@ -1937,6 +2017,7 @@
             "avgPointsAgainst": 106.05
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 3
         },
         {
@@ -1971,6 +2052,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 3
         },
         {
@@ -2005,6 +2087,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 12
         },
         {
@@ -2039,6 +2122,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 11
         },
         {
@@ -2073,6 +2157,7 @@
             "avgPointsAgainst": 118.47
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 4
         }
       ],
@@ -2825,7 +2910,8 @@
         "finalsWon": 1,
         "finalsLost": 1,
         "finalsReached": 2,
-        "shitbowls": 1
+        "shitbowls": 1,
+        "shitbowlsDisputed": 0
       },
       "seasons": [
         {
@@ -2860,6 +2946,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 6
         },
         {
@@ -2894,6 +2981,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 5
         },
         {
@@ -2928,6 +3016,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 12
         },
         {
@@ -2962,6 +3051,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": true,
+          "shitbowlDisputed": false,
           "finalStanding": 8
         },
         {
@@ -2996,6 +3086,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 15
         },
         {
@@ -3030,6 +3121,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 9
         },
         {
@@ -3064,6 +3156,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 8
         },
         {
@@ -3098,6 +3191,7 @@
             "avgPointsAgainst": 102.1
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 4
         },
         {
@@ -3132,6 +3226,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 10
         },
         {
@@ -3166,6 +3261,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 2
         },
         {
@@ -3200,6 +3296,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 15
         },
         {
@@ -3234,6 +3331,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 1
         },
         {
@@ -3268,6 +3366,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": null
         }
       ],
@@ -3936,7 +4035,8 @@
         "finalsWon": 1,
         "finalsLost": 0,
         "finalsReached": 1,
-        "shitbowls": 0
+        "shitbowls": 0,
+        "shitbowlsDisputed": 0
       },
       "seasons": [
         {
@@ -3971,6 +4071,7 @@
             "avgPointsAgainst": 99.42
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 5
         },
         {
@@ -4005,6 +4106,7 @@
             "avgPointsAgainst": 75.24
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 5
         },
         {
@@ -4039,6 +4141,7 @@
             "avgPointsAgainst": 142.82
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 5
         },
         {
@@ -4073,6 +4176,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 7
         },
         {
@@ -4107,6 +4211,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 12
         },
         {
@@ -4141,6 +4246,7 @@
             "avgPointsAgainst": 124.58
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 6
         },
         {
@@ -4175,6 +4281,7 @@
             "avgPointsAgainst": 106.34
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 1
         },
         {
@@ -4209,6 +4316,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 16
         },
         {
@@ -4243,6 +4351,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 10
         },
         {
@@ -4277,6 +4386,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 9
         },
         {
@@ -4311,6 +4421,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": null
         }
       ],
@@ -4965,7 +5076,8 @@
         "finalsWon": 1,
         "finalsLost": 0,
         "finalsReached": 1,
-        "shitbowls": 1
+        "shitbowls": 1,
+        "shitbowlsDisputed": 1
       },
       "seasons": [
         {
@@ -5000,6 +5112,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 6
         },
         {
@@ -5034,6 +5147,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": true,
+          "shitbowlDisputed": false,
           "finalStanding": 8
         },
         {
@@ -5068,6 +5182,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 12
         },
         {
@@ -5102,6 +5217,7 @@
             "avgPointsAgainst": 103.08
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 6
         },
         {
@@ -5136,6 +5252,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 11
         },
         {
@@ -5170,6 +5287,7 @@
             "avgPointsAgainst": 103.04
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 1
         },
         {
@@ -5204,6 +5322,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 13
         },
         {
@@ -5238,6 +5357,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 16
         },
         {
@@ -5272,6 +5392,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 7
         },
         {
@@ -5306,6 +5427,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": true,
           "finalStanding": 7
         },
         {
@@ -5340,6 +5462,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 5
         }
       ],
@@ -5924,7 +6047,8 @@
         "finalsWon": 0,
         "finalsLost": 0,
         "finalsReached": 0,
-        "shitbowls": 3
+        "shitbowls": 3,
+        "shitbowlsDisputed": 0
       },
       "seasons": [
         {
@@ -5959,6 +6083,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": true,
+          "shitbowlDisputed": false,
           "finalStanding": 8
         },
         {
@@ -5993,6 +6118,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 5
         },
         {
@@ -6027,6 +6153,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 9
         },
         {
@@ -6061,6 +6188,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 7
         },
         {
@@ -6095,6 +6223,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 14
         },
         {
@@ -6129,6 +6258,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 12
         },
         {
@@ -6163,6 +6293,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": true,
+          "shitbowlDisputed": false,
           "finalStanding": 8
         },
         {
@@ -6197,6 +6328,7 @@
             "avgPointsAgainst": 142.74
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 5
         },
         {
@@ -6231,6 +6363,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": true,
+          "shitbowlDisputed": false,
           "finalStanding": 10
         },
         {
@@ -6265,6 +6398,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 15
         },
         {
@@ -6299,6 +6433,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 12
         },
         {
@@ -6333,6 +6468,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 16
         },
         {
@@ -6367,6 +6503,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 10
         }
       ],
@@ -6937,7 +7074,8 @@
         "finalsWon": 1,
         "finalsLost": 0,
         "finalsReached": 1,
-        "shitbowls": 1
+        "shitbowls": 1,
+        "shitbowlsDisputed": 0
       },
       "seasons": [
         {
@@ -6972,6 +7110,7 @@
             "avgPointsAgainst": 77.29
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 1
         },
         {
@@ -7006,6 +7145,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 7
         },
         {
@@ -7040,6 +7180,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 11
         },
         {
@@ -7074,6 +7215,7 @@
             "avgPointsAgainst": 119.12
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 5
         },
         {
@@ -7108,6 +7250,7 @@
             "avgPointsAgainst": 89.44
           },
           "shitbowl": true,
+          "shitbowlDisputed": false,
           "finalStanding": 6
         },
         {
@@ -7142,6 +7285,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 11
         },
         {
@@ -7176,6 +7320,7 @@
             "avgPointsAgainst": 97.46
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 5
         }
       ],
@@ -7760,7 +7905,8 @@
         "finalsWon": 0,
         "finalsLost": 1,
         "finalsReached": 1,
-        "shitbowls": 0
+        "shitbowls": 0,
+        "shitbowlsDisputed": 0
       },
       "seasons": [
         {
@@ -7795,6 +7941,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 11
         },
         {
@@ -7829,6 +7976,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 13
         },
         {
@@ -7863,6 +8011,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 16
         },
         {
@@ -7897,6 +8046,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 14
         },
         {
@@ -7931,6 +8081,7 @@
             "avgPointsAgainst": 98.38
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 2
         },
         {
@@ -7965,6 +8116,7 @@
             "avgPointsAgainst": 92.8
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 3
         },
         {
@@ -7999,6 +8151,7 @@
             "avgPointsAgainst": 103.46
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 6
         },
         {
@@ -8033,6 +8186,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 9
         },
         {
@@ -8067,6 +8221,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 14
         },
         {
@@ -8101,6 +8256,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 4
         },
         {
@@ -8135,6 +8291,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": null
         }
       ],
@@ -8775,7 +8932,8 @@
         "finalsWon": 2,
         "finalsLost": 2,
         "finalsReached": 4,
-        "shitbowls": 1
+        "shitbowls": 1,
+        "shitbowlsDisputed": 0
       },
       "seasons": [
         {
@@ -8810,6 +8968,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 9
         },
         {
@@ -8844,6 +9003,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 12
         },
         {
@@ -8878,6 +9038,7 @@
             "avgPointsAgainst": 87.01
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 1
         },
         {
@@ -8912,6 +9073,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 15
         },
         {
@@ -8946,6 +9108,7 @@
             "avgPointsAgainst": 106.3
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 2
         },
         {
@@ -8980,6 +9143,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 13
         },
         {
@@ -9014,6 +9178,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 11
         },
         {
@@ -9048,6 +9213,7 @@
             "avgPointsAgainst": 106.05
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 4
         },
         {
@@ -9082,6 +9248,7 @@
             "avgPointsAgainst": 114.41
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 2
         },
         {
@@ -9116,6 +9283,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 9
         },
         {
@@ -9150,6 +9318,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 1
         },
         {
@@ -9184,6 +9353,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 6
         },
         {
@@ -9218,6 +9388,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": true,
+          "shitbowlDisputed": false,
           "finalStanding": 8
         },
         {
@@ -9252,6 +9423,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": null
         }
       ],
@@ -9990,7 +10162,8 @@
         "finalsWon": 1,
         "finalsLost": 0,
         "finalsReached": 1,
-        "shitbowls": 0
+        "shitbowls": 0,
+        "shitbowlsDisputed": 0
       },
       "seasons": [
         {
@@ -10025,6 +10198,7 @@
             "avgPointsAgainst": 98.73
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 1
         }
       ],
@@ -10483,7 +10657,8 @@
         "finalsWon": 0,
         "finalsLost": 0,
         "finalsReached": 0,
-        "shitbowls": 0
+        "shitbowls": 0,
+        "shitbowlsDisputed": 0
       },
       "seasons": [
         {
@@ -10518,6 +10693,7 @@
             "avgPointsAgainst": 139.85
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 3
         },
         {
@@ -10552,6 +10728,7 @@
             "avgPointsAgainst": 109.7
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 4
         },
         {
@@ -10586,6 +10763,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 7
         },
         {
@@ -10620,6 +10798,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 9
         },
         {
@@ -10654,6 +10833,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 10
         },
         {
@@ -10688,6 +10868,7 @@
             "avgPointsAgainst": 121.4
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 6
         },
         {
@@ -10722,6 +10903,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 15
         },
         {
@@ -10756,6 +10938,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 10
         },
         {
@@ -10790,6 +10973,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 13
         },
         {
@@ -10824,6 +11008,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 11
         },
         {
@@ -10858,6 +11043,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 15
         },
         {
@@ -10892,6 +11078,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 11
         },
         {
@@ -10926,6 +11113,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 5
         },
         {
@@ -10960,6 +11148,7 @@
             "avgPointsAgainst": 95.76
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 5
         }
       ],
@@ -11642,7 +11831,8 @@
         "finalsWon": 0,
         "finalsLost": 1,
         "finalsReached": 1,
-        "shitbowls": 0
+        "shitbowls": 0,
+        "shitbowlsDisputed": 0
       },
       "seasons": [
         {
@@ -11677,6 +11867,7 @@
             "avgPointsAgainst": 107.92
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 4
         },
         {
@@ -11711,6 +11902,7 @@
             "avgPointsAgainst": 131.41
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 2
         },
         {
@@ -11745,6 +11937,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 11
         },
         {
@@ -11779,6 +11972,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 13
         },
         {
@@ -11813,6 +12007,7 @@
             "avgPointsAgainst": 88.9
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 6
         },
         {
@@ -11847,6 +12042,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 14
         },
         {
@@ -11881,6 +12077,7 @@
             "avgPointsAgainst": 95.53
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 3
         },
         {
@@ -11915,6 +12112,7 @@
             "avgPointsAgainst": 107.97
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 3
         },
         {
@@ -11949,6 +12147,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 12
         },
         {
@@ -11983,6 +12182,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 13
         },
         {
@@ -12017,6 +12217,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 14
         },
         {
@@ -12051,6 +12252,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 3
         },
         {
@@ -12085,6 +12287,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 6
         },
         {
@@ -12119,6 +12322,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": null
         }
       ],
@@ -12871,7 +13075,8 @@
         "finalsWon": 1,
         "finalsLost": 0,
         "finalsReached": 1,
-        "shitbowls": 1
+        "shitbowls": 1,
+        "shitbowlsDisputed": 0
       },
       "seasons": [
         {
@@ -12906,6 +13111,7 @@
             "avgPointsAgainst": 123.22
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 1
         },
         {
@@ -12940,6 +13146,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 7
         },
         {
@@ -12974,6 +13181,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 10
         },
         {
@@ -13008,6 +13216,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 14
         },
         {
@@ -13042,6 +13251,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 12
         },
         {
@@ -13076,6 +13286,7 @@
             "avgPointsAgainst": 96.8
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 3
         },
         {
@@ -13110,6 +13321,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 16
         },
         {
@@ -13144,6 +13356,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 11
         },
         {
@@ -13178,6 +13391,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 15
         },
         {
@@ -13212,6 +13426,7 @@
             "avgPointsAgainst": 89.7
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 4
         },
         {
@@ -13246,6 +13461,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": true,
+          "shitbowlDisputed": false,
           "finalStanding": 10
         },
         {
@@ -13280,6 +13496,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 4
         },
         {
@@ -13314,6 +13531,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 7
         },
         {
@@ -13348,6 +13566,7 @@
             "avgPointsAgainst": 121.76
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": null
         }
       ],
@@ -14114,7 +14333,8 @@
         "finalsWon": 0,
         "finalsLost": 1,
         "finalsReached": 1,
-        "shitbowls": 0
+        "shitbowls": 0,
+        "shitbowlsDisputed": 0
       },
       "seasons": [
         {
@@ -14149,6 +14369,7 @@
             "avgPointsAgainst": 113.94
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 2
         },
         {
@@ -14183,6 +14404,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 11
         }
       ],
@@ -14599,7 +14821,8 @@
         "finalsWon": 0,
         "finalsLost": 0,
         "finalsReached": 0,
-        "shitbowls": 2
+        "shitbowls": 2,
+        "shitbowlsDisputed": 1
       },
       "seasons": [
         {
@@ -14634,6 +14857,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 10
         },
         {
@@ -14668,6 +14892,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 10
         },
         {
@@ -14702,6 +14927,7 @@
             "avgPointsAgainst": 104.12
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 4
         },
         {
@@ -14736,6 +14962,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": true,
+          "shitbowlDisputed": false,
           "finalStanding": 10
         },
         {
@@ -14770,6 +14997,7 @@
             "avgPointsAgainst": 84.63
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 3
         },
         {
@@ -14804,6 +15032,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 9
         },
         {
@@ -14838,6 +15067,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 10
         },
         {
@@ -14872,6 +15102,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 15
         },
         {
@@ -14906,6 +15137,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 8
         },
         {
@@ -14940,6 +15172,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": true,
           "finalStanding": 8
         },
         {
@@ -14974,6 +15207,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 8
         },
         {
@@ -15008,6 +15242,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": true,
+          "shitbowlDisputed": false,
           "finalStanding": 8
         },
         {
@@ -15042,6 +15277,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 12
         },
         {
@@ -15076,6 +15312,7 @@
             "avgPointsAgainst": 87.45
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 3
         }
       ],
@@ -15744,7 +15981,8 @@
         "finalsWon": 0,
         "finalsLost": 1,
         "finalsReached": 1,
-        "shitbowls": 0
+        "shitbowls": 0,
+        "shitbowlsDisputed": 0
       },
       "seasons": [
         {
@@ -15779,6 +16017,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 6
         },
         {
@@ -15813,6 +16052,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 2
         },
         {
@@ -15847,6 +16087,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 13
         },
         {
@@ -15881,6 +16122,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": null
         }
       ],
@@ -16437,7 +16679,8 @@
         "finalsWon": 1,
         "finalsLost": 3,
         "finalsReached": 4,
-        "shitbowls": 0
+        "shitbowls": 0,
+        "shitbowlsDisputed": 0
       },
       "seasons": [
         {
@@ -16472,6 +16715,7 @@
             "avgPointsAgainst": 97.15
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 3
         },
         {
@@ -16506,6 +16750,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 6
         },
         {
@@ -16540,6 +16785,7 @@
             "avgPointsAgainst": 101.54
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 2
         },
         {
@@ -16574,6 +16820,7 @@
             "avgPointsAgainst": 71.57
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 1
         },
         {
@@ -16608,6 +16855,7 @@
             "avgPointsAgainst": 103.1
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 4
         },
         {
@@ -16642,6 +16890,7 @@
             "avgPointsAgainst": 109.25
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 2
         },
         {
@@ -16676,6 +16925,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 14
         },
         {
@@ -16710,6 +16960,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 16
         },
         {
@@ -16744,6 +16995,7 @@
             "avgPointsAgainst": 126.68
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 2
         },
         {
@@ -16778,6 +17030,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 11
         },
         {
@@ -16812,6 +17065,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 13
         },
         {
@@ -16846,6 +17100,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 3
         },
         {
@@ -16880,6 +17135,7 @@
             "avgPointsAgainst": 100.6
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 6
         }
       ],
@@ -17590,7 +17846,8 @@
         "finalsWon": 0,
         "finalsLost": 0,
         "finalsReached": 0,
-        "shitbowls": 0
+        "shitbowls": 0,
+        "shitbowlsDisputed": 0
       },
       "seasons": [
         {
@@ -17625,6 +17882,7 @@
             "avgPointsAgainst": 114.12
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 3
         },
         {
@@ -17659,6 +17917,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 16
         },
         {
@@ -17693,6 +17952,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 15
         },
         {
@@ -17727,6 +17987,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 8
         },
         {
@@ -17761,6 +18022,7 @@
             "avgPointsAgainst": 139.98
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 6
         },
         {
@@ -17795,6 +18057,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 7
         },
         {
@@ -17829,6 +18092,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 9
         },
         {
@@ -17863,6 +18127,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 12
         },
         {
@@ -17897,6 +18162,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 7
         },
         {
@@ -17931,6 +18197,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 9
         },
         {
@@ -17965,6 +18232,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 16
         },
         {
@@ -17999,6 +18267,7 @@
             "avgPointsAgainst": 152.26
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": null
         }
       ],
@@ -18583,7 +18852,8 @@
         "finalsWon": 2,
         "finalsLost": 3,
         "finalsReached": 5,
-        "shitbowls": 0
+        "shitbowls": 0,
+        "shitbowlsDisputed": 0
       },
       "seasons": [
         {
@@ -18618,6 +18888,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 7
         },
         {
@@ -18652,6 +18923,7 @@
             "avgPointsAgainst": 98.28
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 1
         },
         {
@@ -18686,6 +18958,7 @@
             "avgPointsAgainst": 94.28
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 2
         },
         {
@@ -18720,6 +18993,7 @@
             "avgPointsAgainst": 111.32
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 4
         },
         {
@@ -18754,6 +19028,7 @@
             "avgPointsAgainst": 77.61
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 4
         },
         {
@@ -18788,6 +19063,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 7
         },
         {
@@ -18822,6 +19098,7 @@
             "avgPointsAgainst": 84.63
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 1
         },
         {
@@ -18856,6 +19133,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 13
         },
         {
@@ -18890,6 +19168,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 14
         },
         {
@@ -18924,6 +19203,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 14
         },
         {
@@ -18958,6 +19238,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 4
         },
         {
@@ -18992,6 +19273,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 5
         },
         {
@@ -19026,6 +19308,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 2
         },
         {
@@ -19060,6 +19343,7 @@
             "avgPointsAgainst": 87.48
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 2
         }
       ],
@@ -19854,7 +20138,8 @@
         "finalsWon": 0,
         "finalsLost": 0,
         "finalsReached": 0,
-        "shitbowls": 1
+        "shitbowls": 1,
+        "shitbowlsDisputed": 0
       },
       "seasons": [
         {
@@ -19889,6 +20174,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 7
         },
         {
@@ -19923,6 +20209,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": false,
+          "shitbowlDisputed": false,
           "finalStanding": 15
         },
         {
@@ -19957,6 +20244,7 @@
             "avgPointsAgainst": 0.0
           },
           "shitbowl": true,
+          "shitbowlDisputed": false,
           "finalStanding": null
         }
       ],

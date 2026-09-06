@@ -304,8 +304,12 @@ def shitbowl():
     with open(RAW / "shitbowl.csv", newline="") as f:
         for row in csv.DictReader(r for r in f if not r.startswith("#")):
             if row.get("franchise"):
+                # "A|B" means genuinely disputed: both are shown, neither counts.
+                names = [n.strip() for n in row["franchise"].split("|") if n.strip()]
                 out[row["year"]] = {
-                    "franchise": row["franchise"],
+                    "candidates": names,
+                    "franchise": names[0] if len(names) == 1 else None,
+                    "disputed": len(names) > 1,
                     "secondLast": row.get("second_last") or None,
                     "source": row.get("source") or None,
                 }
@@ -320,8 +324,8 @@ def check_shitbowl(spoons, alias):
     """
     known = set(alias.values())
     for year, v in spoons.items():
-        for field in ("franchise", "secondLast"):
-            name = v.get(field)
+        for name in v.get("candidates", []) + [v.get("secondLast")]:
+            field = "franchise"
             if name and name not in known:
                 raise SystemExit(
                     f"data/shitbowl.csv: {year} {field} {name!r} is not a franchise. "
@@ -586,12 +590,15 @@ def main():
             continue
         for m in json.load(open(f)):
             if m.get("p") == 1 and m.get("w"):
-                spoons[year] = {"franchise": salias[str(m["w"])], "secondLast": None,
+                spoons[year] = {"franchise": salias[str(m["w"])], "candidates": [salias[str(m["w"])]],
+                                "disputed": False, "secondLast": None,
                                 "source": "sleeper-bracket"}
     check_shitbowl(spoons, alias)
     for f_ in podiums:
         sb = spoons.get(f_["year"])
         f_["shitbowl"] = sb["franchise"] if sb else None
+        f_["shitbowlCandidates"] = sb["candidates"] if sb else []
+        f_["shitbowlDisputed"] = bool(sb and sb["disputed"])
         f_["shitbowlSecondLast"] = sb["secondLast"] if sb else None
         f_["shitbowlSource"] = sb["source"] if sb else None
     podium_by = defaultdict(dict)
@@ -605,9 +612,12 @@ def main():
         t["allTime"]["finalsLost"] = lost
         t["allTime"]["finalsReached"] = won + lost
         t["allTime"]["shitbowls"] = sum(1 for v in spoons.values() if v["franchise"] == name)
+        t["allTime"]["shitbowlsDisputed"] = sum(
+            1 for v in spoons.values() if v["disputed"] and name in v["candidates"])
         for srow in t["seasons"]:
             sb = spoons.get(srow["year"])
             srow["shitbowl"] = bool(sb and sb["franchise"] == name)
+            srow["shitbowlDisputed"] = bool(sb and sb["disputed"] and name in sb["candidates"])
         for srow in t["seasons"]:
             srow["finalStanding"] = podium_by[name].get(srow["year"])
 

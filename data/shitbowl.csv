@@ -15,12 +15,16 @@
 # "Mooreccan chicken with rice", the same manager's 2020 name.
 #
 # Blank means nobody has confirmed it; blank rows render as "unknown" rather
-# than a guess. 2025 onwards derives itself from Sleeper's losers bracket, whose
+# than a guess. Two names separated by "|" means it is genuinely disputed - both
+# are shown with a question mark, and neither is counted towards anyone's tally,
+# because awarding half a shitbowl to two franchises would be worse than saying
+# we do not know. 2025 onwards derives itself from Sleeper's losers bracket, whose
 # placement final names the winner outright, and needs no row here.
 #
 # source:
 #   derived-confirmed  worked out from the game log, then checked by the league
 #   recalled           from memory; no surviving data could have supplied it
+#   inconclusive       two candidates and nothing to separate them
 year,franchise,second_last,source
 2012,Mikkels Manatees,,derived-confirmed
 2013,London Tanqs,,derived-confirmed
@@ -31,7 +35,7 @@ year,franchise,second_last,source
 2018,Mikkels Manatees,,derived-confirmed
 2019,Mooreccan chicken with rice,,recalled
 2020,Mikkels Manatees,,derived-confirmed
-2021,,,
+2021,London Tanqs|The Dirty Birds,,inconclusive
 2022,The Beer Barons,,recalled
 2023,The Dirty Birds,,recalled
 2024,SERPION,,recalled

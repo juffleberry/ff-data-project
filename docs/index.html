@@ -401,7 +401,7 @@ function rowsFor(phase, everyone = false) {
     .map((t) => ({ ...t.allTime[phase], ...{
       franchise: t.franchise, emoji: t.emoji, active: t.active, titles: t.allTime.titles,
       playoffAppearances: t.allTime.playoffAppearances, trades: t.allTime.trades,
-      shitbowls: t.allTime.shitbowls,
+      shitbowls: t.allTime.shitbowls, shitbowlsDisputed: t.allTime.shitbowlsDisputed,
       adds: t.allTime.adds, seasons: t.allTime.seasons,
       firstSeason: t.allTime.firstSeason, lastSeason: t.allTime.lastSeason,
     } }));
@@ -487,6 +487,24 @@ function renderStandings() {
   renderRecords();
 }
 
+const SB_SOURCE = {
+  'derived-confirmed': 'Worked out from the game log, then confirmed',
+  'recalled': 'From memory — the postseason results for this season are gone',
+  'sleeper-bracket': "Sleeper's losers bracket states it",
+  'inconclusive': 'Two candidates, and nothing in the data separates them',
+};
+
+function shitbowlCell(f, who) {
+  const title = SB_SOURCE[f.shitbowlSource] || '';
+  if (f.shitbowlDisputed)
+    // Both names, neither counted. Half a shitbowl each would be worse than
+    // admitting nobody knows which of them it was.
+    return `<span title="${title}" style="color:var(--muted)">💩 ` +
+      f.shitbowlCandidates.map(who).join(' <i>or</i> ') + ' <b>?</b></span>';
+  if (f.shitbowl) return `<span title="${title}">💩 ${who(f.shitbowl)}</span>`;
+  return '<span style="color:var(--muted)">unknown</span>';
+}
+
 function select(name) {
   const t = DATA.franchises[name];
   if (!t) return;
@@ -509,7 +527,10 @@ function select(name) {
     stat('Titles', a.titles || '—', a.titles ? stars(a.titles) : 'never won it'),
     stat('Finals', `${a.finalsWon}–${a.finalsLost}`,
          a.finalsReached ? `reached ${a.finalsReached}` : 'never reached one'),
-    a.shitbowls ? stat('Shitbowls', `💩 ${a.shitbowls}`, 'came last in it') : '',
+    (a.shitbowls || a.shitbowlsDisputed)
+      ? stat('Shitbowls', `💩 ${a.shitbowls}`,
+             a.shitbowlsDisputed ? `+${a.shitbowlsDisputed} disputed` : 'crowned worst')
+      : '',
     stat('Made playoffs', a.playoffAppearances, `of ${a.seasons} seasons`),
     stat('Points for', num(R.pointsFor), `${R.avgPointsFor.toFixed(1)} per game`),
     stat('Points against', num(R.pointsAgainst), `${R.avgPointsAgainst.toFixed(1)} per game`),
@@ -540,6 +561,7 @@ function select(name) {
       cell(`<span class="nm">${s.teamName}</span>`), cell(meter(s.winPct)), cell(s.record),
       cell(s.finish === 1 ? `${stars(1)} 1st` : s.finish ? ord(s.finish) : (s.madePlayoffs ? '<span class="tag">playoffs</span>' : '—')),
       cell(s.shitbowl ? '<span class="neg">💩 shitbowl</span>'
+           : s.shitbowlDisputed ? '<span style="color:var(--muted)">💩 shitbowl?</span>'
            : s.finalStanding === 1 ? `${stars(1)} champion`
            : s.finalStanding === 2 ? '<span class="neg">lost final</span>'
            : s.finalStanding ? `${ord(s.finalStanding)} of 16` : '—'),
@@ -683,12 +705,7 @@ async function init() {
               cell(`${stars(1)} ${who(f.champion)}`),
               cell(named && named !== f.champion ? `<span style="color:var(--muted)">${named}</span>` : '—'),
               cell(who(f.runnerUp)), cell(who(f.third)),
-              cell(f.shitbowl
-                   ? `<span title="${{'derived-confirmed': 'Worked out from the game log, then confirmed',
-                        'recalled': 'From memory — the postseason results for this season are gone',
-                        'sleeper-bracket': "Sleeper's losers bracket states it"}[f.shitbowlSource] || ''}">` +
-                     `💩 ${who(f.shitbowl)}</span>`
-                   : '<span style="color:var(--muted)">unknown</span>'));
+              cell(shitbowlCell(f, who)));
     tr.onclick = () => { select(f.champion); $('#profile').scrollIntoView({ block: 'start' }); };
     return tr;
   }));
